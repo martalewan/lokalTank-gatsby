@@ -1,7 +1,6 @@
-# Gatsby starter i18n
+# Gatsby i18n web
 
-[![Support me on Patreon](https://c5.patreon.com/external/logo/become_a_patron_button.png)](https://www.patreon.com/smakosh)
-
+Lokal Tank web, made using gatsby, react and i18n.
 ## Getting started
 
 ```bash
@@ -20,7 +19,3 @@ yarn && yarn start
 - ⚛️ Context API
 - ❌ Offline support (Disabled for the moment)
 - Eslint and workspace settings set to auto lint on save.
-
-### Todo
-
-- [ ] Prepare another config file for the secondary language

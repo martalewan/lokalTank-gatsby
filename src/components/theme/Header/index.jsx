@@ -23,7 +23,7 @@ const Header = () => {
 						<FormattedMessage id="home" />
 					</Link>
 					<Link to="/about">
-						<FormattedMessage id="about" />
+						<FormattedMessage id="navigation.about" />
 					</Link>
 					<SelectLanguage lang={lang} toggleLanguage={handleLanguage} />
 				</Links>

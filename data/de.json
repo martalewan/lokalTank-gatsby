@@ -3,5 +3,51 @@
     "logo": "Logo",
     "home": "Zuhause",
     "about": "Über",
-    "not_found": "404 - Seite nicht gefunden"
+    "not_found": "404 - Seite nicht gefunden",
+
+    "general.downloadLink": "Click to download the pdf",
+    
+    "navigation.about": "About us",
+    "navigation.offer": "Offer",
+    "navigation.contact": "Contact",
+    "navigation.implementation": "Implementation",
+    "navigation.polish": "Polish",
+    "navigation.english": "English",
+  
+    "mainPage.header": "Pressure filters Lokal Tank",
+    "mainPage.descrition": "Mechanical purification of water from iron, manganese compounds and minor impurities.",
+  
+    "aboutPage.title": "About us",
+    "aboutPage.p1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id felis nec ex congue vulputate. Nam diam mauris, mattis a odio quis, volutpat sodales odio.",
+    "aboutPage.p2": "Praesent justo arcu, fringilla ac interdum non, congue a ligula. Aliquam erat volutpat. Nam nisi purus, dapibus in finibus nec, volutpat ac sapien. Nullam semper ex dolor, in ullamcorper turpis congue quis. Phasellus ac ipsum viverra, fringilla erat et, fermentum dui. Fusce orci purus, faucibus ornare orci nec, cursus dapibus nibh.",
+    "aboutPage.p3": "Fusce vitae mi et diam mattis imperdiet ut at odio. Mauris accumsan risus sed velit tincidunt mattis. Aliquam iaculis iaculis neque, eu tristique nisl malesuada scelerisque. In consequat rutrum tortor, eu consectetur libero volutpat in. Nunc in tempor libero. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
+    "aboutPage.button": "Offer",
+    "aboutPage.button2": "Write",
+  
+    "cardsPage.title": "What makes us stand out",
+    "cardsPage.card1": "We help take care of a crean and fresh water in your houses and some more text",
+    "cardsPage.card2": "We help take care of a crean and fresh water in your houses and some more text",
+    "cardsPage.card3": "We help take care of a crean and fresh water in your houses and some more text",
+  
+    "offer.title": "Offer",
+    "offer.zbiornikiMagazynowe": "Zbiorniki Magazynowe",
+    "offer.zbiornikiCiśnieniowe": "Zbiorniki Ciśnieniowe",
+    "offer.filtryCiśnieniowe": "Filtry Ciśnieniowe",
+    "offer.mieszaczeWodnoPowietrzne": "Mieszacze wodno powietrzne",
+    "offer.zbiornikiHydroforowe":  "Zbiorniki hydroforowe",
+    "offer.wymiennikiPojemnościowe": "Wymienniki pojemnościowe",
+    "offer.zasobnikiCiepłejWodyLubPary": "Zasobniki ciepłej wody lub pary",
+    "offer.odgazowywaczeTermiczne": "Odgazowywacze termiczne",
+    "offer.zbiornikiProcesowe": "Zbiorniki procesowe", 
+    "offer.zbiornikiNaZamówienie":" Zbiorniki na zamówienie",
+    "offer.konstrukcjeStalowe": "Konstrukcje Stalowe",
+    "offer.instalacjeProcesowe": "Instalacje procesowe",
+
+    "product.textDirective": "We manufacture capacitive heat exchangers WP 6/6 in accordance with Directive 2014/68/EU.",
+    "product.pipeDescription": "PIPE DESCRIPTION:",
+    "product.downloadText": "Click to download the detailed product's offer",
+  
+    "contactPage.title": "Contact",
+    "contactPage.p1": "Feel free to contact us",
+    "contactPage.button": "Write an email"
 }

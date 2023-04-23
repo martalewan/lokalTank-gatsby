@@ -4,7 +4,7 @@ const LanguageContext = createContext()
 
 const LanguageProvider = ({ children }) => {
 	const [loading, setLoading] = useState(true)
-	const [lang, setLanguage] = useState('en')
+	const [lang, setLanguage] = useState('pl')
 
 	const handleLanguage = value => {
 		setLanguage(value)

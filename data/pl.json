@@ -3,5 +3,55 @@
     "logo": "Logo",
     "home": "Dom",
     "about": "O nas",
-    "not_found": "404 - Nie znaleziono"
+    "not_found": "404 - Nie znaleziono",
+  
+    "general.downloadLink": "Click to download the pdf",
+
+    "navigation.about": "O nas",
+    "navigation.offer": "Oferta",
+    "navigation.contact": "Kontakt",
+    "navigation.implementation": "Realizacja",
+    "navigation.polish": "Polski",
+    "navigation.english": "Angielski",
+  
+    "mainPage.header": "Zbiorniki i konstrukcje stalowe",
+    "mainPage.descrition": "Mechaniczne oczyszczanie wody ze związków żelaza, manganu i drobnych zanieczyszczeń.",
+  
+    "aboutPage.title": "O nas",
+    "aboutPage.p1": "Local Tank to firma oferująca rozwiązania dla przemysłu w zakresie zbiorników i konstrukcji stalowych. Naszą eksperckość zawdzięczamy wieloletniemu doświadczeniu naszych pracowników. Dostarczamy rozwiązania standardowe jaki i szyte na miarę indywidualnych potrzeb naszych Klientów. Doradzamy i projektujemy dla nich najlepsze rozwiązania.",
+    "aboutPage.p2": "Posiadamy zdolności do produkcji typowych konstrukcji stalowych (hale, podesty, pomosty) jak i typowych zbiorników magazynowych , procesowych i ciśnieniowych. Wykonujemy wszystkie możliwe zbiorniki i konstrukcje ze stali czarnej o różnej klasie jakości. Natomiast dzięki wieloletniej współpracy z innymi dostawcami, możemy przedstawić pełną ofertę na produkty ze stali nierdzewnej i tworzyw sztucznych (PP, PE, GRP). Wykonujemy urządzenia proste zarówno o wadze 100 kg jak i bardzo złożone nawet do 80 ton.",
+    "aboutPage.p3": "Duże doświadczenie naszego zespołu projektowego i wykonawczego, infrastruktura techniczna oraz wewnętrzny system jakości pozwala nam sprostać wysokim wymaganiom współczesnego rynku.",
+    "aboutPage.button": "Oferta",
+    "aboutPage.button2": "Napisz",
+  
+    "cardsPage.title": "Co nas wyróżnia",
+    "cardsPage.card1": "Kompleksowa oferta",
+    "cardsPage.card2": "Rozwiązania dopasowane do indywidualnych potrzeb klienta",
+    "cardsPage.card3": "Zrównoważony wzrost",
+  
+    "offer.title": "Oferta",
+    "offer.zbiornikiMagazynowe": "Zbiorniki Magazynowe",
+    "offer.zbiornikiCiśnieniowe": "Zbiorniki Ciśnieniowe",
+      "offer.filtryCiśnieniowe": "- Filtry Ciśnieniowe",
+      "offer.mieszaczeWodnoPowietrzne": "- Mieszacze wodno powietrzne",
+      "offer.zbiornikiHydroforowe":  "- Zbiorniki hydroforowe",
+      "offer.wymiennikiPojemnościowe": "- Wymienniki pojemnościowe",
+      "offer.zasobnikiCiepłejWodyLubPary": "- Zasobniki ciepłej wody lub pary",
+      "offer.odgazowywaczeTermiczne": "- Odgazowywacze termiczne",
+    "offer.zbiornikiProcesowe": "Zbiorniki procesowe", 
+    "offer.zbiornikiNaZamówienie":"Zbiorniki na zamówienie",
+    "offer.konstrukcjeStalowe": "Konstrukcje Stalowe",
+    "offer.InstalacjeProcesowe": "Instalacje procesowe",
+  
+    "product.textDirective": "Pojemnościowe wymienniki ciepła WP 6/6 produkujemy zgodnie z dyrektywą 2014/68/UE.",
+    "product.pipeDescription": "OPIS KRÓĆCÓW:",
+    "product.downloadText": "Kliknij aby pobrac oferte produktu",
+  
+  
+    "contactPage.title": "Kontakt",
+    "contactPage.p1": "Zapraszamy do kontaku",
+    "contactPage.p2": "",
+    "contactPage.p3": "",
+    "contactPage.button": "Napisz meila"
+  
 }
