@@ -1,1 +1,0 @@
-# lokalTank-gatsby
