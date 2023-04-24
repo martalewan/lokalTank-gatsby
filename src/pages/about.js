@@ -7,6 +7,7 @@ import SEO from '../components/common/SEO'
 import Header from '../components/theme/Header'
 import Footer from '../components/theme/Footer'
 import Nav from '../components/theme/Nav'
+import AboutSection from '../components/sections/AboutSection'
 
 const AboutPage = () => (
 	<Layout>
@@ -14,6 +15,7 @@ const AboutPage = () => (
 			<SEO title="about" />
 			{/* <Header /> */}
 			<Nav />
+			{/* <AboutSection /> */}
 
 			<Welcome as={Container}>
 				<h2>
