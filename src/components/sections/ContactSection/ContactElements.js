@@ -2,9 +2,9 @@ import styled from 'styled-components'
 import { Link as LinkScroll } from 'react-scroll'
 import { colors } from '../../../colors'
 
-export const AboutContainer = styled.div`
-    color: ${(colors.lightGray)};
-    background: ${({ lightBg }) => (lightBg ? colors.white : colors.darkGray)};
+export const ContactContainer = styled.div`
+    color: ${(colors.white)};
+    background: ${({ lightBg }) => (lightBg ? colors.lightGray : colors.darkGray)};
     box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
     padding: 0 10%;
 
@@ -13,7 +13,7 @@ export const AboutContainer = styled.div`
     };
 `
 
-export const AboutWrapper = styled.div`
+export const ContactWrapper = styled.div`
     z-index: 1;
     height: ${({ elementHeight }) => (elementHeight)};
     width: 100%;
@@ -22,7 +22,7 @@ export const AboutWrapper = styled.div`
     align-content: center;
 `
 
-export const AboutRow = styled.div`
+export const ContactRow = styled.div`
     display: grid;
     width:100%;
     grid-gap: 30px;
@@ -49,7 +49,6 @@ export const Column1 = styled.div`
         width: 100%;
         flex-direction: column;
         align-items: start;
-
     }
 `
 
@@ -65,9 +64,9 @@ export const TextWrapper = styled.div`
     padding-top: 0;
 `
 
-export const Heading = styled.h2`
+export const Heading = styled.h1`
     margin-bottom: 24px;
-    font-size: 2rem;
+    font-size: 42px;
     line-height: 36px;
     font-weight: 600;
     color: ${({ lightText }) => (lightText ? colors.white : colors.darkGray)};
@@ -80,13 +79,13 @@ export const Heading = styled.h2`
 export const Text = styled.p`
     max-width: 800px;
     margin-bottom: 35px;
-    font-size: 15px;
-    line-height: 20px;
+    font-size: 16px;
+    line-height: 24px;
     color: ${({ lightText }) => (lightText ? colors.white : colors.darkGray)};
 
     @media screen and (max-width: 480px) {
-        font-size: 15px;
-        line-height: 20px;
+        font-size: 14px;
+        line-height: 18px;
     };
 `
 
@@ -108,7 +107,6 @@ export const Img = styled.img`
     width: 100%;
     margin: 0 0 10px 0;
     padding-right: 0;
-    opacity: .3;
 `
 export const ImgLeft = styled.img`
     width: 300px;
@@ -135,14 +133,14 @@ export const LinksWrapper = styled.div`
 export const OfferLink = styled(LinkScroll)`
     color: ${(colors.darkGray)};
     background: ${(colors.white)};
+
     text-decoration: none;
     margin: 0.3rem 0;
-    font-size: 15px;
+    font-size: 14px;
     cursor: pointer;
-    padding: 7px;
-    box-shadow: 15px 15px 30px #bebebe,
-             -15px -15px 30px #ffffff;
-             
+    padding: 6px;
+
+
     &:hover {
         color: ${(colors.darkBlue)};
         transform: scale(1.01);
@@ -150,3 +148,71 @@ export const OfferLink = styled(LinkScroll)`
         cursor: pointer;
     }
 `
+
+
+// Styles
+export const StyledContactForm = styled.div`
+  width: 400px;
+  form {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    font-size: 16px;
+    color: ${(colors.darkGray)};
+
+    input {
+      width: 100%;
+      height: 35px;
+      padding: 7px;
+      outline: none;
+      border-radius: 5px;
+      border: 1px solid rgb(220, 220, 220);
+      &:focus {
+        border: 2px solid;
+        border-color: ${(colors.blue)}
+      }
+    }
+    textarea {
+      max-width: 100%;
+      min-width: 100%;
+      width: 100%;
+      max-height: 100px;
+      min-height: 100px;
+      padding: 7px;
+      outline: none;
+      border-radius: 5px;
+      border: 1px solid rgb(220, 220, 220);
+
+
+      &:focus {
+        border: 2px solid;
+        border-color: ${(colors.blue)}
+      }
+    }
+    label {
+      margin-top: 1rem;
+    }
+    input[type="submit"] {
+      margin-top: 2rem;
+    border-radius: 8px;
+    background: ${(colors.blue)};
+    white-space: nowrap;
+    color: ${({ dark }) => (dark ? '#010606' : colors.white)};
+    font-size: ${({ fontBig }) => (fontBig ? '20px' : '16px')};
+    outline: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    margin-right: 10px;
+
+    &:hover {
+        transition: all 0.2s ease-in-out;
+        background: ${(colors.darkBlue)};
+    }
+    }
+  }
+`;

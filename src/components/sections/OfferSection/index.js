@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Modal } from 'react-bootstrap';
-import { FormattedMessage } from 'react-intl'
+import { FormattedMessage } from 'react-intl';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Document, Page, pdfjs } from 'react-pdf';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
@@ -38,7 +38,6 @@ const OfferSection = () => {
 		setNumPages(numPages);
 	}
 
-	// new function to toggle the visibility of the secondary links
 	function toggleSecondaryLinks() {
 		setShowSecondaryLinks(!showSecondaryLinks);
 	}
@@ -66,13 +65,16 @@ const OfferSection = () => {
 							</Heading>
 
 							<PDFModal show={show} onHide={handleClose} size="lg">
-								<Modal.Header>
-									<FontAwesomeIcon
-										icon={faTimes}
-										className="close"
-										onClick={handleClose}
-									/>
-								</Modal.Header>
+								{numPages > 0 ? (
+									<Modal.Header>
+										<FontAwesomeIcon
+											icon={faTimes}
+											className="close"
+											onClick={handleClose}
+										/>
+									</Modal.Header>
+								) : null}
+
 								<Modal.Body>
 									<Document
 										file={lokalTank6_16}
@@ -82,18 +84,22 @@ const OfferSection = () => {
 									</Document>
 								</Modal.Body>
 
-								<Modal.Footer>
-									<PageBtn onClick={handlePrevPage} disabled={pageNumber === 1}>
-                    Previous
-									</PageBtn>
+								{numPages > 0 ? (
+									<Modal.Footer>
+										<PageBtn onClick={handlePrevPage} disabled={pageNumber === 1}>
+													Previous
+										</PageBtn>
 
-									<PageBtn
-										onClick={handleNextPage}
-										disabled={pageNumber === numPages}
-									>
-                    Next
-									</PageBtn>
-								</Modal.Footer>
+										<PageBtn
+											onClick={handleNextPage}
+											disabled={pageNumber === numPages}
+										>
+													Next
+										</PageBtn>
+									</Modal.Footer>
+								) : null}
+
+
 							</PDFModal>
 
 							<LinksWrapper>
@@ -146,7 +152,7 @@ const OfferSection = () => {
 								</OfferBtn>
 
 								<OfferBtn offset={-80} to="product4" smooth duration={500}>
-									<FormattedMessage id="offer.InstalacjeProcesowe" />
+									<FormattedMessage id="offer.instalacjeProcesowe" />
 								</OfferBtn>
 							</LinksWrapper>
 						</TextWrapper>

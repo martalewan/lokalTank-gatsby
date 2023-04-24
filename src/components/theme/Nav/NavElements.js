@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { Link as LinkScroll } from 'react-scroll'
 import { Link } from '@reach/router';
+import { FaCaretDown } from 'react-icons/fa'
 import { colors } from '../../../colors'
 
 export const Navbar = styled.nav`
@@ -93,7 +94,7 @@ export const Img = styled.img`
     margin-top: 4px;
 `
 
-export const NavLinkLang = styled.a`
+export const NavLinkBtn = styled.button`
     color: ${(colors.white)};
     display: flex;
     align-items: center;
@@ -101,29 +102,44 @@ export const NavLinkLang = styled.a`
     padding: 0 1rem;
     height: 100%;
     cursor: pointer;
+    background: none;
+    border: none;
 `;
+
+export const LanguageItem = styled.button`
+    align-items: center;
+    justify-content: center;
+    font-size: .8rem;
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+    text-decoration: none;
+    color: ${(colors.white)};
+    width: 100%;
+    border: 2px solid white;
+    margin: 0 0;
+    color: black;
+    padding-left: 5px;
+    text-align: left;
+
+    &:hover {
+        color: ${(colors.mediumBlue)};
+        transition: 0.2 ease-in-out;
+        cursor: pointer;
+        background: ${(colors.white)};
+    }
+`
+
 
 export const LanguagesContainer = styled.div`
     position: absolute;
-    right: 10.5%;
+    right: 10%;
     top: 52px;
     border-radius: 1px;
     display: ${({ isOpen }) => (isOpen ? 'block' : 'none')};
+    width: 80px;
 
     @media screen and (max-width: 768px) {
         right: 1.8rem;
-    }
-`;
-
-export const LanguageWrapper = styled.div`
-    width: 70px;
-    background: ${(colors.white)};
-    padding: 4px;
-    opacity: 0.95;
-    border-radius: 1px;
-
-    &:hover {
-        background-color: lightgrey;
     }
 `;
 
@@ -134,4 +150,9 @@ export const LngLink = styled(Link)`
     font-size: .9rem;
     text-decoration: none;
     color: ${(colors.darkGray)};
+`;
+
+export const StyledIcon = styled(FaCaretDown)`
+    margin-left: 4px;
+    pointer-events: none;
 `;

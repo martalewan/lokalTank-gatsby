@@ -29,13 +29,24 @@ const AboutSection = () => {
 							</Heading>
 							<Text darkText={false}>
 								<FormattedMessage id="aboutPage.p1" />
-
 								<br />
 								<br />
 								<FormattedMessage id="aboutPage.p2" />
 								<br />
 								<br />
 								<FormattedMessage id="aboutPage.p3" />
+								<br />
+								<br />
+								<FormattedMessage id="aboutPage.p4" />
+								<br />
+								<br />
+								<FormattedMessage id="aboutPage.p5" />
+								<br />
+								<br />
+								<FormattedMessage id="aboutPage.p6" />
+								<br />
+								<br />
+
 							</Text>
 
 							<BtnWrap>

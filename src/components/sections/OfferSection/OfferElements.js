@@ -109,13 +109,13 @@ export const Heading = styled.h2`
 export const Text = styled.p`
     max-width: 800px;
     margin-bottom: 35px;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 14px;
+    line-height: 20px;
     color: ${({ lightText }) => (lightText ? colors.white : colors.darkGray)};
 
     @media screen and (max-width: 480px) {
         font-size: 14px;
-        line-height: 18px;
+        line-height: 20px;
     };
 `
 

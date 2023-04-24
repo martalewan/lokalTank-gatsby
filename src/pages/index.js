@@ -1,40 +1,43 @@
-import React from 'react'
-import styled from 'styled-components'
-import { FormattedMessage } from 'react-intl'
+import React, { useState } from 'react'
 import Layout from '../components/common/Layout'
-import Container from '../components/common/Container'
 import SEO from '../components/common/SEO'
 // import Header from '../components/theme/Header'
 import Footer from '../components/theme/Footer'
 import Nav from '../components/theme/Nav'
+import Sidebar from '../components/theme/Sidebar'
 import AboutSection from '../components/sections/AboutSection'
 import MainSection from '../components/sections/MainSection'
 import OfferSection from '../components/sections/OfferSection'
+import CardsSection from '../components/sections/CardsSection'
+import ContactSection from '../components/sections/ContactSection'
 
-const IndexPage = () => (
-	<Layout>
-		<React.Fragment>
-			<SEO title="welcome" />
-			{/* <Header /> */}
-			<Nav />
+const IndexPage = () => {
+	const [isOpen, setIsOpen] = useState(false)
 
-			<MainSection />
-			<AboutSection />
-			<OfferSection />
+	const toggle = (event) => {
+		if (event.target.tagName !== 'BUTTON') {
+			setIsOpen(!isOpen)
+		}
+	}
 
-			<Welcome as={Container}>
-				<h2>
-					<FormattedMessage id="welcome" />
-				</h2>
-			</Welcome>
-			<Footer />
+	return (
+		<Layout>
+			<React.Fragment>
+				<SEO title="welcome" />
+				{/* <Header /> */}
+				<Nav toggle={toggle} />
+				<Sidebar isOpen={isOpen} toggle={toggle} />
 
-		</React.Fragment>
-	</Layout>
-)
+				<MainSection />
+				<AboutSection />
+				<CardsSection />
+				<OfferSection />
+				<ContactSection />
 
-const Welcome = styled.div`
-	padding: 2rem 0;
-`
+				<Footer />
+			</React.Fragment>
+		</Layout>
+	)
+}
 
 export default IndexPage

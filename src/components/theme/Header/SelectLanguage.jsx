@@ -5,7 +5,7 @@ const SelectLanguage = ({ toggleLanguage, lang }) => (
 		<option value="en">English</option>
 		<option value="pl">Polski</option>
 		<option value="de">Deutsch</option>
-		<option value="ua">Ukraina</option>
+		<option value="uk">Ukraina</option>
 	</select>
 )
 

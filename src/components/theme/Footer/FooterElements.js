@@ -9,7 +9,7 @@ export const FooterContainer = styled.footer`
 ;
 `
 export const FooterWrapper = styled.div`
-    padding: 48px 24px;
+    padding: 28px 24px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -53,13 +53,11 @@ export const FooterLinkItems = styled.div`
 
 export const FooterLinkTitle = styled.div`
     font-size: 14px;
-    margin-bottom: 0.3rem;
 `
 
 export const FooterLink = styled(Link)`
     color: ${(colors.white)};
     text-decoration: none;
-    margin-bottom: 0.3rem;
     font-size: 14px;
 
     &:hover {
@@ -71,7 +69,6 @@ export const FooterLink = styled(Link)`
 export const FooterLinksPage = styled(reactLink)`
     color: ${(colors.white)};
     text-decoration: none;
-    margin-bottom: 0.3rem;
     font-size: 14px;
 
     &:hover {

@@ -61,7 +61,7 @@ export const BtnWrap = styled.div`
 
 export const MainP = styled.p`
     color: ${(colors.white)};
-    font-size: 16px;
+    font-size: 14px;
     text-align: left;
     z-index: 3;
     position: absolute;

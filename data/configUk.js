@@ -1,6 +1,6 @@
 module.exports = {
 	title: 'غاتسبي',
-	legalName: 'Lokal Tanl',
+	legalName: 'Lokal Tank',
 	description: 'بداية غاتسبي مع ترجمة والكثير من الميزات الرائعة الأخرى',
 	address: {
 		city: 'الرشيدية',

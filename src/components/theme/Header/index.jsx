@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import { FormattedMessage } from 'react-intl'
-import SelectLanguage from './SelectLanguage'
+import SelectLanguage from './../../common/Select/SelectLanguage'
 import Container from '../../common/Container'
 import { Navbar, Links, StyledHeader, Logo } from './styles'
 import { useI18n } from '../../../providers/LanguageProvider'

@@ -24,7 +24,7 @@ module.exports = {
 	address: {
 		city: 'Errachidia',
 		region: 'Drâa-Tafilalet',
-		country: 'Morocco',
+		country: 'Warsaw',
 		zipCode: '52000'
 	},
 	contact: {

@@ -1,13 +1,45 @@
 /* eslint-disable no-undef */
-import React, { useEffect, useState } from 'react'
-import { FaBars } from 'react-icons/fa'
-import { FormattedMessage } from 'react-intl'
-import { Navbar, NavbarContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLinks, Img, NavLinkLang, LanguagesContainer, LanguageWrapper, LngLink } from './NavElements'
+import React, { useEffect, useState } from 'react';
+import { FaBars, FaCaretDown } from 'react-icons/fa';
+import { FormattedMessage } from 'react-intl';
+import { useI18n } from '../../../providers/LanguageProvider';
+import {
+	Navbar,
+	NavbarContainer,
+	NavLogo,
+	MobileIcon,
+	NavMenu,
+	NavItem,
+	NavLinks,
+	Img,
+	NavLinkBtn,
+	LanguagesContainer,
+	LanguageItem,
+	StyledIcon,
+} from './NavElements';
 import LokalTWhite from '../../../images/LTlogo-main.svg';
 
 const Nav = ({ toggle }) => {
 	const [scrollNav, setScrollNav] = useState(false);
 	const [isOpen, setIsOpen] = useState(false);
+
+	const { lang, handleLanguage } = useI18n();
+
+	const getLanguageName = (code) => {
+		switch (code) {
+		case 'en':
+			return 'ENG';
+		case 'pl':
+			return 'POL';
+		case 'de':
+			return 'DEU';
+		case 'uk':
+			return 'UKR';
+		default:
+			return '';
+		}
+	};
+	const langName = getLanguageName(lang);
 
 	const changeNav = () => {
 		if (window.scrollY >= 80) {
@@ -15,38 +47,35 @@ const Nav = ({ toggle }) => {
 		} else {
 			setScrollNav(false);
 		}
-	}
+	};
 
 	// Close the dropdown menu if the user clicks outside of it
 	// eslint-disable-next-line func-names
 	window.onclick = function (event) {
-		if (!(event.target).matches('.langBtn') && !(event.target).matches('.lang-dropdown')) {
-			setIsOpen(false)
+		if (
+			!event.target.matches('.langBtn')
+      && !event.target.matches('.lang-dropdown')
+		) {
+			setIsOpen(false);
 		}
-	}
+	};
 
 	const toggleLangDrop = () => {
 		if (isOpen === true) {
-			setIsOpen(false)
+			setIsOpen(false);
 		} else {
-			setIsOpen(true)
+			setIsOpen(true);
 		}
-	}
+	};
 
 	useEffect(() => {
-		window.addEventListener('scroll', changeNav)
-	})
+		window.addEventListener('scroll', changeNav);
+	});
 
 	return (
 		<Navbar scrollNav={scrollNav}>
 			<NavbarContainer>
-				<NavLogo
-					to="home"
-					smooth
-					duration={500}
-					spy
-					offset={-80}
-				>
+				<NavLogo to="home" smooth duration={500} spy offset={-80}>
 					<Img src={LokalTWhite} alt="Lokal Tank logo" />
 				</NavLogo>
 				<MobileIcon onClick={toggle}>
@@ -55,77 +84,59 @@ const Nav = ({ toggle }) => {
 
 				<NavMenu>
 					<NavItem>
-						<NavLinks
-							to="onas"
-							smooth
-							duration={500}
-							spy
-							offset={-80}
-						>
+						<NavLinks to="onas" smooth duration={500} spy offset={-80}>
 							<FormattedMessage id="navigation.about" />
 						</NavLinks>
 					</NavItem>
 					<NavItem>
-						<NavLinks
-							to="oferta"
-							smooth
-							duration={500}
-							spy
-							offset={-80}
-						>
+						<NavLinks to="oferta" smooth duration={500} spy offset={-80}>
 							<FormattedMessage id="navigation.offer" />
-
 						</NavLinks>
 					</NavItem>
 
 					<NavItem>
-						<NavLinks
-							to="oferta"
-							smooth
-							duration={500}
-							spy
-							offset={-80}
-						>
+						<NavLinks to="oferta" smooth duration={500} spy offset={-80}>
 							<FormattedMessage id="navigation.implementation" />
 						</NavLinks>
 					</NavItem>
 
-
 					<NavItem>
-						<NavLinks
-							to="kontakt"
-							smooth
-							duration={500}
-							spy
-							offset={-80}
-						>
+						<NavLinks to="kontakt" smooth duration={500} spy offset={-80}>
 							<FormattedMessage id="navigation.contact" />
 						</NavLinks>
 					</NavItem>
-					<NavItem>
-						<NavLinkLang
+					<div>
+						<NavLinkBtn
 							className="langBtn"
 							onClick={toggleLangDrop}
 							smooth
 							duration={500}
 							spy
 							offset={-80}
-						>En/Pl</NavLinkLang>
-					</NavItem>
+						>
+							{langName}
+							<StyledIcon />
+						</NavLinkBtn>
+					</div>
 				</NavMenu>
 
 				<LanguagesContainer id="lang-dropdown" isOpen={isOpen}>
-					{/* <LanguageWrapper>
-						// eslint-disable-next-line max-len
-						<LngLink to={getLocalizedRoute(originalPath, 'en')} language="en" className="langBtn">{t('navigation.english')}</LngLink>
-					</LanguageWrapper>
-					<LanguageWrapper>
-						<LngLink to={getLocalizedRoute(originalPath, 'pl')} language="pl" className="langBtn">{t('navigation.polish')}</LngLink>
-					</LanguageWrapper> */}
+					<LanguageItem onClick={() => handleLanguage('en')}>
+						<FormattedMessage id="navigation.english" />
+					</LanguageItem>
+					<LanguageItem onClick={() => handleLanguage('pl')}>
+						<FormattedMessage id="navigation.polish" />
+					</LanguageItem>
+					<LanguageItem onClick={() => handleLanguage('de')}>
+						<FormattedMessage id="navigation.german" />
+					</LanguageItem>
+					<LanguageItem onClick={() => handleLanguage('uk')}>
+						<FormattedMessage id="navigation.ukrainian" />
+					</LanguageItem>
 				</LanguagesContainer>
 			</NavbarContainer>
 		</Navbar>
-	)
-}
+	);
+};
 
-export default Nav
+export default Nav;
