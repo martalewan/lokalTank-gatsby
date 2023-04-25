@@ -9,13 +9,15 @@ export const FooterContainer = styled.footer`
 ;
 `
 export const FooterWrapper = styled.div`
-    padding: 28px 24px;
+    padding: 20px 24px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     max-width: 1100px;
     margin: 0 auto;
+    width: 500px;
+
 `
 export const FooterLinksContainer = styled.div`
     display: flex;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { FormattedMessage } from 'react-intl'
+import { FormattedMessage } from 'react-intl';
 import {
 	FooterContainer,
 	FooterWrapper,
@@ -31,11 +31,11 @@ const Footer = () => {
 
 					<FooterLinksWrapper>
 						<FooterLinkItems>
-							<FooterLinkTitle>lokaltank@gmail.com</FooterLinkTitle>
+							<FooterLinkTitle to="home">NIP 6272782103</FooterLinkTitle>
+							<FooterLinkTitle to="home">
+                biuro@lokaltank.pl
+							</FooterLinkTitle>{' '}
 							<FooterLinkTitle>-</FooterLinkTitle>
-							{/* <FooterLink onClick="location.href='https://www.linkedin.com/feed/">
-                Linkedin
-							</FooterLink> */}
 							<FooterLinksPage to="onas">
 								<FormattedMessage id="navigation.about" />
 							</FooterLinksPage>

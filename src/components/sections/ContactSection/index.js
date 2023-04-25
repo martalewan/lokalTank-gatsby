@@ -1,7 +1,6 @@
 import React, { useRef } from 'react';
-import { FormattedMessage } from 'react-intl';
+// import { FormattedMessage } from 'react-intl';
 import emailjs from '@emailjs/browser';
-import glassImg from '../../../images/glassImg.jpg';
 import waves from '../../../images/waves.svg';
 
 import {
@@ -12,7 +11,8 @@ import {
 	Column2,
 	ImgWrap,
 	Img,
-	StyledContactForm
+	StyledContactForm,
+	ContactH2
 } from './ContactElements';
 
 const ContactSection = () => {
@@ -45,13 +45,36 @@ const ContactSection = () => {
 				<ContactRow imgStart={false}>
 					<Column1>
 						<StyledContactForm>
+							<ContactH2>Formularz kontaktowy: </ContactH2>
+
 							<form ref={form} onSubmit={sendEmail}>
-								<label>Name</label>
-								<input type="text" name="user_name" />
-								<label>Email</label>
-								<input type="email" name="user_email" />
-								<label>Message</label>
-								<textarea name="message" />
+
+								<label>
+									<span className="required">* </span>
+                Temat</label>
+								<input type="text" name="user_topic" />
+
+								<label>
+									<span className="required">* </span>
+                Message
+								</label>
+								<textarea name="message" required />
+
+								<label>
+									<span className="required">* </span>
+                Imię i nazwisko/ Nazwa firmy
+								</label>
+								<input type="text" name="user_name" required />
+
+								<label>Telefon kontaktowy</label>
+								<input type="text" name="user_number" />
+
+								<label>
+									<span className="required">* </span>
+                    Adres email
+								</label>
+								<input type="text" name="user_email" required />
+
 								<input type="submit" value="Send" />
 							</form>
 						</StyledContactForm>

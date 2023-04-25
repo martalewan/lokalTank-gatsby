@@ -10,6 +10,10 @@ export const ServicesCointeiner = styled.div`
     background: ${(colors.lightGray)};
     box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
 
+    @media screen and (max-width: 1000px) {
+        height: 630px;
+    }
+
     @media screen and (max-width: 768px) {
         height: 1100px;
     }
