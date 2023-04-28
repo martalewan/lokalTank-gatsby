@@ -59,5 +59,8 @@
     "contactPage.message": "Message",
     "contactPage.nameAndCompany": "Imię i nazwisko/ Nazwa firmy",
     "contactPage.phoneNumber": "Telefon kontaktowy",
-    "contactPage.emailAdress": "Adres email"
+    "contactPage.emailAdress": "Adres email",
+    "contactPage.successMessage": "Your message has been sent!",
+    "contactPage.errorMessage": "Something went wrong. Please try again later."
+
 }

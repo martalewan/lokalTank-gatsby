@@ -57,6 +57,11 @@ const Sidebar = ({ isOpen, toggle }) => {
 					<SidebarLink to="oferta" onClick={toggle}>
 						<FormattedMessage id="navigation.offer" />
 					</SidebarLink>
+
+					<SidebarLink to="galeria" onClick={toggle}>
+						<FormattedMessage id="navigation.implementation" />
+					</SidebarLink>
+
 					<SidebarLink to="kontakt" onClick={toggle}>
 						<FormattedMessage id="navigation.contact" />
 					</SidebarLink>

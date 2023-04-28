@@ -95,7 +95,7 @@ const Nav = ({ toggle }) => {
 					</NavItem>
 
 					<NavItem>
-						<NavLinks to="oferta" smooth duration={500} spy offset={-80}>
+						<NavLinks to="galeria" smooth duration={500} spy offset={-80}>
 							<FormattedMessage id="navigation.implementation" />
 						</NavLinks>
 					</NavItem>

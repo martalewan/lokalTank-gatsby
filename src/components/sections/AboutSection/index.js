@@ -64,7 +64,7 @@ const AboutSection = () => {
 								</Button>
 
 								<Button
-									to="contact"
+									to="kontakt"
 									smooth
 									duration={500}
 									spy

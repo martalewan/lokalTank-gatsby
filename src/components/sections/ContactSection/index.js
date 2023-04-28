@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
+import { FormattedMessage } from 'react-intl'
 import waves from '../../../images/waves.svg';
 
 import {
@@ -39,13 +40,13 @@ const ContactSection = () => {
 			.then(
 				(response) => {
 					console.log('SUCCESS!', response.status, response.text);
-					setSuccessMessage('Your message has been sent!');
+					setSuccessMessage('success');
 					setErrorMessage('');
 				},
 				(error) => {
 					console.log('FAILED...', error);
 					setSuccessMessage('');
-					setErrorMessage('Something went wrong. Please try again later.');
+					setErrorMessage('error');
 				}
 			);
 
@@ -64,13 +65,17 @@ const ContactSection = () => {
 				<ContactRow imgStart={false}>
 					<Column1>
 						<StyledContactForm>
-							<ContactH2>Formularz kontaktowy: </ContactH2>
+							<ContactH2>
+								<FormattedMessage id="contactPage.contactForm" />
+							</ContactH2>
 
 							<form onSubmit={sendEmail}>
 								<label htmlFor="user_topic">
-                  Topic: <span className="required">* </span>
+									<FormattedMessage id="contactPage.topic" />
+				  <span className="required"> *</span>
 								</label>
 								<input
+									required
 									type="text"
 									name="user_topic"
 									id="user_topic"
@@ -80,9 +85,11 @@ const ContactSection = () => {
 								/>
 
 								<label htmlFor="message">
-                  Message: <span className="required">* </span>
+									<FormattedMessage id="contactPage.message" />
+				  <span className="required"> *</span>
 								</label>
 								<textarea
+									required
 									name="message"
 									id="message"
 									value={formData.message}
@@ -91,10 +98,11 @@ const ContactSection = () => {
 								/>
 
 								<label htmlFor="user_name">
-                  Imię i nazwisko/ Nazwa firmy:{' '}
-									<span className="required">* </span>
+									<FormattedMessage id="contactPage.nameAndCompany" />
+									<span className="required"> *</span>
 								</label>
 								<input
+									requireds
 									type="text"
 									name="user_name"
 									id="user_name"
@@ -104,7 +112,7 @@ const ContactSection = () => {
 								/>
 
 								<label htmlFor="user_number">
-                  Number: <span className="required">* </span>
+									<FormattedMessage id="contactPage.phoneNumber" />
 								</label>
 								<input
 									type="text"
@@ -116,9 +124,11 @@ const ContactSection = () => {
 								/>
 
 								<label htmlFor="user_email">
-                  Email: <span className="required">* </span>
+									<FormattedMessage id="contactPage.emailAdress" />
+									<span className="required"> *</span>
 								</label>
 								<input
+									required
 									type="text"
 									name="user_email"
 									id="user_email"
@@ -131,9 +141,15 @@ const ContactSection = () => {
 							</form>
 
 							{successMessage && (
-								<p style={{ color: 'green' }}>{successMessage}</p>
+								<p style={{ color: 'green' }}>
+									<FormattedMessage id="contactPage.successMessage" />
+								</p>
 							)}
-							{errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
+							{errorMessage && (
+								<p style={{ color: 'red' }}>
+									<FormattedMessage id="contactPage.errorMessage" />
+								</p>
+							)}
 						</StyledContactForm>
 					</Column1>
 					<Column2>
