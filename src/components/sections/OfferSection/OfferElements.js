@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { Modal } from 'react-bootstrap';
+import { FaCaretDown } from 'react-icons/fa'
 import { colors } from '../../../colors'
 import { Button } from '../ButtonElement'
 
@@ -172,6 +173,9 @@ export const OfferBtn = styled.button`
     padding: 6px;
     text-align: left;
     border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
     &:hover {
         color: ${(colors.darkBlue)};
@@ -252,4 +256,10 @@ export const PDFModal = styled(Modal)`
     width: 537px !important;
     height: auto !important;
   }
+`;
+
+
+export const StyledIcon = styled(FaCaretDown)`
+    margin-left: 4px;
+    pointer-events: none;
 `;

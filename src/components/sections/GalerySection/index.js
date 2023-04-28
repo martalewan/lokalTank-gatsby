@@ -4,42 +4,51 @@ import {
 	ServicesCointeiner,
 	ServicesH2,
 	ServicesWrapper,
-	ServicesCard,
-	ServicesIcon,
-	ServicesP
+	ImplementationBtn,
+	ImgLeft
 } from './GaleryElements'
-import tank from '../../../images/tank.svg'
-import location from '../../../images/location.svg'
-import progress from '../../../images/progress.svg'
+import glassImg from '../../../images/glassImg.jpg'
+
 
 const GalerySection = () => {
 	return (
 		<ServicesCointeiner id="galeria">
 			<ServicesH2>
-				<FormattedMessage id="cardsPage.title" />
+				<FormattedMessage id="galeryPage.title" />
 			</ServicesH2>
+			<div>
+				<ImplementationBtn>
+					<FormattedMessage id="galeryPage.subtitle1" />
+				</ImplementationBtn>
+
+				<ImplementationBtn>
+					<FormattedMessage id="galeryPage.subtitle2" />
+				</ImplementationBtn>
+
+				<ImplementationBtn>
+					<FormattedMessage id="galeryPage.subtitle3" />
+				</ImplementationBtn>
+
+
+				<ImplementationBtn>
+					<FormattedMessage id="galeryPage.subtitle4" />
+				</ImplementationBtn>
+
+				<ImplementationBtn>
+					<FormattedMessage id="galeryPage.subtitle5" />
+				</ImplementationBtn>
+
+				<ImplementationBtn>
+					<FormattedMessage id="galeryPage.subtitle6" />
+				</ImplementationBtn>
+
+				<ImplementationBtn>
+					<FormattedMessage id="galeryPage.subtitle7" />
+				</ImplementationBtn>
+			</div>
+
 			<ServicesWrapper>
-
-				<ServicesCard>
-					<ServicesIcon src={tank} />
-					<ServicesP>
-						<FormattedMessage id="cardsPage.card1" />
-					</ServicesP>
-				</ServicesCard>
-
-				<ServicesCard>
-					<ServicesIcon src={location} />
-					<ServicesP>
-						<FormattedMessage id="cardsPage.card2" />
-					</ServicesP>
-				</ServicesCard>
-
-				<ServicesCard>
-					<ServicesIcon src={progress} />
-					<ServicesP>
-						<FormattedMessage id="cardsPage.card3" />
-					</ServicesP>
-				</ServicesCard>
+				<ImgLeft src={glassImg} alt="Desc" />
 			</ServicesWrapper>
 		</ServicesCointeiner>
 	)

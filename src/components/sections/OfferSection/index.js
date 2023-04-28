@@ -20,6 +20,7 @@ import {
 	OfferBtnSecondaryWrapper,
 	OfferBtnSecondary,
 	PageBtn,
+	StyledIcon
 } from './OfferElements';
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/legacy/build/pdf.worker.min.js`;
@@ -109,6 +110,8 @@ const OfferSection = () => {
 
 								<OfferBtn onClick={toggleSecondaryLinks}>
 									<FormattedMessage id="offer.zbiornikiCiśnieniowe" />
+									<StyledIcon />
+
 								</OfferBtn>
 
 								{showSecondaryLinks && (

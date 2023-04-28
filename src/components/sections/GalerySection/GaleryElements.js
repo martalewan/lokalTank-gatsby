@@ -5,10 +5,15 @@ export const ServicesCointeiner = styled.div`
     height: 500px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: ${(colors.lightGray)};
-    box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+    justify-content: start;
+    align-items: start;
+    background: ${(colors.white)};
+
+    padding: 0 10%;
+
+@media screen and (max-width: 768px) {
+    padding: 0 1.8rem;     
+};
 
     @media screen and (max-width: 1000px) {
         height: 630px;
@@ -25,21 +30,12 @@ export const ServicesCointeiner = styled.div`
 
 export const ServicesWrapper = styled.div`
      max-width: 1000px;
+     width: 100%;
      margin: 0 auto;
-     display: grid;
-     grid-template-columns: 1fr 1fr 1fr;
-     align-items: center;
-     grid-gap: 18px;
-     padding: 0 50px;
-
-     @media screen and (max-width: 1000px) {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    @media screen and (max-width: 768px) {
-        grid-template-columns: 1fr;
-        padding: 0 20px;
-    }
+     display: flex;
+     align-items: start;
+     justify-content: start;
+     margin-top: 15px;
 `
 
 export const ServicesCard = styled.div`
@@ -69,21 +65,42 @@ export const ServicesIcon = styled.img`
 
 export const ServicesH2 = styled.h2`
     font-size: 2rem;
+    font-weight: 600;    
     color: ${(colors.darkGray)};
-    margin-bottom: 64px;
+    margin-bottom: 1rem;
     font-family: Arial, sans-serif;
 
     @media screen and (max-width: 480px) {
         font-size: 2rem;
     }
 `
-export const ServicesP = styled.p`
+export const ImplementationBtn = styled.button`
     font-size: .8rem;
-    text-align: center;
-    margin-top: 20px;
+    margin: 2px 2px;
+    background: none;
+    border: 1px solid blue;
     line-height: 1.1rem;
 
+    &:hover {
+        transform: scale(1.02);
+        transition: all 0.2 ease-in-out;
+        cursor: pointer;
+    }
     @media screen and (max-width: 480px) {
         font-size: 14px;
     }
+`
+
+export const ImgLeft = styled.img`
+    width: 200px;
+    margin: 0 30px 0 0;
+    padding-right: 0;
+
+    @media screen and (max-width: 480px) {
+        padding-bottom: 20px;
+    };
+
+    @media screen and (max-width: 768px) {
+        display: none;
+    };
 `

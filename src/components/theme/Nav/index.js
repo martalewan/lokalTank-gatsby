@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 import React, { useEffect, useState } from 'react';
-import { FaBars, FaCaretDown } from 'react-icons/fa';
+import { FaBars } from 'react-icons/fa';
 import { FormattedMessage } from 'react-intl';
 import { useI18n } from '../../../providers/LanguageProvider';
 import {

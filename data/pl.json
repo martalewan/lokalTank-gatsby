@@ -63,5 +63,17 @@
    "contactPage.phoneNumber": "Telefon kontaktowy",
    "contactPage.emailAdress": "Adres email",
    "contactPage.successMessage": "Your message has been sent!",
-   "contactPage.errorMessage": "Something went wrong. Please try again later."
+   "contactPage.errorMessage": "Something went wrong. Please try again later.",
+
+   "galeryPage.title": "Realizacje",
+   "galeryPage.subtitle1": "Zbiorniki podziemne",
+   "galeryPage.subtitle2": "Zbiorniki dwupłaszczowe",
+   "galeryPage.subtitle3": "Zbiorniki procesowe",
+   "galeryPage.subtitle4": "Silosy do pyłów drzewnych",
+   "galeryPage.subtitle5": "Zbiorniki ciśnieniowe",
+   "galeryPage.subtitle6": "Zbiorniki magazynowe",
+   "galeryPage.subtitle7": "Zbiorniki nierdzewne",
+   "galeryPage.subtitle8": "Zbiorniki technologiczne",
+   "galeryPage.subtitle9": "Silosy",
+   "galeryPage.subtitle10": "Zbiorniki retencyjne"
 }
