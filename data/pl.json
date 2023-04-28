@@ -54,9 +54,12 @@
   
   
     "contactPage.title": "Kontakt",
-    "contactPage.p1": "Zapraszamy do kontaku",
-    "contactPage.p2": "",
-    "contactPage.p3": "",
-    "contactPage.button": "Napisz meila"
-  
+    "contactPage.button": "Napisz meila",
+
+   "contactPage.contactForm": "Formularz kontaktowy:",
+   "contactPage.topic": "Temat",
+   "contactPage.message": "Message",
+   "contactPage.nameAndCompany": "Imię i nazwisko/ Nazwa firmy",
+   "contactPage.phoneNumber": "Telefon kontaktowy",
+   "contactPage.emailAdress": "Adres email"
 }

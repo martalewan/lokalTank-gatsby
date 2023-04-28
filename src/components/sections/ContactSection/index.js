@@ -1,5 +1,5 @@
-import React, { useRef } from 'react';
-// import { FormattedMessage } from 'react-intl';
+/* eslint-disable jsx-a11y/label-has-associated-control */
+import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import waves from '../../../images/waves.svg';
 
@@ -12,31 +12,50 @@ import {
 	ImgWrap,
 	Img,
 	StyledContactForm,
-	ContactH2
+	ContactH2,
 } from './ContactElements';
 
 const ContactSection = () => {
-	const form = useRef();
+	const [successMessage, setSuccessMessage] = useState('');
+	const [errorMessage, setErrorMessage] = useState('');
+	const [formData, setFormData] = useState({
+		user_topic: '',
+		message: '',
+		user_name: '',
+		user_number: '',
+		user_email: '',
+	});
 
 	const sendEmail = (e) => {
 		e.preventDefault();
 
 		emailjs
-			.sendForm(
-				'replace with service id',
-				'replace with template id',
-				form.current,
-				'replace with user id'
+			.send(
+				'service_ko1vxj9',
+				'template_zw1aosf',
+				formData,
+				'hKL4V3pCvAaCEoZa4'
 			)
 			.then(
-				(result) => {
-					console.log(result.text);
-					console.log('message sent');
+				(response) => {
+					console.log('SUCCESS!', response.status, response.text);
+					setSuccessMessage('Your message has been sent!');
+					setErrorMessage('');
 				},
 				(error) => {
-					console.log(error.text);
+					console.log('FAILED...', error);
+					setSuccessMessage('');
+					setErrorMessage('Something went wrong. Please try again later.');
 				}
 			);
+
+		setFormData({
+			user_topic: '',
+			message: '',
+			user_name: '',
+			user_number: '',
+			user_email: '',
+		});
 	};
 
 	return (
@@ -47,41 +66,77 @@ const ContactSection = () => {
 						<StyledContactForm>
 							<ContactH2>Formularz kontaktowy: </ContactH2>
 
-							<form ref={form} onSubmit={sendEmail}>
-
-								<label>
-									<span className="required">* </span>
-                Temat</label>
-								<input type="text" name="user_topic" />
-
-								<label>
-									<span className="required">* </span>
-                Message
+							<form onSubmit={sendEmail}>
+								<label htmlFor="user_topic">
+                  Topic: <span className="required">* </span>
 								</label>
-								<textarea name="message" required />
+								<input
+									type="text"
+									name="user_topic"
+									id="user_topic"
+									value={formData.user_topic}
+									onChange={(e) => setFormData({ ...formData, user_topic: e.target.value })
+									}
+								/>
 
-								<label>
-									<span className="required">* </span>
-                Imię i nazwisko/ Nazwa firmy
+								<label htmlFor="message">
+                  Message: <span className="required">* </span>
 								</label>
-								<input type="text" name="user_name" required />
+								<textarea
+									name="message"
+									id="message"
+									value={formData.message}
+									onChange={(e) => setFormData({ ...formData, message: e.target.value })
+									}
+								/>
 
-								<label>Telefon kontaktowy</label>
-								<input type="text" name="user_number" />
-
-								<label>
+								<label htmlFor="user_name">
+                  Imię i nazwisko/ Nazwa firmy:{' '}
 									<span className="required">* </span>
-                    Adres email
 								</label>
-								<input type="text" name="user_email" required />
+								<input
+									type="text"
+									name="user_name"
+									id="user_name"
+									value={formData.user_name}
+									onChange={(e) => setFormData({ ...formData, user_name: e.target.value })
+									}
+								/>
+
+								<label htmlFor="user_number">
+                  Number: <span className="required">* </span>
+								</label>
+								<input
+									type="text"
+									name="user_number"
+									id="user_number"
+									value={formData.user_number}
+									onChange={(e) => setFormData({ ...formData, user_number: e.target.value })
+									}
+								/>
+
+								<label htmlFor="user_email">
+                  Email: <span className="required">* </span>
+								</label>
+								<input
+									type="text"
+									name="user_email"
+									id="user_email"
+									value={formData.user_email}
+									onChange={(e) => setFormData({ ...formData, user_email: e.target.value })
+									}
+								/>
 
 								<input type="submit" value="Send" />
 							</form>
-						</StyledContactForm>
 
+							{successMessage && (
+								<p style={{ color: 'green' }}>{successMessage}</p>
+							)}
+							{errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
+						</StyledContactForm>
 					</Column1>
 					<Column2>
-
 						<ImgWrap imgSize="150px">
 							<Img src={waves} alt="Desc" />
 						</ImgWrap>

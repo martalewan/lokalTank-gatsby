@@ -53,6 +53,11 @@
     "product.downloadText": "Click to download the detailed product's offer",
   
     "contactPage.title": "Contact",
-    "contactPage.p1": "Feel free to contact us",
-    "contactPage.button": "Write an email"
+    "contactPage.button": "Write an email",
+    "contactPage.contactForm": "Formularz kontaktowy:",
+    "contactPage.topic": "Temat",
+    "contactPage.message": "Message",
+    "contactPage.nameAndCompany": "Imię i nazwisko/ Nazwa firmy",
+    "contactPage.phoneNumber": "Telefon kontaktowy",
+    "contactPage.emailAdress": "Adres email"
 }
