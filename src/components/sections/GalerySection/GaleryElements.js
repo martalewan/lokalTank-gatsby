@@ -31,7 +31,6 @@ export const ServicesCointeiner = styled.div`
 export const ServicesWrapper = styled.div`
      max-width: 1000px;
      width: 100%;
-     margin: 0 auto;
      display: flex;
      align-items: start;
      justify-content: start;

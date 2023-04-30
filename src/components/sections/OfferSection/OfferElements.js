@@ -2,9 +2,9 @@ import styled from 'styled-components'
 import { Modal } from 'react-bootstrap';
 import { FaCaretDown } from 'react-icons/fa'
 import { colors } from '../../../colors'
-import { Button } from '../ButtonElement'
+import { Button } from '../Button'
 
-export const AboutContainer = styled.div`
+export const OfferContainer = styled.div`
     color: ${(colors.white)};
     background: ${({ lightBg }) => (lightBg ? colors.white : colors.darkGray)};
     box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
@@ -23,6 +23,13 @@ export const AboutWrapper = styled.div`
     display: flex;
     flex-wrap: wrap;
     align-content: center;
+`
+
+export const ItemWrapper = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 1rem;
 `
 
 export const AboutRow = styled.div`
@@ -79,7 +86,6 @@ export const Column1 = styled.div`
         width: 100%;
         flex-direction: column;
         align-items: start;
-
     }
 `
 
@@ -176,33 +182,41 @@ export const OfferBtn = styled.button`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-weight: 550;
 
     &:hover {
         color: ${(colors.darkBlue)};
         transform: scale(1.01);
         transition: all 0.2 ease-in-out;
         cursor: pointer;
+        text-decoration: underline;
     }
 `
 
 export const OfferBtnSecondaryWrapper = styled.div`
-    background: ${(colors.lightGray)};
-    margin-top: -5px;
+
 `
 
 export const OfferBtnSecondary = styled.button`
     color: ${(colors.darkGray)};
     text-decoration: none;
-    margin: 0.3rem 0;
     width: 20rem;
     font-size: 14px;
+    background: none;
     cursor: pointer;
-    padding: 6px;
+    padding: 8px;
     display: flex;
     border: none;
+    background: ${(colors.lightGrayLt)};
+    font-weight: 550;
+
     &:hover {
         color: ${(colors.darkBlue)};
         cursor: pointer;
+        transform: scale(1.01);
+        transition: all 0.2 ease-in-out;
+        text-decoration: underline;
+
     }
 `
 
@@ -230,6 +244,7 @@ export const PDFModal = styled(Modal)`
     position: absolute;
     bottom: 5px;
     width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
 
   }
   .modal-header {

@@ -1,7 +1,7 @@
 import React from 'react'
 import { FormattedMessage } from 'react-intl'
 import { MainContainer, MainBg, ImageBg, MainH1, MainP, BtnWrap } from './MainElements'
-import { Button } from '../ButtonElement';
+import { Button } from '../Button';
 
 const Main = () => {
 	return (
@@ -20,9 +20,6 @@ const Main = () => {
 					duration={500}
 					spy
 					offset={-80}
-					primaty={1}
-					dark={false ? 1 : 0}
-					dark2={false ? 1 : 0}
 				>
 					<FormattedMessage id="navigation.offer" />
 				</Button>

@@ -5,9 +5,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Document, Page, pdfjs } from 'react-pdf';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import lokalTank6_16 from '../../../images/lokalTank6_16.pdf';
+import { Button } from '../Button'
 
 import {
-	AboutContainer,
+	OfferContainer,
 	AboutWrapper,
 	AboutRow,
 	Column1,
@@ -20,7 +21,8 @@ import {
 	OfferBtnSecondaryWrapper,
 	OfferBtnSecondary,
 	PageBtn,
-	StyledIcon
+	StyledIcon,
+	ItemWrapper
 } from './OfferElements';
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/legacy/build/pdf.worker.min.js`;
@@ -56,7 +58,7 @@ const OfferSection = () => {
 	}
 
 	return (
-		<AboutContainer lightBg id="oferta">
+		<OfferContainer lightBg id="oferta">
 			<AboutWrapper elementHeight="380px">
 				<AboutRow imgStart={false}>
 					<Column1>
@@ -72,6 +74,7 @@ const OfferSection = () => {
 											icon={faTimes}
 											className="close"
 											onClick={handleClose}
+											style={{ pointerEvent: 'none' }}
 										/>
 									</Modal.Header>
 								) : null}
@@ -104,9 +107,14 @@ const OfferSection = () => {
 							</PDFModal>
 
 							<LinksWrapper>
-								<OfferBtn onClick={handleShow}>
-									<FormattedMessage id="offer.zbiornikiMagazynowe" />
-								</OfferBtn>
+								<ItemWrapper>
+									<OfferBtn onClick={handleShow}>
+										<FormattedMessage id="offer.zbiornikiMagazynowe" />
+									</OfferBtn>
+									<Button secondary>
+										<FormattedMessage id="navigation.download" />
+									</Button>
+								</ItemWrapper>
 
 								<OfferBtn onClick={toggleSecondaryLinks}>
 									<FormattedMessage id="offer.zbiornikiCiśnieniowe" />
@@ -116,54 +124,104 @@ const OfferSection = () => {
 
 								{showSecondaryLinks && (
 									<OfferBtnSecondaryWrapper>
-										<OfferBtnSecondary offset={-80} smooth duration={500}>
-											<FormattedMessage id="offer.filtryCiśnieniowe" />
-										</OfferBtnSecondary>
 
-										<OfferBtnSecondary offset={-80} smooth duration={500}>
-											<FormattedMessage id="offer.mieszaczeWodnoPowietrzne" />
-										</OfferBtnSecondary>
-
-										<OfferBtnSecondary offset={-80} smooth duration={500}>
-											<FormattedMessage id="offer.zbiornikiHydroforowe" />
-										</OfferBtnSecondary>
-
-										<OfferBtnSecondary offset={-80} smooth duration={500}>
-											<FormattedMessage id="offer.wymiennikiPojemnościowe" />
-										</OfferBtnSecondary>
-
-										<OfferBtnSecondary offset={-80} smooth duration={500}>
-											<FormattedMessage id="offer.zasobnikiCiepłejWodyLubPary" />
-										</OfferBtnSecondary>
-
-										<OfferBtnSecondary offset={-80} smooth duration={500}>
-											<FormattedMessage id="offer.odgazowywaczeTermiczne" />
-										</OfferBtnSecondary>
+										<ItemWrapper>
+											<OfferBtnSecondary offset={-80} smooth duration={500}>
+												<FormattedMessage id="offer.filtryCiśnieniowe" />
+											</OfferBtnSecondary>
+											<Button secondary>
+												<FormattedMessage id="navigation.download" />
+											</Button>
+										</ItemWrapper>
+										<ItemWrapper>
+											<OfferBtnSecondary offset={-80} smooth duration={500}>
+												<FormattedMessage id="offer.mieszaczeWodnoPowietrzne" />
+											</OfferBtnSecondary>
+											<Button secondary>
+												<FormattedMessage id="navigation.download" />
+											</Button>
+										</ItemWrapper>
+										<ItemWrapper>
+											<OfferBtnSecondary offset={-80} smooth duration={500}>
+												<FormattedMessage id="offer.zbiornikiHydroforowe" />
+											</OfferBtnSecondary>
+											<Button secondary>
+												<FormattedMessage id="navigation.download" />
+											</Button>
+										</ItemWrapper>
+										<ItemWrapper>
+											<OfferBtnSecondary offset={-80} smooth duration={500}>
+												<FormattedMessage id="offer.wymiennikiPojemnościowe" />
+											</OfferBtnSecondary>
+											<Button secondary>
+												<FormattedMessage id="navigation.download" />
+											</Button>
+										</ItemWrapper>
+										<ItemWrapper>
+											<OfferBtnSecondary offset={-80} smooth duration={500}>
+												<FormattedMessage id="offer.zasobnikiCiepłejWodyLubPary" />
+											</OfferBtnSecondary>
+											<Button secondary>
+												<FormattedMessage id="navigation.download" />
+											</Button>
+										</ItemWrapper>
+										<ItemWrapper>
+											<OfferBtnSecondary offset={-80} smooth duration={500}>
+												<FormattedMessage id="offer.odgazowywaczeTermiczne" />
+											</OfferBtnSecondary>
+											<Button secondary>
+												<FormattedMessage id="navigation.download" />
+											</Button>
+										</ItemWrapper>
 									</OfferBtnSecondaryWrapper>
 								)}
 
-								<OfferBtn offset={-80} smooth duration={500}>
-									<FormattedMessage id="offer.zbiornikiProcesowe" />
-								</OfferBtn>
+								<ItemWrapper>
+									<OfferBtn offset={-80} smooth duration={500}>
+										<FormattedMessage id="offer.zbiornikiProcesowe" />
+									</OfferBtn>
+									<Button secondary>
+										<FormattedMessage id="navigation.download" />
+									</Button>
+								</ItemWrapper>
 
-								<OfferBtn offset={-80} to="product4" smooth duration={500}>
-									<FormattedMessage id="offer.zbiornikiProcesowe" />
-								</OfferBtn>
+								<ItemWrapper>
 
-								<OfferBtn offset={-80} to="product4" smooth duration={500}>
-									<FormattedMessage id="offer.konstrukcjeStalowe" />
-								</OfferBtn>
+									<OfferBtn offset={-80} smooth duration={500}>
+										<FormattedMessage id="offer.zbiornikiNaZamówienie" />
+									</OfferBtn>
+									<Button secondary>
+										<FormattedMessage id="navigation.download" />
+									</Button>
+								</ItemWrapper>
 
-								<OfferBtn offset={-80} to="product4" smooth duration={500}>
-									<FormattedMessage id="offer.instalacjeProcesowe" />
-								</OfferBtn>
+								<ItemWrapper>
+
+									<OfferBtn offset={-80} to="product4" smooth duration={500}>
+										<FormattedMessage id="offer.konstrukcjeStalowe" />
+									</OfferBtn>
+									<Button secondary>
+										<FormattedMessage id="navigation.download" />
+									</Button>
+								</ItemWrapper>
+
+								<ItemWrapper>
+									<OfferBtn offset={-80} to="product4" smooth duration={500}>
+										<FormattedMessage id="offer.instalacjeProcesowe" />
+									</OfferBtn>
+									<Button secondary>
+										<FormattedMessage id="navigation.download" />
+									</Button>
+								</ItemWrapper>
+
+
 							</LinksWrapper>
 						</TextWrapper>
 					</Column1>
 					<Column2 />
 				</AboutRow>
 			</AboutWrapper>
-		</AboutContainer>
+		</OfferContainer>
 	);
 };
 

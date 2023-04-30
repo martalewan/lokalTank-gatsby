@@ -15,7 +15,7 @@ import {
 	ImgWrap,
 	Img,
 } from './AboutElements';
-import { Button } from './../ButtonElement';
+import { Button } from './../Button';
 
 const AboutSection = () => {
 	return (
@@ -56,9 +56,6 @@ const AboutSection = () => {
 									duration={500}
 									spy
 									offset={-80}
-									primaty={1}
-									dark={false ? 1 : 0}
-									dark2={false ? 1 : 0}
 								>
 									<FormattedMessage id="navigation.offer" />
 								</Button>
@@ -69,9 +66,6 @@ const AboutSection = () => {
 									duration={500}
 									spy
 									offset={-80}
-									primaty={1}
-									dark={false ? 1 : 0}
-									dark2={false ? 1 : 0}
 								>
 									<FormattedMessage id="navigation.contact" />
 								</Button>
