@@ -6,7 +6,7 @@ import { Button } from '../Button'
 
 export const OfferContainer = styled.div`
     color: ${(colors.white)};
-    background: ${({ lightBg }) => (lightBg ? colors.white : colors.darkGray)};
+    background: ${(colors.white)};
     box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
     padding: 0 10%;
     min-height: 500px;
@@ -30,6 +30,7 @@ export const ItemWrapper = styled.div`
     flex-direction: row;
     align-items: flex-end;
     gap: 1rem;
+    margin-bottom: .7rem;
 `
 
 export const AboutRow = styled.div`
@@ -90,7 +91,6 @@ export const Column1 = styled.div`
 `
 
 export const Column2 = styled.div`
-    margin-bottom: 15px;
     grid-area: col2;
     display: flex;
     flex-direction: column;
@@ -103,7 +103,7 @@ export const TextWrapper = styled.div`
 
 export const Heading = styled.h2`
     margin-bottom: 24px;
-    font-size: 36px;
+    font-size: 1.6rem;
     line-height: 36px;
     font-weight: 600;
     color: ${({ lightText }) => (lightText ? colors.white : colors.darkGray)};
@@ -114,11 +114,12 @@ export const Heading = styled.h2`
 `
 
 export const Text = styled.p`
-    max-width: 800px;
-    margin-bottom: 35px;
-    font-size: 14px;
-    line-height: 20px;
-    color: ${({ lightText }) => (lightText ? colors.white : colors.darkGray)};
+    max-width: 400px;
+    margin-top: 5rem;
+    font-size: 16px;
+    line-height: 1.75;
+    color: ${colors.darkGray};
+    font-weight: 600;
 
     @media screen and (max-width: 480px) {
         font-size: 14px;
@@ -140,25 +141,6 @@ export const ImgWrap = styled.div`
     };
 `
 
-export const Img = styled.img`
-    width: 100%;
-    margin: 0 0 10px 0;
-    padding-right: 0;
-`
-
-export const ImgLeft = styled.img`
-    width: 300px;
-    margin: 0 30px 0 0;
-    padding-right: 0;
-
-    @media screen and (max-width: 480px) {
-        padding-bottom: 20px;
-    };
-
-    @media screen and (max-width: 768px) {
-        display: none;
-    };
-`
 export const LinksWrapper = styled.div`
     display: flex;
     flex-direction: column;
@@ -172,11 +154,10 @@ export const OfferBtn = styled.button`
     color: ${(colors.darkGray)};
     background: ${(colors.lightGray)};
     text-decoration: none;
-    margin-top: 0.4rem;
-    width: 20rem;
+    width: 30rem;
     font-size: 14px;
     cursor: pointer;
-    padding: 6px;
+    padding: 8px;
     text-align: left;
     border: none;
     display: flex;
@@ -194,13 +175,12 @@ export const OfferBtn = styled.button`
 `
 
 export const OfferBtnSecondaryWrapper = styled.div`
-
 `
 
 export const OfferBtnSecondary = styled.button`
     color: ${(colors.darkGray)};
     text-decoration: none;
-    width: 20rem;
+    width: 30rem;
     font-size: 14px;
     background: none;
     cursor: pointer;
@@ -216,7 +196,6 @@ export const OfferBtnSecondary = styled.button`
         transform: scale(1.01);
         transition: all 0.2 ease-in-out;
         text-decoration: underline;
-
     }
 `
 

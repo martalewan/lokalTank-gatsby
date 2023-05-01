@@ -4,35 +4,54 @@ import { colors } from '../../../colors'
 
 const primaryStyles = css`
   background-color: ${(colors.blue)};
-  border-radius: 8px;
+  border-radius: 4px;
   font-size: 16px;
-  padding: 9px 0;
+  padding: 12px 0;
   font-weight: 500;
   letter-spacing: 1px;
+  color: ${(colors.white)};
+  transition: background 0.5s;
+  background-image: linear-gradient(to left, transparent 50%, ${colors.darkBlue} 50%);
+  background-position: 100% 0;
+  background-size: 200% 100%;
 
+  &:hover,
+  &:focus {
+    background-color: ${(colors.darkBlue)};
+    background-position: 0 0;
+    transition: background 0.5s;
+    background-image: linear-gradient(to left, transparent 50%, ${colors.darkBlue} 50%);
+    background-size: 200% 100%;
+
+  }
+
+  &:hover:before {
+    transform: scaleX(1);
+  }
 `;
 
 const secondaryStyles = css`
   background: "none";
   background-color: "none";
-  color: ${(colors.blue)};
+  color: ${(colors.darkGray)};
   border: 2px solid;
-  border-color: ${(colors.blue)};
-  border-radius: 4px;
+  border-color: ${(colors.darkGray)};
+  border-radius: 2px;
   font-size: 14px;
-  height: 2rem;
+  height: 2.3rem;
   padding: 0;
   font-weight: 700;
 
   &:hover,
   &:focus {
-    color: white
+    color: ${(colors.darkBlue)};
+    border-color: ${(colors.darkBlue)};
+
   }
 `;
 
 export const Button = styled(Link)`
-    color: ${(colors.white)};
-    width: 7rem;
+    width: 8rem;
     white-space: nowrap;
     outline: none;
     border: none;
@@ -47,7 +66,6 @@ export const Button = styled(Link)`
   &:hover,
   &:focus {
     transition: all 0.2s ease-in-out;
-    background: ${(colors.darkBlue)};
   }
 
   &:active {

@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import bgImage from './../../../images/bgImage.jpg'
 import { colors } from '../../../colors'
 
@@ -59,6 +59,18 @@ export const BtnWrap = styled.div`
     margin-top: 200px;
 `
 
+
+const AppearAnimation = keyframes`
+  from {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+`;
+
 export const MainP = styled.p`
     color: ${(colors.white)};
     font-size: 14px;
@@ -70,6 +82,8 @@ export const MainP = styled.p`
     margin: 0 10%;
     padding-bottom: 4px;
     border-bottom: 2.5px solid white;
+    opacity: 0;
+    animation: ${AppearAnimation} 1s forwards;
 
     @media screen and (max-width: 768px) {
         margin: 0 1.8rem;
@@ -79,4 +93,6 @@ export const MainP = styled.p`
     @media screen and (max-width: 480px) {
         font-size: 15px;
     };
+
+    
 `

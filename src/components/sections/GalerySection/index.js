@@ -8,11 +8,12 @@ import {
 	ImgLeft
 } from './GaleryElements'
 import glassImg from '../../../images/glassImg.jpg'
-
+import Line from '../../common/Line'
 
 const GalerySection = () => {
 	return (
 		<ServicesCointeiner id="galeria">
+			<Line />
 			<ServicesH2>
 				<FormattedMessage id="galeryPage.title" />
 			</ServicesH2>
@@ -50,6 +51,11 @@ const GalerySection = () => {
 			<ServicesWrapper>
 				<ImgLeft src={glassImg} alt="Desc" />
 			</ServicesWrapper>
+			<div className="eltd-listing-related-content">
+				<p> Grisslinge, Sweden</p>
+			</div>
+
+
 		</ServicesCointeiner>
 	)
 }

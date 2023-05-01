@@ -8,7 +8,6 @@ import {
 	AboutRow,
 	Column1,
 	TextWrapper,
-	Heading,
 	Text,
 	BtnWrap,
 	Column2,
@@ -16,6 +15,7 @@ import {
 	Img,
 } from './AboutElements';
 import { Button } from './../Button';
+import { colors } from '../../../colors';
 
 const AboutSection = () => {
 	return (
@@ -24,31 +24,26 @@ const AboutSection = () => {
 				<AboutRow imgStart={false}>
 					<Column1>
 						<TextWrapper>
-							<Heading lightText={false}>
-								<FormattedMessage id="about" />
-							</Heading>
-							<Text darkText={false}>
-								<FormattedMessage id="aboutPage.p1" />
-								<br />
-								<br />
-								<FormattedMessage id="aboutPage.p2" />
-								<br />
-								<br />
-								<FormattedMessage id="aboutPage.p3" />
-								<br />
-								<br />
-								<FormattedMessage id="aboutPage.p4" />
-								<br />
-								<br />
-								<FormattedMessage id="aboutPage.p5" />
-								<br />
-								<br />
-								<FormattedMessage id="aboutPage.p6" />
-								<br />
-								<br />
-
+							<Text style={{ color: colors.darkGray, fontSize: '20px', fontWeight: 800, lineHeight: 1.6 }}>
+								<FormattedMessage
+									id="aboutPage.p1"
+									values={{
+										boldText: <strong>Lalala</strong>
+									}}
+								/>
 							</Text>
-
+							<Text>
+								<FormattedMessage id="aboutPage.p2" />
+							</Text>
+							<Text>
+								<FormattedMessage id="aboutPage.p3" />
+							</Text>
+							<Text>
+								<FormattedMessage id="aboutPage.p4" />
+							</Text>
+							<Text>
+								<FormattedMessage id="aboutPage.p6" />
+							</Text>
 							<BtnWrap>
 								<Button
 									to="oferta"

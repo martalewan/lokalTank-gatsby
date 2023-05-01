@@ -6,7 +6,6 @@ import { Document, Page, pdfjs } from 'react-pdf';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import lokalTank6_16 from '../../../images/lokalTank6_16.pdf';
 import { Button } from '../Button'
-
 import {
 	OfferContainer,
 	AboutWrapper,
@@ -22,7 +21,8 @@ import {
 	OfferBtnSecondary,
 	PageBtn,
 	StyledIcon,
-	ItemWrapper
+	ItemWrapper,
+	Text
 } from './OfferElements';
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/legacy/build/pdf.worker.min.js`;
@@ -115,12 +115,14 @@ const OfferSection = () => {
 										<FormattedMessage id="navigation.download" />
 									</Button>
 								</ItemWrapper>
+								<ItemWrapper>
 
-								<OfferBtn onClick={toggleSecondaryLinks}>
-									<FormattedMessage id="offer.zbiornikiCiśnieniowe" />
-									<StyledIcon />
+									<OfferBtn onClick={toggleSecondaryLinks}>
+										<FormattedMessage id="offer.zbiornikiCiśnieniowe" />
+										<StyledIcon />
 
-								</OfferBtn>
+									</OfferBtn>
+								</ItemWrapper>
 
 								{showSecondaryLinks && (
 									<OfferBtnSecondaryWrapper>
@@ -218,7 +220,11 @@ const OfferSection = () => {
 							</LinksWrapper>
 						</TextWrapper>
 					</Column1>
-					<Column2 />
+					<Column2>
+						<Text>
+							<FormattedMessage id="aboutPage.p5" />
+						</Text>
+					</Column2>
 				</AboutRow>
 			</AboutWrapper>
 		</OfferContainer>

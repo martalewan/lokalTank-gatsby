@@ -1,7 +1,7 @@
 import React from 'react'
 import { FormattedMessage } from 'react-intl'
 import {
-	ServicesCointeiner,
+	CardsCointeiner,
 	ServicesH2,
 	ServicesWrapper,
 	ServicesCard,
@@ -9,39 +9,43 @@ import {
 	ServicesP
 } from './CardsElements'
 import tank from '../../../images/tank.svg'
-import location from '../../../images/location.svg'
-import progress from '../../../images/progress.svg'
+import Line from '../../common/Line'
 
 const CardsSection = () => {
 	return (
-		<ServicesCointeiner>
+		<CardsCointeiner>
 			<ServicesH2>
 				<FormattedMessage id="cardsPage.title" />
 			</ServicesH2>
 			<ServicesWrapper>
 
 				<ServicesCard>
-					<ServicesIcon src={tank} />
+					<Line />
 					<ServicesP>
 						<FormattedMessage id="cardsPage.card1" />
 					</ServicesP>
+					<Line />
+
 				</ServicesCard>
 
 				<ServicesCard>
-					<ServicesIcon src={location} />
+					<ServicesIcon src={tank} />
 					<ServicesP>
 						<FormattedMessage id="cardsPage.card2" />
 					</ServicesP>
 				</ServicesCard>
 
 				<ServicesCard>
-					<ServicesIcon src={progress} />
+					<Line />
+
 					<ServicesP>
 						<FormattedMessage id="cardsPage.card3" />
 					</ServicesP>
+					<Line />
+
 				</ServicesCard>
 			</ServicesWrapper>
-		</ServicesCointeiner>
+		</CardsCointeiner>
 	)
 }
 
