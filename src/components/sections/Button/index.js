@@ -22,7 +22,6 @@ const primaryStyles = css`
     transition: background 0.5s;
     background-image: linear-gradient(to left, transparent 50%, ${colors.darkBlue} 50%);
     background-size: 200% 100%;
-
   }
 
   &:hover:before {

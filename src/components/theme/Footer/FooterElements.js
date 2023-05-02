@@ -31,7 +31,7 @@ export const FooterLinksContainer = styled.div`
 export const FooterLinksWrapper = styled.div`
     display: flex;
 
-    @media screen and (max-width: 820px) {
+    @media screen and (max-width: 920px) {
         flex-direction: column;
     }
 `
@@ -76,5 +76,6 @@ export const FooterLinksPage = styled(reactLink)`
     &:hover {
         color: ${(colors.lightBlue)};
         transition: 0.3s ease-out;
+        cursor: pointer;
     }
 `

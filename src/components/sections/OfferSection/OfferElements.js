@@ -95,6 +95,7 @@ export const Column2 = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+
 `
 
 export const TextWrapper = styled.div`
@@ -154,7 +155,8 @@ export const OfferBtn = styled.button`
     color: ${(colors.darkGray)};
     background: ${(colors.lightGray)};
     text-decoration: none;
-    width: 30rem;
+    max-width: 30rem;
+    min-width: 19rem;
     font-size: 14px;
     cursor: pointer;
     padding: 8px;
@@ -175,12 +177,16 @@ export const OfferBtn = styled.button`
 `
 
 export const OfferBtnSecondaryWrapper = styled.div`
+    &a {
+        color: red;
+    }
 `
 
 export const OfferBtnSecondary = styled.button`
     color: ${(colors.darkGray)};
     text-decoration: none;
-    width: 30rem;
+    max-width: 30rem;
+    min-width: 19rem;
     font-size: 14px;
     background: none;
     cursor: pointer;

@@ -17,25 +17,25 @@ const Footer = () => {
 				<FooterLinksContainer>
 					<FooterLinksWrapper>
 						<FooterLinkItems>
-							<FooterLinkTitle to="home">
+							<FooterLinkTitle>
 								<strong>Lokal Tank</strong> Sp. Z o.o.
 							</FooterLinkTitle>
-							<FooterLinkTitle to="home">
+							<FooterLinkTitle>
                 Gabriela Narutowicza 15,
 							</FooterLinkTitle>
-							<FooterLinkTitle to="home">41-530 Chorzów</FooterLinkTitle>
-							<FooterLinkTitle to="home">Tel. +48 517 580 300,</FooterLinkTitle>
-							<FooterLinkTitle to="home">Tel. +48 664 570 171</FooterLinkTitle>
+							<FooterLinkTitle>41-530 Chorzów</FooterLinkTitle>
 						</FooterLinkItems>
 					</FooterLinksWrapper>
 
+					<FooterLinkItems>
+						<FooterLinkTitle>Tel. +48 517 580 300,</FooterLinkTitle>
+						<FooterLinkTitle>Tel. +48 664 570 171</FooterLinkTitle>
+						<FooterLinkTitle>biuro@lokaltank.pl</FooterLinkTitle>
+					</FooterLinkItems>
+
 					<FooterLinksWrapper>
 						<FooterLinkItems>
-							<FooterLinkTitle to="home">NIP 6272782103</FooterLinkTitle>
-							<FooterLinkTitle to="home">
-                biuro@lokaltank.pl
-							</FooterLinkTitle>{' '}
-							<FooterLinkTitle>-</FooterLinkTitle>
+							<FooterLinkTitle>NIP 6272782103</FooterLinkTitle>
 							<FooterLinksPage to="onas">
 								<FormattedMessage id="navigation.about" />
 							</FooterLinksPage>
