@@ -8,8 +8,7 @@ import lokalTank6_16 from '../../../images/lokalTank6_16.pdf';
 import { Button } from '../Button'
 import {
 	OfferContainer,
-	AboutWrapper,
-	AboutRow,
+	OffersWrapper,
 	Column1,
 	TextWrapper,
 	Heading,
@@ -19,7 +18,7 @@ import {
 	OfferBtn,
 	OfferBtnSecondaryWrapper,
 	OfferBtnSecondary,
-	PageBtn,
+	PopupBtn,
 	StyledIcon,
 	ItemWrapper,
 	Text
@@ -58,175 +57,172 @@ const OfferSection = () => {
 	}
 
 	return (
-		<OfferContainer lightBg id="oferta">
-			<AboutWrapper elementHeight="380px">
-				<AboutRow imgStart={false}>
-					<Column1>
-						<TextWrapper>
-							<Heading lightText={false}>
-								<FormattedMessage id="navigation.offer" />
-							</Heading>
+		<OfferContainer id="oferta">
+			<Heading>
+				<FormattedMessage id="navigation.offer" />
+			</Heading>
+			<OffersWrapper>
+				<Column1>
+					<TextWrapper>
+						<PDFModal show={show} onHide={handleClose} size="lg">
+							{numPages > 0 ? (
+								<Modal.Header>
+									<FontAwesomeIcon
+										icon={faTimes}
+										className="close"
+										onClick={handleClose}
+										style={{ pointerEvent: 'none' }}
+									/>
+								</Modal.Header>
+							) : null}
 
-							<PDFModal show={show} onHide={handleClose} size="lg">
-								{numPages > 0 ? (
-									<Modal.Header>
-										<FontAwesomeIcon
-											icon={faTimes}
-											className="close"
-											onClick={handleClose}
-											style={{ pointerEvent: 'none' }}
-										/>
-									</Modal.Header>
-								) : null}
+							<Modal.Body>
+								<Document
+									file={lokalTank6_16}
+									onLoadSuccess={onDocumentLoadSuccess}
+								>
+									<Page pageNumber={pageNumber} />
+								</Document>
+							</Modal.Body>
 
-								<Modal.Body>
-									<Document
-										file={lokalTank6_16}
-										onLoadSuccess={onDocumentLoadSuccess}
-									>
-										<Page pageNumber={pageNumber} />
-									</Document>
-								</Modal.Body>
-
-								{numPages > 0 ? (
-									<Modal.Footer>
-										<PageBtn onClick={handlePrevPage} disabled={pageNumber === 1}>
+							{numPages > 0 ? (
+								<Modal.Footer>
+									<PopupBtn onClick={handlePrevPage} disabled={pageNumber === 1}>
 													Previous
-										</PageBtn>
+									</PopupBtn>
 
-										<PageBtn
-											onClick={handleNextPage}
-											disabled={pageNumber === numPages}
-										>
+									<PopupBtn
+										onClick={handleNextPage}
+										disabled={pageNumber === numPages}
+									>
 													Next
-										</PageBtn>
-									</Modal.Footer>
-								) : null}
+									</PopupBtn>
+								</Modal.Footer>
+							) : null}
 
 
-							</PDFModal>
+						</PDFModal>
 
-							<LinksWrapper>
-								<ItemWrapper>
-									<OfferBtn onClick={handleShow}>
-										<FormattedMessage id="offer.zbiornikiMagazynowe" />
-									</OfferBtn>
-									<Button secondary>
-										<FormattedMessage id="navigation.download" />
-									</Button>
-								</ItemWrapper>
-								<ItemWrapper>
+						<LinksWrapper>
+							<ItemWrapper>
+								<OfferBtn onClick={handleShow}>
+									<FormattedMessage id="offer.zbiornikiMagazynowe" />
+								</OfferBtn>
+								<Button secondary>
+									<FormattedMessage id="navigation.download" />
+								</Button>
+							</ItemWrapper>
+							<ItemWrapper>
 
-									<OfferBtn onClick={toggleSecondaryLinks}>
-										<FormattedMessage id="offer.zbiornikiCiśnieniowe" />
-										<StyledIcon />
+								<OfferBtn onClick={toggleSecondaryLinks}>
+									<FormattedMessage id="offer.zbiornikiCiśnieniowe" />
+									<StyledIcon />
 
-									</OfferBtn>
-								</ItemWrapper>
+								</OfferBtn>
+							</ItemWrapper>
 
-								{showSecondaryLinks && (
-									<OfferBtnSecondaryWrapper>
+							{showSecondaryLinks && (
+								<OfferBtnSecondaryWrapper>
 
-										<ItemWrapper>
-											<OfferBtnSecondary offset={-80} smooth duration={500}>
-												<FormattedMessage id="offer.filtryCiśnieniowe" />
-											</OfferBtnSecondary>
-											<Button secondary>
-												<FormattedMessage id="navigation.download" />
-											</Button>
-										</ItemWrapper>
-										<ItemWrapper>
-											<OfferBtnSecondary offset={-80} smooth duration={500}>
-												<FormattedMessage id="offer.mieszaczeWodnoPowietrzne" />
-											</OfferBtnSecondary>
-											<Button secondary>
-												<FormattedMessage id="navigation.download" />
-											</Button>
-										</ItemWrapper>
-										<ItemWrapper>
-											<OfferBtnSecondary offset={-80} smooth duration={500}>
-												<FormattedMessage id="offer.zbiornikiHydroforowe" />
-											</OfferBtnSecondary>
-											<Button secondary>
-												<FormattedMessage id="navigation.download" />
-											</Button>
-										</ItemWrapper>
-										<ItemWrapper>
-											<OfferBtnSecondary offset={-80} smooth duration={500}>
-												<FormattedMessage id="offer.wymiennikiPojemnościowe" />
-											</OfferBtnSecondary>
-											<Button secondary>
-												<FormattedMessage id="navigation.download" />
-											</Button>
-										</ItemWrapper>
-										<ItemWrapper>
-											<OfferBtnSecondary offset={-80} smooth duration={500}>
-												<FormattedMessage id="offer.zasobnikiCiepłejWodyLubPary" />
-											</OfferBtnSecondary>
-											<Button secondary>
-												<FormattedMessage id="navigation.download" />
-											</Button>
-										</ItemWrapper>
-										<ItemWrapper>
-											<OfferBtnSecondary offset={-80} smooth duration={500}>
-												<FormattedMessage id="offer.odgazowywaczeTermiczne" />
-											</OfferBtnSecondary>
-											<Button secondary>
-												<FormattedMessage id="navigation.download" />
-											</Button>
-										</ItemWrapper>
-									</OfferBtnSecondaryWrapper>
-								)}
+									<ItemWrapper>
+										<OfferBtnSecondary offset={-80} smooth duration={500}>
+											<FormattedMessage id="offer.filtryCiśnieniowe" />
+										</OfferBtnSecondary>
+										<Button secondary>
+											<FormattedMessage id="navigation.download" />
+										</Button>
+									</ItemWrapper>
+									<ItemWrapper>
+										<OfferBtnSecondary offset={-80} smooth duration={500}>
+											<FormattedMessage id="offer.mieszaczeWodnoPowietrzne" />
+										</OfferBtnSecondary>
+										<Button secondary>
+											<FormattedMessage id="navigation.download" />
+										</Button>
+									</ItemWrapper>
+									<ItemWrapper>
+										<OfferBtnSecondary offset={-80} smooth duration={500}>
+											<FormattedMessage id="offer.zbiornikiHydroforowe" />
+										</OfferBtnSecondary>
+										<Button secondary>
+											<FormattedMessage id="navigation.download" />
+										</Button>
+									</ItemWrapper>
+									<ItemWrapper>
+										<OfferBtnSecondary offset={-80} smooth duration={500}>
+											<FormattedMessage id="offer.wymiennikiPojemnościowe" />
+										</OfferBtnSecondary>
+										<Button secondary>
+											<FormattedMessage id="navigation.download" />
+										</Button>
+									</ItemWrapper>
+									<ItemWrapper>
+										<OfferBtnSecondary offset={-80} smooth duration={500}>
+											<FormattedMessage id="offer.zasobnikiCiepłejWodyLubPary" />
+										</OfferBtnSecondary>
+										<Button secondary>
+											<FormattedMessage id="navigation.download" />
+										</Button>
+									</ItemWrapper>
+									<ItemWrapper>
+										<OfferBtnSecondary offset={-80} smooth duration={500}>
+											<FormattedMessage id="offer.odgazowywaczeTermiczne" />
+										</OfferBtnSecondary>
+										<Button secondary>
+											<FormattedMessage id="navigation.download" />
+										</Button>
+									</ItemWrapper>
+								</OfferBtnSecondaryWrapper>
+							)}
 
-								<ItemWrapper>
-									<OfferBtn offset={-80} smooth duration={500}>
-										<FormattedMessage id="offer.zbiornikiProcesowe" />
-									</OfferBtn>
-									<Button secondary>
-										<FormattedMessage id="navigation.download" />
-									</Button>
-								</ItemWrapper>
+							<ItemWrapper>
+								<OfferBtn offset={-80} smooth duration={500}>
+									<FormattedMessage id="offer.zbiornikiProcesowe" />
+								</OfferBtn>
+								<Button secondary>
+									<FormattedMessage id="navigation.download" />
+								</Button>
+							</ItemWrapper>
 
-								<ItemWrapper>
+							<ItemWrapper>
 
-									<OfferBtn offset={-80} smooth duration={500}>
-										<FormattedMessage id="offer.zbiornikiNaZamówienie" />
-									</OfferBtn>
-									<Button secondary>
-										<FormattedMessage id="navigation.download" />
-									</Button>
-								</ItemWrapper>
+								<OfferBtn offset={-80} smooth duration={500}>
+									<FormattedMessage id="offer.zbiornikiNaZamówienie" />
+								</OfferBtn>
+								<Button secondary>
+									<FormattedMessage id="navigation.download" />
+								</Button>
+							</ItemWrapper>
 
-								<ItemWrapper>
+							<ItemWrapper>
 
-									<OfferBtn offset={-80} to="product4" smooth duration={500}>
-										<FormattedMessage id="offer.konstrukcjeStalowe" />
-									</OfferBtn>
-									<Button secondary>
-										<FormattedMessage id="navigation.download" />
-									</Button>
-								</ItemWrapper>
+								<OfferBtn offset={-80} to="product4" smooth duration={500}>
+									<FormattedMessage id="offer.konstrukcjeStalowe" />
+								</OfferBtn>
+								<Button secondary>
+									<FormattedMessage id="navigation.download" />
+								</Button>
+							</ItemWrapper>
 
-								<ItemWrapper>
-									<OfferBtn offset={-80} to="product4" smooth duration={500}>
-										<FormattedMessage id="offer.instalacjeProcesowe" />
-									</OfferBtn>
-									<Button secondary>
-										<FormattedMessage id="navigation.download" />
-									</Button>
-								</ItemWrapper>
+							<ItemWrapper>
+								<OfferBtn offset={-80} to="product4" smooth duration={500}>
+									<FormattedMessage id="offer.instalacjeProcesowe" />
+								</OfferBtn>
+								<Button secondary>
+									<FormattedMessage id="navigation.download" />
+								</Button>
+							</ItemWrapper>
 
 
-							</LinksWrapper>
-						</TextWrapper>
-					</Column1>
-					<Column2>
-						<Text>
-							<FormattedMessage id="aboutPage.p5" />
-						</Text>
-					</Column2>
-				</AboutRow>
-			</AboutWrapper>
+						</LinksWrapper>
+					</TextWrapper>
+				</Column1>
+				<Column2>
+					<Text>
+						<FormattedMessage id="offer.text" />
+					</Text>
+				</Column2>
+			</OffersWrapper>
 		</OfferContainer>
 	);
 };

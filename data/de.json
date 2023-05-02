@@ -1,12 +1,9 @@
 {
     "welcome": "Herzlich willkommen",
-    "logo": "Logo",
-    "home": "Zuhause",
-    "about": "Über",
     "not_found": "404 - Seite nicht gefunden",
 
     "general.downloadLink": "Click to download the pdf",
-    
+
     "navigation.about": "About us",
     "navigation.offer": "Offer",
     "navigation.contact": "Contact",
@@ -16,26 +13,26 @@
     "navigation.ukrainian": "UKR",
     "navigation.german": "DEU",
     "navigation.download": "Download",
-    
+
     "mainPage.header": "Pressure filters Lokal Tank",
-    "mainPage.descrition": "Mechanical purification of water from iron, manganese compounds and minor impurities.",
-  
+    "mainPage.description": "Mechanical purification of water from iron, manganese compounds and minor impurities.",
+
     "aboutPage.title": "About us",
     "aboutPage.p1": "Willkommen auf der Website von Local Tank, einem Unternehmen, das sich auf die Herstellung von hochwertigen Druckbehältern, Lagertanks und Stahlkonstruktionen spezialisiert. Wir gewinnen das Vertrauen unserer Kunden durch Zuverlässigkeit und Solidität sowie schnelle Auftragsabwicklung.",
     "aboutPage.p2": "Wir verfügen über mehrere Produktionsstätten in Polen, was uns Flexibilität in der Produktion und schnelle Auftragsabwicklung ermöglicht. Jede unserer Anlagen ist mit modernen Maschinen und Werkzeugen ausgestattet, die uns die Herstellung von hochwertigen Tanks und Stahlkonstruktionen ermöglichen.",
     "aboutPage.p3": "Wir bieten Druckbehälter an, die gemäß den Normen und Anforderungen der Kunden aus Schwarzstahl sowie Edelstahl oder Kunststoff hergestellt werden. Sie finden Anwendung in verschiedenen Branchen wie der chemischen, pharmazeutischen, Lebensmittel-, Kosmetik-, Energie- und anderen Industrien. Unsere Lagertanks sind für die Lagerung verschiedener Substanzen wie Flüssigkeiten, Gase und Schüttgüter ausgelegt.",
     "aboutPage.p4": "Darüber hinaus entwerfen und fertigen wir Stahlkonstruktionen nach den Anforderungen der Kunden, die in verschiedenen Branchen wie der Bau-, Energie- und Landwirtschaftsindustrie Anwendung finden.",
-    "aboutPage.p5": "Bei Local Tank setzen wir auf Qualität und Zuverlässigkeit unserer Produkte und verwenden daher nur die besten Materialien und neuesten Technologien. Dadurch können wir unseren Kunden Produkte von hoher Qualität und langer Lebensdauer garantieren.",
-    "aboutPage.p6": "Wir laden Sie ein, sich mit unserem Angebot vertraut zu machen und Kontakt mit unseren Fachleuten aufzunehmen, die Ihnen gerne bei der Auswahl der besten Lösung für Ihr Unternehmen helfen.",
+    "aboutPage.p5": "Wir laden Sie ein, sich mit unserem Angebot vertraut zu machen und Kontakt mit unseren Fachleuten aufzunehmen, die Ihnen gerne bei der Auswahl der besten Lösung für Ihr Unternehmen helfen.",
     "aboutPage.button": "Offer",
     "aboutPage.button2": "Write",
-  
+
     "cardsPage.title": "What makes us stand out",
     "cardsPage.card1": "Kompleksowa oferta",
     "cardsPage.card2": "Rozwiązania dopasowane do indywidualnych potrzeb klienta",
     "cardsPage.card3": "Zrównoważony wzrost",
-  
+
     "offer.title": "Offer",
+    "offer.text": "At Local Tank, we prioritize quality and reliability of our products, which is why we use only the best materials and the latest technologies in production. This allows us to guarantee our customers high-quality products with long service life.",
     "offer.zbiornikiMagazynowe": "Zbiorniki Magazynowe",
     "offer.zbiornikiCiśnieniowe": "Zbiorniki Ciśnieniowe",
     "offer.filtryCiśnieniowe": "Filtry Ciśnieniowe",
@@ -44,15 +41,11 @@
     "offer.wymiennikiPojemnościowe": "Wymienniki pojemnościowe",
     "offer.zasobnikiCiepłejWodyLubPary": "Zasobniki ciepłej wody lub pary",
     "offer.odgazowywaczeTermiczne": "Odgazowywacze termiczne",
-    "offer.zbiornikiProcesowe": "Zbiorniki procesowe", 
+    "offer.zbiornikiProcesowe": "Zbiorniki procesowe",
     "offer.zbiornikiNaZamówienie":" Zbiorniki na zamówienie",
     "offer.konstrukcjeStalowe": "Konstrukcje Stalowe",
     "offer.instalacjeProcesowe": "Instalacje procesowe",
 
-    "product.textDirective": "We manufacture capacitive heat exchangers WP 6/6 in accordance with Directive 2014/68/EU.",
-    "product.pipeDescription": "PIPE DESCRIPTION:",
-    "product.downloadText": "Click to download the detailed product's offer",
-  
     "contactPage.title": "Contact",
     "contactPage.button": "Write an email",
     "contactPage.contactForm": "Formularz kontaktowy:",

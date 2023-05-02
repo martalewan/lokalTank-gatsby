@@ -26,7 +26,7 @@ const Main = () => {
 			</BtnWrap>
 
 			<MainP>
-				<FormattedMessage id="mainPage.descrition" />
+				<FormattedMessage id="mainPage.description" />
 			</MainP>
 		</MainContainer>
 	)

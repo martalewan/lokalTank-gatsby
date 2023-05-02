@@ -42,7 +42,7 @@ const AboutSection = () => {
 								<FormattedMessage id="aboutPage.p4" />
 							</Text>
 							<Text>
-								<FormattedMessage id="aboutPage.p6" />
+								<FormattedMessage id="aboutPage.p5" />
 							</Text>
 							<BtnWrap>
 								<Button
