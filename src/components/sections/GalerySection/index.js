@@ -1,19 +1,17 @@
 import React from 'react'
 import { FormattedMessage } from 'react-intl'
 import {
-	ServicesCointeiner,
+	GaleryContainer,
 	ServicesH2,
-	ServicesWrapper,
+	ImageWrapper,
 	ImplementationBtn,
 	ImgLeft
 } from './GaleryElements'
 import glassImg from '../../../images/glassImg.jpg'
-import Line from '../../common/Line'
 
 const GalerySection = () => {
 	return (
-		<ServicesCointeiner id="galeria">
-			<Line />
+		<GaleryContainer id="galeria">
 			<ServicesH2>
 				<FormattedMessage id="galeryPage.title" />
 			</ServicesH2>
@@ -48,15 +46,11 @@ const GalerySection = () => {
 				</ImplementationBtn>
 			</div>
 
-			<ServicesWrapper>
+			<ImageWrapper>
 				<ImgLeft src={glassImg} alt="Desc" />
-			</ServicesWrapper>
-			<div className="eltd-listing-related-content">
 				<p> Grisslinge, Sweden</p>
-			</div>
-
-
-		</ServicesCointeiner>
+			</ImageWrapper>
+		</GaleryContainer>
 	)
 }
 

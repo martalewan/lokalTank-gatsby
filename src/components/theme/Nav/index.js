@@ -17,7 +17,7 @@ import {
 	LanguageItem,
 	StyledIcon,
 } from './NavElements';
-import LokalTWhite from '../../../images/LTlogo-main.svg';
+import logoWhite from '../../../images/logo-white.svg';
 
 const Nav = ({ toggle }) => {
 	const [scrollNav, setScrollNav] = useState(false);
@@ -76,7 +76,7 @@ const Nav = ({ toggle }) => {
 		<Navbar scrollNav={scrollNav}>
 			<NavbarContainer>
 				<NavLogo to="home" smooth duration={500} spy offset={-80}>
-					<Img src={LokalTWhite} alt="Lokal Tank logo" />
+					<Img src={logoWhite} alt="Lokal Tank logo" />
 				</NavLogo>
 				<MobileIcon onClick={toggle}>
 					<FaBars />

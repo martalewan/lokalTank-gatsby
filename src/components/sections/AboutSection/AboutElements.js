@@ -5,10 +5,10 @@ export const AboutContainer = styled.div`
   color: ${colors.secondary};
   background: ${colors.white};
   box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
-  padding: 0 10%;
+  padding: 2rem 10%;
 
   @media screen and (max-width: 768px) {
-    padding: 0 1.8rem;
+    padding: 1rem 1.8rem;
   } ;
 `;
 
@@ -103,6 +103,9 @@ export const ImgWrap = styled.div`
   @keyframes move {
     0% {
       transform: translateY(0);
+    }
+    50% {
+      transform: translateX(10%);
     }
     100% {
       transform: translateY(-10%);

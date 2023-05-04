@@ -1,36 +1,23 @@
 import styled from 'styled-components';
 import { colors } from '../../../colors';
 
-export const ServicesCointeiner = styled.div`
+export const GaleryContainer = styled.div`
   height: 700px;
   display: flex;
   flex-direction: column;
   justify-content: start;
-  align-items: start;
-  background: ${colors.white};
   padding: 0 10%;
 
-  @media screen and (max-width: 1000px) {
-    height: 630px;
-  }
 
   @media screen and (max-width: 768px) {
-    height: 1100px;
     padding: 0 1.8rem;
-  }
-
-  @media screen and (max-width: 480px) {
-    height: 1300px;
   }
 `;
 
-export const ServicesWrapper = styled.div`
-  max-width: 1000px;
-  width: 100%;
+export const ImageWrapper = styled.div`
   display: flex;
-  align-items: start;
-  justify-content: start;
   margin-top: 15px;
+  flex-direction: column;
 `;
 
 export const ServicesCard = styled.div`
@@ -61,13 +48,9 @@ export const ServicesH2 = styled.h2`
   font-size: 1.6rem;
   font-weight: 600;
   color: ${colors.darkGray};
-  margin-bottom: 1rem;
-  font-family: Arial, sans-serif;
-  margin-top: 3rem;
-  @media screen and (max-width: 480px) {
-    font-size: 2rem;
-  }
+  margin: 3rem 0;
 `;
+
 export const ImplementationBtn = styled.button`
   font-size: 0.8rem;
   margin: 2px 2px;
@@ -89,14 +72,8 @@ export const ImplementationBtn = styled.button`
 
 export const ImgLeft = styled.img`
   width: 200px;
-  margin: 0 30px 0 0;
-  padding-right: 0;
 
   @media screen and (max-width: 480px) {
     padding-bottom: 20px;
   }
-
-  @media screen and (max-width: 768px) {
-    display: none;
-  } ;
 `;

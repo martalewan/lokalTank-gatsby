@@ -102,7 +102,7 @@ const ContactSection = () => {
 									<span className="required"> *</span>
 								</label>
 								<input
-									requireds
+									required
 									type="text"
 									name="user_name"
 									id="user_name"

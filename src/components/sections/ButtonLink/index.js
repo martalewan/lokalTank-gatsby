@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { Link } from 'react-scroll';
 import { colors } from '../../../colors'
 
 const primaryStyles = css`
@@ -48,8 +49,7 @@ const secondaryStyles = css`
   }
 `;
 
-export const Button = styled('button')`
-    background: none;
+export const ButtonLink = styled(Link)`
     width: 8rem;
     white-space: nowrap;
     outline: none;
@@ -72,4 +72,4 @@ export const Button = styled('button')`
   }
 `;
 
-export default Button;
+export default ButtonLink;

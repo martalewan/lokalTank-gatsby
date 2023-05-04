@@ -113,14 +113,14 @@ export const LanguageItem = styled.button`
     text-decoration: none;
     transition: 0.2s ease-in-out;
     text-decoration: none;
-    color: ${(colors.white)};
+    color: ${(colors.darkGray)};
     width: 100%;
-    border: 2px solid white;
-    margin: 0 0;
-    color: black;
-    padding-left: 5px;
-    text-align: left;
+    border: 1px solid;
+    border-color: ${(colors.lightGray)};
 
+    margin: 0 0;
+    text-align: left;
+    
     &:hover {
         color: ${(colors.mediumBlue)};
         transition: 0.2 ease-in-out;
@@ -128,7 +128,6 @@ export const LanguageItem = styled.button`
         background: ${(colors.white)};
     }
 `
-
 
 export const LanguagesContainer = styled.div`
     position: absolute;

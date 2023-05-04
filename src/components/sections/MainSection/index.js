@@ -1,7 +1,7 @@
 import React from 'react'
 import { FormattedMessage } from 'react-intl'
 import { MainContainer, MainBg, ImageBg, MainH1, MainP, BtnWrap } from './MainElements'
-import { Button } from '../Button';
+import { ButtonLink } from '../ButtonLink';
 
 const Main = () => {
 	return (
@@ -14,7 +14,7 @@ const Main = () => {
 			</MainH1>
 			<BtnWrap>
 
-				<Button
+				<ButtonLink
 					to="oferta"
 					smooth
 					duration={500}
@@ -22,7 +22,7 @@ const Main = () => {
 					offset={-80}
 				>
 					<FormattedMessage id="navigation.offer" />
-				</Button>
+				</ButtonLink>
 			</BtnWrap>
 
 			<MainP>

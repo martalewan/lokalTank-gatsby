@@ -1,6 +1,6 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl'
-import Wave from '../../../images/wave-gray.svg';
+import Wave from '../../../images/wave.svg';
 
 import {
 	AboutContainer,
@@ -14,14 +14,14 @@ import {
 	ImgWrap,
 	Img,
 } from './AboutElements';
-import { Button } from './../Button';
+import { ButtonLink } from './../ButtonLink';
 import { colors } from '../../../colors';
 
 const AboutSection = () => {
 	return (
-		<AboutContainer lightBg="true" id="onas">
-			<AboutWrapper elementHeight="750px">
-				<AboutRow imgStart={false}>
+		<AboutContainer id="onas">
+			<AboutWrapper>
+				<AboutRow>
 					<Column1>
 						<TextWrapper>
 							<Text style={{ color: colors.darkGray, fontSize: '20px', fontWeight: 800, lineHeight: 1.6 }}>
@@ -45,7 +45,7 @@ const AboutSection = () => {
 								<FormattedMessage id="aboutPage.p5" />
 							</Text>
 							<BtnWrap>
-								<Button
+								<ButtonLink
 									to="oferta"
 									smooth
 									duration={500}
@@ -53,9 +53,9 @@ const AboutSection = () => {
 									offset={-80}
 								>
 									<FormattedMessage id="navigation.offer" />
-								</Button>
+								</ButtonLink>
 
-								<Button
+								<ButtonLink
 									to="kontakt"
 									smooth
 									duration={500}
@@ -63,7 +63,7 @@ const AboutSection = () => {
 									offset={-80}
 								>
 									<FormattedMessage id="navigation.contact" />
-								</Button>
+								</ButtonLink>
 
 							</BtnWrap>
 						</TextWrapper>

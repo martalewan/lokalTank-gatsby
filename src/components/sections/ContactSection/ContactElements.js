@@ -7,6 +7,7 @@ export const ContactContainer = styled.div`
   background: ${colors.lightGray};
   box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
   padding: 0 10%;
+  padding-bottom: 2rem;
 
   @media screen and (max-width: 768px) {
     padding: 0 1.8rem;
@@ -15,7 +16,6 @@ export const ContactContainer = styled.div`
 
 export const ContactWrapper = styled.div`
   z-index: 1;
-  height: ${({ elementHeight }) => elementHeight};
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -23,7 +23,10 @@ export const ContactWrapper = styled.div`
 `;
 
 export const ContactH2 = styled.h2`
+  font-size: 1.6rem;
+  font-weight: 600;
   color: ${colors.darkGray};
+  margin-top: 3rem;
 `;
 
 export const ContactRow = styled.div`
@@ -154,7 +157,8 @@ export const OfferLink = styled(LinkScroll)`
 
 // Styles
 export const StyledContactForm = styled.div`
-  width: 400px;
+  max-width: 400px;
+  width: 100%;
   form {
     display: flex;
     align-items: flex-start;
@@ -193,7 +197,10 @@ export const StyledContactForm = styled.div`
     }
     label {
       margin-top: 0.4rem;
+      font-weight: 600;
+      color: ${colors.darkGrayLt};
     }
+
     input[type="submit"] {
       margin-top: 1.2rem;
       border-radius: 8px;

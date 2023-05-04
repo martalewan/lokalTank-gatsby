@@ -71,7 +71,7 @@ export const TextWrapper = styled.div`
 `
 
 export const Heading = styled.h2`
-    margin-bottom: 24px;
+    margin: 3rem 0;
     font-size: 1.6rem;
     font-weight: 600;
     color: ${colors.darkGray};
@@ -111,7 +111,7 @@ export const LinksWrapper = styled.div`
     }
 `
 
-export const OfferBtn = styled.button`
+export const OfferBtn = styled('button')`
     color: ${(colors.darkGray)};
     background: ${(colors.lightGray)};
     text-decoration: none;
@@ -138,7 +138,7 @@ export const OfferBtn = styled.button`
 
 export const OfferBtnSecondaryWrapper = styled.div``
 
-export const OfferBtnSecondary = styled.button`
+export const OfferBtnSecondary = styled('button')`
     color: ${(colors.darkGray)};
     text-decoration: none;
     width: 100%;
@@ -197,7 +197,7 @@ export const PDFModal = styled(Modal)`
   .modal-header {
     position: absolute;
     z-index: 9;
-    margin-left: -35px;
+    margin-left: -30px;
     padding: 2px 5px;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
     cursor: pointer;
@@ -217,6 +217,10 @@ export const PDFModal = styled(Modal)`
   canvas {
     width: 537px !important;
     height: auto !important;
+
+    @media screen and (max-width: 768px) {
+      max-width: 83vw;
+    }
   }
 `;
 

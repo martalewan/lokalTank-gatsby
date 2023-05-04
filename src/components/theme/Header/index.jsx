@@ -5,7 +5,6 @@ import SelectLanguage from './../../common/Select/SelectLanguage'
 import Container from '../../common/Container'
 import { Navbar, Links, StyledHeader, Logo } from './styles'
 import { useI18n } from '../../../providers/LanguageProvider'
-import gatsbyIcon from '../../../images/gatsby-icon.png'
 
 const Header = () => {
 	const { lang, handleLanguage } = useI18n()
@@ -13,7 +12,6 @@ const Header = () => {
 	return (
 		<StyledHeader>
 			<Navbar as={Container}>
-				<img src={gatsbyIcon} alt="" />
 
 				<Logo as={Link} to="/">
 					<FormattedMessage id="logo" />

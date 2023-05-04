@@ -125,7 +125,7 @@ const OfferSection = () => {
 								<OfferBtnSecondaryWrapper>
 
 									<ItemWrapper>
-										<OfferBtnSecondary offset={-80} smooth duration={500}>
+										<OfferBtnSecondary>
 											<FormattedMessage id="offer.filtryCiśnieniowe" />
 										</OfferBtnSecondary>
 										<Button secondary>
@@ -133,7 +133,7 @@ const OfferSection = () => {
 										</Button>
 									</ItemWrapper>
 									<ItemWrapper>
-										<OfferBtnSecondary offset={-80} smooth duration={500}>
+										<OfferBtnSecondary>
 											<FormattedMessage id="offer.mieszaczeWodnoPowietrzne" />
 										</OfferBtnSecondary>
 										<Button secondary>
@@ -141,7 +141,7 @@ const OfferSection = () => {
 										</Button>
 									</ItemWrapper>
 									<ItemWrapper>
-										<OfferBtnSecondary offset={-80} smooth duration={500}>
+										<OfferBtnSecondary>
 											<FormattedMessage id="offer.zbiornikiHydroforowe" />
 										</OfferBtnSecondary>
 										<Button secondary>
@@ -149,7 +149,7 @@ const OfferSection = () => {
 										</Button>
 									</ItemWrapper>
 									<ItemWrapper>
-										<OfferBtnSecondary offset={-80} smooth duration={500}>
+										<OfferBtnSecondary>
 											<FormattedMessage id="offer.wymiennikiPojemnościowe" />
 										</OfferBtnSecondary>
 										<Button secondary>
@@ -157,7 +157,7 @@ const OfferSection = () => {
 										</Button>
 									</ItemWrapper>
 									<ItemWrapper>
-										<OfferBtnSecondary offset={-80} smooth duration={500}>
+										<OfferBtnSecondary>
 											<FormattedMessage id="offer.zasobnikiCiepłejWodyLubPary" />
 										</OfferBtnSecondary>
 										<Button secondary>
@@ -165,7 +165,7 @@ const OfferSection = () => {
 										</Button>
 									</ItemWrapper>
 									<ItemWrapper>
-										<OfferBtnSecondary offset={-80} smooth duration={500}>
+										<OfferBtnSecondary>
 											<FormattedMessage id="offer.odgazowywaczeTermiczne" />
 										</OfferBtnSecondary>
 										<Button secondary>
@@ -176,7 +176,7 @@ const OfferSection = () => {
 							)}
 
 							<ItemWrapper>
-								<OfferBtn offset={-80} smooth duration={500}>
+								<OfferBtn>
 									<FormattedMessage id="offer.zbiornikiProcesowe" />
 								</OfferBtn>
 								<Button secondary>
@@ -186,7 +186,7 @@ const OfferSection = () => {
 
 							<ItemWrapper>
 
-								<OfferBtn offset={-80} smooth duration={500}>
+								<OfferBtn>
 									<FormattedMessage id="offer.zbiornikiNaZamówienie" />
 								</OfferBtn>
 								<Button secondary>
@@ -196,7 +196,7 @@ const OfferSection = () => {
 
 							<ItemWrapper>
 
-								<OfferBtn offset={-80} to="product4" smooth duration={500}>
+								<OfferBtn>
 									<FormattedMessage id="offer.konstrukcjeStalowe" />
 								</OfferBtn>
 								<Button secondary>
@@ -205,7 +205,7 @@ const OfferSection = () => {
 							</ItemWrapper>
 
 							<ItemWrapper>
-								<OfferBtn offset={-80} to="product4" smooth duration={500}>
+								<OfferBtn>
 									<FormattedMessage id="offer.instalacjeProcesowe" />
 								</OfferBtn>
 								<Button secondary>
