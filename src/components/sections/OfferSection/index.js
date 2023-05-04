@@ -4,8 +4,14 @@ import { FormattedMessage } from 'react-intl';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Document, Page, pdfjs } from 'react-pdf';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
-import lokalTank6_16 from '../../../images/lokalTank6_16.pdf';
-import { Button } from '../Button'
+import filtry_FWP from '../../../images/filtry-FWP.pdf';
+// import filtry_pionowe_FWL from '../../../images/FILTRY-PIONOWE-FWL.pdf';
+import hydrofory_pionowe_HPB from '../../../images/Hydrofory-pionowe-HPB.pdf';
+import odgazowywacze_termiczne from '../../../images/Odgazowywacze-termoczne-kaskadowe-typu-ODT.pdf';
+// import pionowe_zasobniki from '../../../images/Pionowe-zasobniki-ciepłej-wody-ZWV.pdf';
+import WP_3 from '../../../images/WP-3x.pdf';
+
+import { Button } from '../Button';
 import {
 	OfferContainer,
 	OffersWrapper,
@@ -21,7 +27,7 @@ import {
 	PopupBtn,
 	StyledIcon,
 	ItemWrapper,
-	Text
+	Text,
 } from './OfferElements';
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/legacy/build/pdf.worker.min.js`;
@@ -31,9 +37,23 @@ const OfferSection = () => {
 	const [numPages, setNumPages] = useState(null);
 	const [pageNumber, setPageNumber] = useState(1);
 	const [showSecondaryLinks, setShowSecondaryLinks] = useState(false); // new state variable
+	const [filePaths] = useState({
+		zbiornikiMagazynowe: '',
+		filtryCisnieniowe: filtry_FWP,
+		mieszaczeWodnoPowietrzne: '',
+		zbiornikiHydroforowe: hydrofory_pionowe_HPB,
+		wymiennikiPojemnosciowe: WP_3,
+		zasobnikiCieplejWodyLubPary: '',
+		odgazowywaczeTermiczne: odgazowywacze_termiczne,
+		zbiornikiProcesowe: '',
+	});
+	const [selectedFile, setSelectedFile] = useState(filePaths.magazynowe);
 
 	const handleClose = () => setShow(false);
-	const handleShow = () => setShow(true);
+	const handleShow = (pdfFile) => {
+		setSelectedFile(pdfFile);
+		setShow(true);
+	};
 
 	// eslint-disable-next-line no-shadow
 	function onDocumentLoadSuccess({ numPages }) {
@@ -78,7 +98,7 @@ const OfferSection = () => {
 
 							<Modal.Body>
 								<Document
-									file={lokalTank6_16}
+									file={selectedFile}
 									onLoadSuccess={onDocumentLoadSuccess}
 								>
 									<Page pageNumber={pageNumber} />
@@ -87,25 +107,26 @@ const OfferSection = () => {
 
 							{numPages > 0 ? (
 								<Modal.Footer>
-									<PopupBtn onClick={handlePrevPage} disabled={pageNumber === 1}>
-													Previous
+									<PopupBtn
+										onClick={handlePrevPage}
+										disabled={pageNumber === 1}
+									>
+                    Previous
 									</PopupBtn>
 
 									<PopupBtn
 										onClick={handleNextPage}
 										disabled={pageNumber === numPages}
 									>
-													Next
+                    Next
 									</PopupBtn>
 								</Modal.Footer>
 							) : null}
-
-
 						</PDFModal>
 
 						<LinksWrapper>
 							<ItemWrapper>
-								<OfferBtn onClick={handleShow}>
+								<OfferBtn onClick={() => handleShow(filePaths.zbiornikiMagazynowe)}>
 									<FormattedMessage id="offer.zbiornikiMagazynowe" />
 								</OfferBtn>
 								<Button secondary>
@@ -113,19 +134,16 @@ const OfferSection = () => {
 								</Button>
 							</ItemWrapper>
 							<ItemWrapper>
-
 								<OfferBtn onClick={toggleSecondaryLinks}>
 									<FormattedMessage id="offer.zbiornikiCiśnieniowe" />
 									<StyledIcon />
-
 								</OfferBtn>
 							</ItemWrapper>
 
 							{showSecondaryLinks && (
 								<OfferBtnSecondaryWrapper>
-
 									<ItemWrapper>
-										<OfferBtnSecondary>
+										<OfferBtnSecondary onClick={() => handleShow(filePaths.filtryCiśnieniowe)}>
 											<FormattedMessage id="offer.filtryCiśnieniowe" />
 										</OfferBtnSecondary>
 										<Button secondary>
@@ -133,7 +151,7 @@ const OfferSection = () => {
 										</Button>
 									</ItemWrapper>
 									<ItemWrapper>
-										<OfferBtnSecondary>
+										<OfferBtnSecondary onClick={() => handleShow(filePaths.mieszaczeWodnoPowietrzne)}>
 											<FormattedMessage id="offer.mieszaczeWodnoPowietrzne" />
 										</OfferBtnSecondary>
 										<Button secondary>
@@ -141,7 +159,7 @@ const OfferSection = () => {
 										</Button>
 									</ItemWrapper>
 									<ItemWrapper>
-										<OfferBtnSecondary>
+										<OfferBtnSecondary onClick={() => handleShow(filePaths.zbiornikiHydroforowe)}>
 											<FormattedMessage id="offer.zbiornikiHydroforowe" />
 										</OfferBtnSecondary>
 										<Button secondary>
@@ -149,7 +167,7 @@ const OfferSection = () => {
 										</Button>
 									</ItemWrapper>
 									<ItemWrapper>
-										<OfferBtnSecondary>
+										<OfferBtnSecondary onClick={() => handleShow(filePaths.wymiennikiPojemnościowe)}>
 											<FormattedMessage id="offer.wymiennikiPojemnościowe" />
 										</OfferBtnSecondary>
 										<Button secondary>
@@ -157,7 +175,7 @@ const OfferSection = () => {
 										</Button>
 									</ItemWrapper>
 									<ItemWrapper>
-										<OfferBtnSecondary>
+										<OfferBtnSecondary onClick={() => handleShow(filePaths.zasobnikiCiepłejWodyLubPary)}>
 											<FormattedMessage id="offer.zasobnikiCiepłejWodyLubPary" />
 										</OfferBtnSecondary>
 										<Button secondary>
@@ -165,7 +183,7 @@ const OfferSection = () => {
 										</Button>
 									</ItemWrapper>
 									<ItemWrapper>
-										<OfferBtnSecondary>
+										<OfferBtnSecondary onClick={() => handleShow(filePaths.odgazowywaczeTermiczne)}>
 											<FormattedMessage id="offer.odgazowywaczeTermiczne" />
 										</OfferBtnSecondary>
 										<Button secondary>
@@ -176,7 +194,7 @@ const OfferSection = () => {
 							)}
 
 							<ItemWrapper>
-								<OfferBtn>
+								<OfferBtn onClick={() => handleShow(filePaths.zbiornikiProcesowe)}>
 									<FormattedMessage id="offer.zbiornikiProcesowe" />
 								</OfferBtn>
 								<Button secondary>
@@ -185,8 +203,7 @@ const OfferSection = () => {
 							</ItemWrapper>
 
 							<ItemWrapper>
-
-								<OfferBtn>
+								<OfferBtn onClick={() => handleShow(filePaths.zbiornikiNaZamówienie)}>
 									<FormattedMessage id="offer.zbiornikiNaZamówienie" />
 								</OfferBtn>
 								<Button secondary>
@@ -195,7 +212,6 @@ const OfferSection = () => {
 							</ItemWrapper>
 
 							<ItemWrapper>
-
 								<OfferBtn>
 									<FormattedMessage id="offer.konstrukcjeStalowe" />
 								</OfferBtn>
@@ -212,8 +228,6 @@ const OfferSection = () => {
 									<FormattedMessage id="navigation.download" />
 								</Button>
 							</ItemWrapper>
-
-
 						</LinksWrapper>
 					</TextWrapper>
 				</Column1>

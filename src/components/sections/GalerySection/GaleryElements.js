@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { colors } from '../../../colors';
 
 export const GaleryContainer = styled.div`
-  height: 700px;
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -16,8 +15,23 @@ export const GaleryContainer = styled.div`
 
 export const ImageWrapper = styled.div`
   display: flex;
-  margin-top: 15px;
   flex-direction: column;
+  width: fit-content;
+  margin: 4px;
+
+  p {
+    font-size: 12px;
+    margin-top: 0;
+  }
+`;
+export const ImagesContainer = styled.div`
+  display: flex;
+  margin-top: 15px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
 `;
 
 export const ServicesCard = styled.div`
@@ -71,7 +85,7 @@ export const ImplementationBtn = styled.button`
 `;
 
 export const ImgLeft = styled.img`
-  width: 200px;
+  height: 300px;
 
   @media screen and (max-width: 480px) {
     padding-bottom: 20px;
