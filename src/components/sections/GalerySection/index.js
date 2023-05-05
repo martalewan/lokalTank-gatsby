@@ -9,15 +9,15 @@ import {
 	ImagesContainer
 } from './GaleryElements'
 
-import Filtr_ciśnieniowy from '../../../images/Filtr_ciśnieniowy.jpg'
-import Filtry_ciśnieniowe_gumowane from '../../../images/Filtry_ciśnieniowe_gumowane.jpg'
-import Odgazowywacz_termiczny from '../../../images/Odgazowywacz_termiczny.jpg'
-import Przesiewacz from '../../../images/Przesiewacz.jpg'
-import Stopy_do_obudowy from '../../../images/Stopy_do_obudowy.jpg'
-import Wkład_stalowy_do_wymiennika_2 from '../../../images/Wkład_stalowy_do_wymiennika_2.jpg'
-import Wkłady_mosiężne_do_wymienników_2 from '../../../images/Wkłady_mosiężne_do_wymienników_2.jpg'
-import Zbiornik_hydroforofy_ocynkowany2 from '../../../images/Zbiornik_hydroforofy_ocynkowany2.jpg'
-import Zbiornik_magazynowy_pary_kondensatu from '../../../images/Zbiornik_magazynowy_pary_kondensatu.jpg'
+import Filtr_ciśnieniowy from '../../../images/Filtr_ciśnieniowy.png'
+import Filtry_ciśnieniowe_gumowane from '../../../images/Filtry_ciśnieniowe_gumowane.png'
+import Odgazowywacz_termiczny from '../../../images/Odgazowywacz_termiczny.png'
+import Przesiewacz from '../../../images/Przesiewacz.png'
+import Stopy_do_obudowy from '../../../images/Stopy_do_obudowy.png'
+import Wkład_stalowy_do_wymiennika_2 from '../../../images/Wkład_stalowy_do_wymiennika_2.png'
+import Wkłady_mosiężne_do_wymienników_2 from '../../../images/Wkłady_mosiężne_do_wymienników_2.png'
+import Zbiornik_hydroforofy_ocynkowany from '../../../images/Zbiornik_hydroforofy_ocynkowany2.png'
+import Zbiornik_magazynowy_pary_kondensatu from '../../../images/Zbiornik_magazynowy_pary_kondensatu.png'
 
 const GalerySection = () => {
 	return (
@@ -85,7 +85,7 @@ const GalerySection = () => {
 					<p>Wkłady mosiężne do wymienników</p>
 				</ImageWrapper>
 				<ImageWrapper>
-					<ImgLeft src={Zbiornik_hydroforofy_ocynkowany2} alt="Desc" />
+					<ImgLeft src={Zbiornik_hydroforofy_ocynkowany} alt="Desc" />
 					<p>Zbiornik hydroforofy ocynkowany</p>
 				</ImageWrapper>
 				<ImageWrapper>

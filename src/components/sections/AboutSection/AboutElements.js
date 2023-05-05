@@ -79,7 +79,7 @@ export const Heading = styled.h2`
 export const Text = styled.p`
   max-width: 750px;
   margin-bottom: 25px;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.5;
   background: ${colors.white};
 

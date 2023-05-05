@@ -8,7 +8,7 @@ import filtry_FWP from '../../../images/filtry-FWP.pdf';
 // import filtry_pionowe_FWL from '../../../images/FILTRY-PIONOWE-FWL.pdf';
 import hydrofory_pionowe_HPB from '../../../images/Hydrofory-pionowe-HPB.pdf';
 import odgazowywacze_termiczne from '../../../images/Odgazowywacze-termoczne-kaskadowe-typu-ODT.pdf';
-// import pionowe_zasobniki from '../../../images/Pionowe-zasobniki-ciepłej-wody-ZWV.pdf';
+import pionowe_zasobniki from '../../../images/Pionowe-zasobniki-ciepłej-wody-ZWV.pdf';
 import WP_3 from '../../../images/WP-3x.pdf';
 
 import { Button } from '../Button';
@@ -43,7 +43,7 @@ const OfferSection = () => {
 		mieszaczeWodnoPowietrzne: '',
 		zbiornikiHydroforowe: hydrofory_pionowe_HPB,
 		wymiennikiPojemnosciowe: WP_3,
-		zasobnikiCieplejWodyLubPary: '',
+		zasobnikiCieplejWodyLubPary: pionowe_zasobniki,
 		odgazowywaczeTermiczne: odgazowywacze_termiczne,
 		zbiornikiProcesowe: '',
 	});
@@ -126,7 +126,7 @@ const OfferSection = () => {
 
 						<LinksWrapper>
 							<ItemWrapper>
-								<OfferBtn onClick={() => handleShow(filePaths.zbiornikiMagazynowe)}>
+								<OfferBtn>
 									<FormattedMessage id="offer.zbiornikiMagazynowe" />
 								</OfferBtn>
 								<Button secondary>
@@ -143,7 +143,7 @@ const OfferSection = () => {
 							{showSecondaryLinks && (
 								<OfferBtnSecondaryWrapper>
 									<ItemWrapper>
-										<OfferBtnSecondary onClick={() => handleShow(filePaths.filtryCiśnieniowe)}>
+										<OfferBtnSecondary onClick={() => handleShow(filePaths.filtryCisnieniowe)}>
 											<FormattedMessage id="offer.filtryCiśnieniowe" />
 										</OfferBtnSecondary>
 										<Button secondary>
@@ -151,7 +151,7 @@ const OfferSection = () => {
 										</Button>
 									</ItemWrapper>
 									<ItemWrapper>
-										<OfferBtnSecondary onClick={() => handleShow(filePaths.mieszaczeWodnoPowietrzne)}>
+										<OfferBtnSecondary>
 											<FormattedMessage id="offer.mieszaczeWodnoPowietrzne" />
 										</OfferBtnSecondary>
 										<Button secondary>
@@ -167,7 +167,7 @@ const OfferSection = () => {
 										</Button>
 									</ItemWrapper>
 									<ItemWrapper>
-										<OfferBtnSecondary onClick={() => handleShow(filePaths.wymiennikiPojemnościowe)}>
+										<OfferBtnSecondary onClick={() => handleShow(filePaths.wymiennikiPojemnosciowe)}>
 											<FormattedMessage id="offer.wymiennikiPojemnościowe" />
 										</OfferBtnSecondary>
 										<Button secondary>
@@ -175,7 +175,7 @@ const OfferSection = () => {
 										</Button>
 									</ItemWrapper>
 									<ItemWrapper>
-										<OfferBtnSecondary onClick={() => handleShow(filePaths.zasobnikiCiepłejWodyLubPary)}>
+										<OfferBtnSecondary onClick={() => handleShow(filePaths.zasobnikiCieplejWodyLubPary)}>
 											<FormattedMessage id="offer.zasobnikiCiepłejWodyLubPary" />
 										</OfferBtnSecondary>
 										<Button secondary>
@@ -194,7 +194,7 @@ const OfferSection = () => {
 							)}
 
 							<ItemWrapper>
-								<OfferBtn onClick={() => handleShow(filePaths.zbiornikiProcesowe)}>
+								<OfferBtn>
 									<FormattedMessage id="offer.zbiornikiProcesowe" />
 								</OfferBtn>
 								<Button secondary>
