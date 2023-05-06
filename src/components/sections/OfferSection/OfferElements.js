@@ -45,6 +45,8 @@ export const Column2 = styled.div`
     display: flex;
     flex-direction: column;
     align-items: start;
+    justify-content: start;
+    margin-top: -30px;
 
     @media screen and (min-width: 1350px) {
         width: 35%;
@@ -113,7 +115,7 @@ export const OfferBtn = styled('button')`
     background: ${(colors.lightGray)};
     text-decoration: none;
     width: 100%;
-    min-width: 18rem;
+    min-width: 13rem;
     font-size: 14px;
     cursor: pointer;
     padding: 8px;
@@ -139,7 +141,7 @@ export const OfferBtnSecondary = styled('button')`
     color: ${(colors.darkGray)};
     text-decoration: none;
     width: 100%;
-    min-width: 18rem;
+    min-width: 14rem;
     font-size: 14px;
     background: none;
     cursor: pointer;
@@ -251,24 +253,24 @@ export const PopupBtn = styled.button`
 
 export const Img = styled.img`
   width: 100%;
-  margin: 0 0 10px 0;
+  margin: 0;
   padding-right: 0;
 `;
 
 export const ImgWrap = styled.div`
-  max-width: ${({ imgSize }) => imgSize};
+  max-width: 200px;
   height: 100%;
   animation: move 8s infinite alternate;
 
   @keyframes move {
     0% {
-      transform: translateY(0);
+      transform: translateX(0);
     }
     50% {
       transform: translateX(10%);
     }
     100% {
-      transform: translateY(-10%);
+      transform: translateX(10%);
     }
   }
   @media screen and (max-width: 1200px) {

@@ -36,7 +36,7 @@ export const Column1 = styled.div`
   width: 55%;
 
   @media screen and (max-width: 1200px) {
-    width: 1000%;
+    width: 100%;
   };
 `;
 
@@ -48,7 +48,7 @@ export const Column2 = styled.div`
   width: 40%;
 
   @media screen and (max-width: 1200px) {
-    width: 1000%;
+    width: 100%;
   };
 `;
 
@@ -112,7 +112,7 @@ export const StyledContactForm = styled.div`
     align-items: flex-start;
     flex-direction: column;
     width: 100%;
-    min-width: 400px;
+    min-width: 300px;
     font-size: 14px;
     color: ${colors.darkGray};
 
