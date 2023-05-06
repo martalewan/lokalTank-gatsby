@@ -85,7 +85,7 @@ export const NavLinks = styled(LinkScroll)`
     cursor: pointer;
     
     &.active {
-        border-bottom: 5px solid ${(colors.lightBlue)};
+        border-bottom: 5px solid ${(colors.blue)};
     }
 `;
 
@@ -117,12 +117,11 @@ export const LanguageItem = styled.button`
     width: 100%;
     border: 1px solid;
     border-color: ${(colors.lightGray)};
-
     margin: 0 0;
     text-align: left;
     
     &:hover {
-        color: ${(colors.mediumBlue)};
+        color: ${(colors.blue)};
         transition: 0.2 ease-in-out;
         cursor: pointer;
         background: ${(colors.white)};

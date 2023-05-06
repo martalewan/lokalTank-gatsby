@@ -1,7 +1,7 @@
 import React from 'react'
 import { FormattedMessage } from 'react-intl'
 import { MainContainer, MainBg, ImageBg, MainH1, MainP, BtnWrap } from './MainElements'
-import { ButtonLink } from '../ButtonLink';
+import { ButtonLink } from '../../common/ButtonLink';
 
 const Main = () => {
 	return (

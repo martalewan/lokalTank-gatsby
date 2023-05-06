@@ -43,8 +43,8 @@ const secondaryStyles = css`
 
   &:hover,
   &:focus {
-    color: ${(colors.lightBlue)};
-    border-color: ${(colors.lightBlue)};
+    color: ${(colors.blue)};
+    border-color: ${(colors.blue)};
 
   }
 `;

@@ -14,7 +14,7 @@ import {
 	ImgWrap,
 	Img,
 } from './AboutElements';
-import { ButtonLink } from './../ButtonLink';
+import { ButtonLink } from './../../common/ButtonLink';
 import { colors } from '../../../colors';
 
 const AboutSection = () => {

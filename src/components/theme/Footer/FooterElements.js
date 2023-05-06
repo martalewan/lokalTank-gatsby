@@ -59,7 +59,7 @@ export const FooterLink = styled(Link)`
     font-size: 14px;
 
     &:hover {
-        color: ${(colors.lightBlue)};
+        color: ${(colors.blue)};
         transition: 0.3s ease-out;
     }
 `
@@ -70,7 +70,7 @@ export const FooterLinksPage = styled(reactLink)`
     font-size: 14px;
 
     &:hover {
-        color: ${(colors.lightBlue)};
+        color: ${(colors.blue)};
         transition: 0.3s ease-out;
         cursor: pointer;
     }

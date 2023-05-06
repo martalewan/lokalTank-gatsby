@@ -2,14 +2,14 @@ import styled from 'styled-components'
 import { Modal } from 'react-bootstrap';
 import { FaCaretDown } from 'react-icons/fa'
 import { colors } from '../../../colors'
-import { Button } from '../Button'
+import { Button } from '../../common/Button';
 
 export const OfferContainer = styled.div`
     color: ${(colors.white)};
     background: ${(colors.white)};
     box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
     padding: 0 10%;
-    min-height: 500px;
+    min-height: 700px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -35,20 +35,20 @@ export const Column1 = styled.div`
     flex-direction: row;
     align-items: center;
     width: 100%;
-    max-width: 40rem;
 
-    @media screen and (max-width: 420px) {
-        margin: 0;
-        flex-direction: column;
-        align-items: start;
-    }
+    @media screen and (min-width: 1350px) {
+        width: 60%;
+    }; 
 `
 
 export const Column2 = styled.div`
-    grid-area: col2;
     display: flex;
     flex-direction: column;
     align-items: start;
+
+    @media screen and (min-width: 1350px) {
+        width: 35%;
+    }; 
 `
 
 export const ItemWrapper = styled.div`
@@ -78,20 +78,17 @@ export const Heading = styled.h2`
 `
 
 export const Text = styled.p`
-    max-width: 400px;
     font-size: 16px;
     line-height: 1.75;
     color: ${colors.darkGray};
     font-weight: 600;
     margin: 0;
+    width: 100%;
 
     @media screen and (max-width: 480px) {
         font-size: 14px;
         line-height: 20px;
     };
-    @media screen and (max-width: 1400px) {
-        max-width: 1400px;
-    }; 
 `
 
 export const BtnWrap = styled.div`
@@ -249,4 +246,32 @@ export const PopupBtn = styled.button`
     :disabled {
         background: ${(colors.lightGray)};
     }
+`;
+
+
+export const Img = styled.img`
+  width: 100%;
+  margin: 0 0 10px 0;
+  padding-right: 0;
+`;
+
+export const ImgWrap = styled.div`
+  max-width: ${({ imgSize }) => imgSize};
+  height: 100%;
+  animation: move 8s infinite alternate;
+
+  @keyframes move {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateX(10%);
+    }
+    100% {
+      transform: translateY(-10%);
+    }
+  }
+  @media screen and (max-width: 1200px) {
+    display: none;
+  } ;
 `;

@@ -21,8 +21,8 @@
     "aboutPage.p1": "LOCAL TANK is a company, which specializing in the production of high-quality pressure and storage vessels,  steel constructions. We earn the trust of our customers through reliability, solidity, and fast implementation.",
     "aboutPage.p2": "Due to several production plants in Poland provide us with flexibility in production and fast order fulfillment. Each of plants is equipped with modern machinery and tools that allowing to produce high-quality tanks and steel constructions",
     "aboutPage.p3": "We offer pressure vessels that comply with customer requirements and standards, made of black and stainless steel or synthetic materials. There are application in the chemical, pharmaceutical, food, cosmetic, energy, and other industries. Storage tanks are adapted for storing various substances, including liquids, gases, and bulk materials.",
-    "aboutPage.p4": " In addition, we design and manufacture according to customer requirements, having implementation in construction, energy or industrial sectors. LOCAL TANK prioritize quality and reliability of products, which is why we use only the best materials and the latest technologies in production. This allows to guarantee high-quality products with long service life",
-    "aboutPage.p5": " Our experts offer commitment, innovation and knowledge in every phase of a project. Our specialists are available for you to provide solution according your request. Feel free to contact us.",
+    "aboutPage.p4": "In addition, we design and manufacture according to customer requirements, having implementation in construction, energy or industrial sectors. LOCAL TANK prioritize quality and reliability of products, which is why we use only the best materials and the latest technologies in production. This allows to guarantee high-quality products with long service life",
+    "aboutPage.p5": "Our experts offer commitment, innovation and knowledge in every phase of a project. Our specialists are available for you to provide solution according your request. Feel free to contact us.",
     "aboutPage.button": "Offer",
     "aboutPage.button2": "Write",
 
@@ -43,7 +43,7 @@
     "offer.zasobnikiCiepłejWodyLubPary": "Hot wayer or steam tanks",
     "offer.odgazowywaczeTermiczne": "Thermal deaerators",
     "offer.zbiornikiProcesowe": "Process tanks",
-    "offer.zbiornikiNaZamówienie":" Customized tanks",
+    "offer.zbiornikiNaZamówienie":"Customized tanks",
     "offer.konstrukcjeStalowe": "Steel structers",
     "offer.instalacjeProcesowe": "Process instalation",
 
@@ -54,7 +54,7 @@
     "contactPage.message": "Message",
     "contactPage.nameAndCompany": "Name and Surname/Name of the company",
     "contactPage.phoneNumber": "Phone contact",
-    "contactPage.emailAdress": " E-mail address",
+    "contactPage.emailAdress": "E-mail address",
     "contactPage.successMessage": "Your message has been sent! Thank You",
     "contactPage.errorMessage": "Something went wrong. Please try again later.",
     "contactPage.send": "Send",

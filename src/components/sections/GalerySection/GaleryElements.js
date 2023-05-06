@@ -7,7 +7,6 @@ export const GaleryContainer = styled.div`
   justify-content: start;
   padding: 0 10%;
 
-
   @media screen and (max-width: 768px) {
     padding: 0 1.8rem;
   }
@@ -16,22 +15,30 @@ export const GaleryContainer = styled.div`
 export const ImageWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  width: fit-content;
-  margin: 4px;
+  width: 32%;
+
+  @media screen and (max-width: 768px) {
+    width: 48.5%;
+  }
+
+  @media screen and (max-width: 600px) {
+    width: 100%;
+  }
 
   p {
     font-size: 12px;
-    margin-top: 0;
+    margin-top: 5px;
+    line-height: 1;
   }
 `;
 export const ImagesContainer = styled.div`
   display: flex;
-  margin-top: 15px;
+  margin: 2.5rem 0;
   width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-
+  gap: 15px;
 `;
 
 export const ServicesCard = styled.div`
@@ -62,7 +69,12 @@ export const ServicesH2 = styled.h2`
   font-size: 1.6rem;
   font-weight: 600;
   color: ${colors.darkGray};
-  margin: 3rem 0;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+`;
+
+export const PhotoDescription = styled.p`
+  height: 0.3rem;
 `;
 
 export const ImplementationBtn = styled.button`
@@ -85,9 +97,5 @@ export const ImplementationBtn = styled.button`
 `;
 
 export const ImgLeft = styled.img`
-  height: 300px;
-
-  @media screen and (max-width: 480px) {
-    padding-bottom: 20px;
-  }
+  max-height: 300px;
 `;

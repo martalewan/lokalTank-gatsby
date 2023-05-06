@@ -4,11 +4,11 @@ import {
 	GaleryContainer,
 	ServicesH2,
 	ImageWrapper,
-	ImplementationBtn,
 	ImgLeft,
-	ImagesContainer
+	ImagesContainer,
+	PhotoDescription
 } from './GaleryElements'
-
+import Line from '../../common/Line/index'
 import Filtr_ciśnieniowy from '../../../images/Filtr_ciśnieniowy.png'
 import Filtry_ciśnieniowe_gumowane from '../../../images/Filtry_ciśnieniowe_gumowane.png'
 import Odgazowywacz_termiczny from '../../../images/Odgazowywacz_termiczny.png'
@@ -25,7 +25,9 @@ const GalerySection = () => {
 			<ServicesH2>
 				<FormattedMessage id="galeryPage.title" />
 			</ServicesH2>
-			<div>
+			<Line />
+
+			{/* <div>
 				<ImplementationBtn>
 					<FormattedMessage id="galeryPage.subtitle1" />
 				</ImplementationBtn>
@@ -54,43 +56,43 @@ const GalerySection = () => {
 				<ImplementationBtn>
 					<FormattedMessage id="galeryPage.subtitle7" />
 				</ImplementationBtn>
-			</div>
+			</div> */}
 			<ImagesContainer>
 				<ImageWrapper>
 					<ImgLeft src={Filtr_ciśnieniowy} alt="Desc" />
-					<p>Filtr ciśnieniowy</p>
+					<PhotoDescription>Filtr ciśnieniowy</PhotoDescription>
 				</ImageWrapper>
 				<ImageWrapper>
 					<ImgLeft src={Filtry_ciśnieniowe_gumowane} alt="Desc" />
-					<p>Filtry ciśnieniowe gumowane</p>
+					<PhotoDescription>Filtry ciśnieniowe gumowane</PhotoDescription>
 				</ImageWrapper>
 				<ImageWrapper>
 					<ImgLeft src={Odgazowywacz_termiczny} alt="Desc" />
-					<p>Odgazowywacz termiczny</p>
+					<PhotoDescription>Odgazowywacz termiczny</PhotoDescription>
 				</ImageWrapper>
 				<ImageWrapper>
 					<ImgLeft src={Przesiewacz} alt="Desc" />
-					<p>Przesiewacz</p>
+					<PhotoDescription>Przesiewacz</PhotoDescription>
 				</ImageWrapper>
 				<ImageWrapper>
 					<ImgLeft src={Stopy_do_obudowy} alt="Desc" />
-					<p>Stopy do obudowy</p>
+					<PhotoDescription>Stopy do obudowy</PhotoDescription>
 				</ImageWrapper>
 				<ImageWrapper>
 					<ImgLeft src={Wkład_stalowy_do_wymiennika_2} alt="Desc" />
-					<p>Wkład stalowy do wymiennika</p>
+					<PhotoDescription>Wkład stalowy do wymiennika</PhotoDescription>
 				</ImageWrapper>
 				<ImageWrapper>
 					<ImgLeft src={Wkłady_mosiężne_do_wymienników_2} alt="Desc" />
-					<p>Wkłady mosiężne do wymienników</p>
+					<PhotoDescription>Wkłady mosiężne do wymienników</PhotoDescription>
 				</ImageWrapper>
 				<ImageWrapper>
 					<ImgLeft src={Zbiornik_hydroforofy_ocynkowany} alt="Desc" />
-					<p>Zbiornik hydroforofy ocynkowany</p>
+					<PhotoDescription>Zbiornik hydroforofy ocynkowany</PhotoDescription>
 				</ImageWrapper>
 				<ImageWrapper>
 					<ImgLeft src={Zbiornik_magazynowy_pary_kondensatu} alt="Desc" />
-					<p>Zbiornik magazynowy pary kondensatu</p>
+					<PhotoDescription>Zbiornik magazynowy pary kondensatu</PhotoDescription>
 				</ImageWrapper>
 			</ImagesContainer>
 		</GaleryContainer>

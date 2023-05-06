@@ -24,7 +24,6 @@ const IndexPage = () => {
 		<Layout>
 			<React.Fragment>
 				<SEO title="welcome" />
-				{/* <Header /> */}
 				<Nav toggle={toggle} />
 				<Sidebar isOpen={isOpen} toggle={toggle} />
 

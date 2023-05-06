@@ -30,7 +30,7 @@ const Footer = () => {
 					<FooterLinkItems>
 						<FooterLinkTitle>Tel. +48 517 580 300,</FooterLinkTitle>
 						<FooterLinkTitle>Tel. +48 664 570 171</FooterLinkTitle>
-						<FooterLinkTitle>biuro@lokaltank.pl</FooterLinkTitle>
+						<FooterLinkTitle>E-mail: biuro@lokaltank.pl</FooterLinkTitle>
 					</FooterLinkItems>
 
 					<FooterLinksWrapper>

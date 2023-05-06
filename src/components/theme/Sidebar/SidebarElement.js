@@ -67,7 +67,7 @@ export const SidebarLink = styled(LinkScroll)`
     color: ${(colors.white)};
 
     &:hover {
-        color: ${(colors.mediumBlue)};
+        color: ${(colors.blue)};
         transition: 0.2 ease-in-out;
         cursor: pointer
     }
@@ -88,7 +88,7 @@ export const LanguageItem = styled.a`
 
 
     &:hover {
-        color: ${(colors.mediumBlue)};
+        color: ${(colors.blue)};
         transition: 0.2 ease-in-out;
         cursor: pointer;
         background: ${(colors.white)};
@@ -136,7 +136,7 @@ export const LanguageItemSidebar = styled.button`
     padding: .3rem 0;
 
     &:hover {
-        color: ${(colors.mediumBlue)};
+        color: ${(colors.darkGray)};
         transition: 0.2 ease-in-out;
         cursor: pointer;
         background: ${(colors.white)};
@@ -155,5 +155,9 @@ export const SidebarBtn = styled.button`
     border: none;
     font-size: 1.5rem;
     text-align: center;
-
+    
+    &:hover {
+        color: ${(colors.blue)};
+        transition: 0.2 ease-in-out;
+    }
 `;

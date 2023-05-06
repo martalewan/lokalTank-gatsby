@@ -10,8 +10,9 @@ import hydrofory_pionowe_HPB from '../../../images/Hydrofory-pionowe-HPB.pdf';
 import odgazowywacze_termiczne from '../../../images/Odgazowywacze-termoczne-kaskadowe-typu-ODT.pdf';
 import pionowe_zasobniki from '../../../images/Pionowe-zasobniki-ciepłej-wody-ZWV.pdf';
 import WP_3 from '../../../images/WP-3x.pdf';
+import waves from '../../../images/waves.svg';
 
-import { Button } from '../Button';
+import { Button } from '../../common/Button';
 import {
 	OfferContainer,
 	OffersWrapper,
@@ -28,6 +29,8 @@ import {
 	StyledIcon,
 	ItemWrapper,
 	Text,
+	Img,
+	ImgWrap
 } from './OfferElements';
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/legacy/build/pdf.worker.min.js`;
@@ -144,7 +147,9 @@ const OfferSection = () => {
 								<OfferBtnSecondaryWrapper>
 									<ItemWrapper>
 										<OfferBtnSecondary onClick={() => handleShow(filePaths.filtryCisnieniowe)}>
-											<FormattedMessage id="offer.filtryCiśnieniowe" />
+											<li>
+												<FormattedMessage id="offer.filtryCiśnieniowe" />
+											</li>
 										</OfferBtnSecondary>
 										<Button secondary>
 											<FormattedMessage id="navigation.download" />
@@ -152,7 +157,9 @@ const OfferSection = () => {
 									</ItemWrapper>
 									<ItemWrapper>
 										<OfferBtnSecondary>
-											<FormattedMessage id="offer.mieszaczeWodnoPowietrzne" />
+											<li>
+												<FormattedMessage id="offer.mieszaczeWodnoPowietrzne" />
+											</li>
 										</OfferBtnSecondary>
 										<Button secondary>
 											<FormattedMessage id="navigation.download" />
@@ -160,7 +167,9 @@ const OfferSection = () => {
 									</ItemWrapper>
 									<ItemWrapper>
 										<OfferBtnSecondary onClick={() => handleShow(filePaths.zbiornikiHydroforowe)}>
-											<FormattedMessage id="offer.zbiornikiHydroforowe" />
+											<li>
+												<FormattedMessage id="offer.zbiornikiHydroforowe" />
+											</li>
 										</OfferBtnSecondary>
 										<Button secondary>
 											<FormattedMessage id="navigation.download" />
@@ -168,7 +177,9 @@ const OfferSection = () => {
 									</ItemWrapper>
 									<ItemWrapper>
 										<OfferBtnSecondary onClick={() => handleShow(filePaths.wymiennikiPojemnosciowe)}>
-											<FormattedMessage id="offer.wymiennikiPojemnościowe" />
+											<li>
+												<FormattedMessage id="offer.wymiennikiPojemnościowe" />
+											</li>
 										</OfferBtnSecondary>
 										<Button secondary>
 											<FormattedMessage id="navigation.download" />
@@ -176,7 +187,9 @@ const OfferSection = () => {
 									</ItemWrapper>
 									<ItemWrapper>
 										<OfferBtnSecondary onClick={() => handleShow(filePaths.zasobnikiCieplejWodyLubPary)}>
-											<FormattedMessage id="offer.zasobnikiCiepłejWodyLubPary" />
+											<li>
+												<FormattedMessage id="offer.zasobnikiCiepłejWodyLubPary" />
+											</li>
 										</OfferBtnSecondary>
 										<Button secondary>
 											<FormattedMessage id="navigation.download" />
@@ -184,7 +197,9 @@ const OfferSection = () => {
 									</ItemWrapper>
 									<ItemWrapper>
 										<OfferBtnSecondary onClick={() => handleShow(filePaths.odgazowywaczeTermiczne)}>
-											<FormattedMessage id="offer.odgazowywaczeTermiczne" />
+											<li>
+												<FormattedMessage id="offer.odgazowywaczeTermiczne" />
+											</li>
 										</OfferBtnSecondary>
 										<Button secondary>
 											<FormattedMessage id="navigation.download" />
@@ -232,6 +247,9 @@ const OfferSection = () => {
 					</TextWrapper>
 				</Column1>
 				<Column2>
+					<ImgWrap imgSize="150px">
+						<Img src={waves} alt="Desc" />
+					</ImgWrap>
 					<Text>
 						<FormattedMessage id="offer.text" />
 					</Text>

@@ -5,14 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="281826e7-e245-462e-b71e-04080bca9605" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/de.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/de.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/en.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/pl.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/pl.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/uk.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/uk.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/sections/AboutSection/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/AboutSection/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/colors.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/colors.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Select/SelectElements.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Select/SelectLanguage.jsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/sections/Button/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/Button/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sections/ButtonLink/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/ButtonLink/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sections/ContactSection/ContactElements.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/ContactSection/ContactElements.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sections/ContactSection/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/ContactSection/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sections/GalerySection/GaleryElements.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/GalerySection/GaleryElements.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sections/GalerySection/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/GalerySection/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/sections/OfferSection/OfferElements.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/OfferSection/OfferElements.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/sections/OfferSection/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/OfferSection/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/theme/Footer/FooterElements.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/theme/Footer/FooterElements.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/theme/Footer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/theme/Footer/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/theme/Header/SelectLanguage.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/theme/Header/index.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/theme/Header/styles.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/theme/Nav/NavElements.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/theme/Nav/NavElements.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/theme/Sidebar/SidebarElement.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/theme/Sidebar/SidebarElement.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/404.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/404.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/about.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/about.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,20 +45,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "go.import.settings.migrated": "true",
+    "last_opened_file_path": "/Users/martalewandowska/Dev/lokalTank-gatsby",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="lokalTank-gatsby" />
@@ -86,6 +105,8 @@
       <workItem from="1683036081512" duration="59000" />
       <workItem from="1683036157037" duration="33000" />
       <workItem from="1683036211904" duration="12000" />
+      <workItem from="1683403557422" duration="170000" />
+      <workItem from="1683403755233" duration="23000" />
     </task>
     <servers />
   </component>
