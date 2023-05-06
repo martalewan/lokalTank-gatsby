@@ -57,6 +57,7 @@
     "contactPage.emailAdress": " E-mail address",
     "contactPage.successMessage": "Your message has been sent! Thank You",
     "contactPage.errorMessage": "Something went wrong. Please try again later.",
+    "contactPage.send": "Send",
 
     "galeryPage.title": "Implementation",
     "galeryPage.subtitle1": "Underground tanks",

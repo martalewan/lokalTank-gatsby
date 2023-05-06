@@ -201,25 +201,9 @@ export const StyledContactForm = styled.div`
       color: ${colors.darkGrayLt};
     }
 
-    input[type="submit"] {
+    button[type="submit"] {
       margin-top: 1.2rem;
-      border-radius: 8px;
-      background: ${colors.blue};
-      white-space: nowrap;
-      color: ${({ dark }) => (dark ? '#010606' : colors.white)};
-      font-size: "16px";
-      outline: none;
-      border: none;
-      cursor: pointer;
-      transition: all 0.2s ease-in-out;
-      margin-right: 10px;
-      font-weight: 500;
-      height: 2.5rem;
-
-      &:hover {
-        transition: all 0.2s ease-in-out;
-        background: ${colors.darkBlue};
-      }
+      width: 100%;
     }
   }
 `;

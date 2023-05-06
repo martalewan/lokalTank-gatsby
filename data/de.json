@@ -55,7 +55,8 @@
     "contactPage.emailAdress": " Adresse E-Mail ",
     "contactPage.successMessage": " Ihre Nachricht wurde gesendet",
     "contactPage.errorMessage": " Es ist ein Fehler aufgetreten. Bitte versuchen Sie es später noch einmal.",
- 
+    "contactPage.send": "Senden",
+
     "galeryPage.title": "Realisierungen",
     "galeryPage.subtitle1": "Unterirdische Tanks",
     "galeryPage.subtitle2": "Doppelwandige Tanks",

@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { FormattedMessage } from 'react-intl'
 import waves from '../../../images/waves.svg';
+import { Button } from '../Button';
 
 import {
 	ContactContainer,
@@ -136,8 +137,9 @@ const ContactSection = () => {
 									onChange={(e) => setFormData({ ...formData, user_email: e.target.value })
 									}
 								/>
-
-								<input type="submit" value="Send" />
+								<Button type="submit">
+									<FormattedMessage id="contactPage.send" />
+								</Button>
 							</form>
 
 							{successMessage && (

@@ -56,7 +56,8 @@
   "contactPage.emailAdress": "Adres email",
   "contactPage.successMessage": "Twoja wiadomość została wysłana!",
   "contactPage.errorMessage": "oś poszło nie tak. Spróbuj ponownie później.",
-
+  "contactPage.send": "Wyślij",
+  
   "galeryPage.title": "Realizacje",
   "galeryPage.subtitle1": "Zbiorniki podziemne",
   "galeryPage.subtitle2": "Zbiorniki dwupłaszczowe",
