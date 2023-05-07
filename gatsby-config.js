@@ -39,12 +39,12 @@ module.exports = {
 				display: 'minimal-ui',
 				icons: [
 					{
-						src: '/favicon-lt/android-chrome-512x512.png',
+						src: '/favicon/logo-512x512.png',
 						sizes: '192x192',
 						type: 'image/png'
 					},
 					{
-						src: '/favicon-lt/android-chrome-512x512.png',
+						src: '/favicon/logo-512x512.png',
 						sizes: '512x512',
 						type: 'image/png'
 					}

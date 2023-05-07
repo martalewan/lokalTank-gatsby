@@ -1,8 +1,8 @@
 module.exports = {
 	title: 'Lokal Tank, Pressure filters',
-	logo: 'https://lokaltank.pl/favicon_lk/flavicon.ico',
+	logo: 'https://lokaltank.pl/favicon/logo-48.png',
 	url: 'https://lokaltank.pl',
-	favicon: 'https://lokaltank.pl/favicon_lk/flavicon.ico',
+	favicon: 'https://lokaltank.pl/favicon/logo-48.png',
 	cover: 'https://lokaltank.pl/cover.jpg',
 	legalName: 'Lokal Tank',
 	description: 'LOCAL TANK is a company, which specializing in the production of high-quality pressure and storage vessels, steel constructions',

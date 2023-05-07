@@ -4,6 +4,6 @@ module.exports = {
 	description: 'Gatsby Internalisierungs Starter-Kit',
 	address: {
 		city: 'Chorzów',
-		country: 'Poland',
+		country: 'Polen',
 	}
 }
