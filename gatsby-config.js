@@ -31,20 +31,20 @@ module.exports = {
 		{
 			resolve: 'gatsby-plugin-manifest',
 			options: {
-				name: 'Gatsby',
-				short_name: 'Gatsby',
+				name: 'Lokal Tank',
+				short_name: 'Lokal Tank',
 				start_url: '/',
 				background_color: config.backgroundColor,
 				theme_color: config.themeColor,
 				display: 'minimal-ui',
 				icons: [
 					{
-						src: '/favicon/logo-192x192.png',
+						src: '/favicon-lt/android-chrome-512x512.png',
 						sizes: '192x192',
 						type: 'image/png'
 					},
 					{
-						src: '/favicon/logo-512x512.png',
+						src: '/favicon-lt/android-chrome-512x512.png',
 						sizes: '512x512',
 						type: 'image/png'
 					}

@@ -59,39 +59,39 @@ const GalerySection = () => {
 			</div> */}
 			<ImagesContainer>
 				<ImageWrapper>
-					<ImgImp src={Filtr_ciśnieniowy} alt="Desc" />
+					<ImgImp src={Filtr_ciśnieniowy} alt="Filtr ciśnieniowy" />
 					<PhotoDescription>Filtr ciśnieniowy</PhotoDescription>
 				</ImageWrapper>
 				<ImageWrapper>
-					<ImgImp src={Filtry_ciśnieniowe_gumowane} alt="Desc" />
+					<ImgImp src={Filtry_ciśnieniowe_gumowane} alt="Filtry ciśnieniowe gumowane" />
 					<PhotoDescription>Filtry ciśnieniowe gumowane</PhotoDescription>
 				</ImageWrapper>
 				<ImageWrapper>
-					<ImgImp src={Odgazowywacz_termiczny} alt="Desc" />
+					<ImgImp src={Odgazowywacz_termiczny} alt="Odgazowywacz termiczny" />
 					<PhotoDescription>Odgazowywacz termiczny</PhotoDescription>
 				</ImageWrapper>
 				<ImageWrapper>
-					<ImgImp src={Przesiewacz} alt="Desc" />
+					<ImgImp src={Przesiewacz} alt="Przesiewacz" />
 					<PhotoDescription>Przesiewacz</PhotoDescription>
 				</ImageWrapper>
 				<ImageWrapper>
-					<ImgImp src={Stopy_do_obudowy} alt="Desc" />
+					<ImgImp src={Stopy_do_obudowy} alt="Stopy do obudowy" />
 					<PhotoDescription>Stopy do obudowy</PhotoDescription>
 				</ImageWrapper>
 				<ImageWrapper>
-					<ImgImp src={Wkład_stalowy_do_wymiennika_2} alt="Desc" />
+					<ImgImp src={Wkład_stalowy_do_wymiennika_2} alt="Wkład stalowy do wymiennika" />
 					<PhotoDescription>Wkład stalowy do wymiennika</PhotoDescription>
 				</ImageWrapper>
 				<ImageWrapper>
-					<ImgImp src={Wkłady_mosiężne_do_wymienników_2} alt="Desc" />
+					<ImgImp src={Wkłady_mosiężne_do_wymienników_2} alt="Wkłady mosiężne do wymienników" />
 					<PhotoDescription>Wkłady mosiężne do wymienników</PhotoDescription>
 				</ImageWrapper>
 				<ImageWrapper>
-					<ImgImp src={Zbiornik_hydroforofy_ocynkowany} alt="Desc" />
+					<ImgImp src={Zbiornik_hydroforofy_ocynkowany} alt="Zbiornik hydroforofy ocynkowany" />
 					<PhotoDescription>Zbiornik hydroforofy ocynkowany</PhotoDescription>
 				</ImageWrapper>
 				<ImageWrapper>
-					<ImgImp src={Zbiornik_magazynowy_pary_kondensatu} alt="Desc" />
+					<ImgImp src={Zbiornik_magazynowy_pary_kondensatu} alt="Zbiornik magazynowy pary kondensatu" />
 					<PhotoDescription>Zbiornik magazynowy pary kondensatu</PhotoDescription>
 				</ImageWrapper>
 			</ImagesContainer>
