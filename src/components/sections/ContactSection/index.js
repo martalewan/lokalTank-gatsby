@@ -11,8 +11,21 @@ import {
 	Column2,
 	StyledContactForm,
 	ContactH2,
-	ContactInfo
+	ContactInfo,
+	EmailLink
 } from './ContactElements';
+
+
+export const sendMail = () => {
+	const recipient = 'me@example.com';
+	const subject = 'Wiadomosc w sprawie oferty Lokal Tank';
+	const body = '';
+
+	const mailtoUrl = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+	// eslint-disable-next-line no-undef
+	window.location.href = mailtoUrl;
+};
 
 const ContactSection = () => {
 	const [successMessage, setSuccessMessage] = useState('');
@@ -25,7 +38,7 @@ const ContactSection = () => {
 		user_email: '',
 	});
 
-	const sendEmail = (e) => {
+	const sendEmailForm = (e) => {
 		e.preventDefault();
 
 		emailjs
@@ -65,12 +78,10 @@ const ContactSection = () => {
 			<ContactRow>
 				<Column1>
 					<StyledContactForm>
-
-
-						<form onSubmit={sendEmail}>
+						<form onSubmit={sendEmailForm}>
 							<label htmlFor="user_topic">
 								<FormattedMessage id="contactPage.topic" />
-				  <span className="required"> *</span>
+								<span className="required"> *</span>
 							</label>
 							<input
 								required
@@ -84,7 +95,7 @@ const ContactSection = () => {
 
 							<label htmlFor="message">
 								<FormattedMessage id="contactPage.message" />
-				  <span className="required"> *</span>
+								<span className="required"> *</span>
 							</label>
 							<textarea
 								required
@@ -155,7 +166,19 @@ const ContactSection = () => {
 					<ContactInfo>Ul. Gabriela Narutowicza 15,</ContactInfo>
 					<ContactInfo>41-530 Chorzów NIP: 6272782103</ContactInfo>
 					<ContactInfo>Tel. +48 517 580 300/ +48 664 570 171</ContactInfo>
-					<ContactInfo>E-mail: biuro@lokaltank.pl</ContactInfo>
+					<ContactInfo>E-mail:
+						<EmailLink
+							to="/"
+							onClick={sendMail}
+							smooth
+							duration={500}
+							spy
+							offset={-80}
+
+						>
+							biuro@lokaltank.pl
+						</EmailLink>
+					</ContactInfo>
 
 					<iframe
 						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2547.6286592474958!2d18.970595116405708!3d50.317521579457406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4716d2413713289f%3A0xd2aa5e4087cd7f03!2sGabriela%20Narutowicza%2015%2C%2041-503%20Chorz%C3%B3w%2C%20Poland!5e0!3m2!1sen!2sse!4v1673188109282!5m2!1sen!2sse"

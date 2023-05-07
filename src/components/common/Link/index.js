@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { primaryStyles, secondaryStyles } from '../Button'
 
 export const Link = styled('a')`
+    text-decoration: none;
     width: 8rem;
     white-space: nowrap;
     outline: none;

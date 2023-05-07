@@ -9,6 +9,9 @@ import {
 	FooterLinkTitle,
 	FooterLinksPage,
 } from './FooterElements';
+import { EmailLink  } from '../../sections/ContactSection/ContactElements'
+import { sendMail } from '../../sections/ContactSection'
+
 
 const Footer = () => {
 	return (
@@ -30,7 +33,20 @@ const Footer = () => {
 					<FooterLinkItems>
 						<FooterLinkTitle>Tel. +48 517 580 300,</FooterLinkTitle>
 						<FooterLinkTitle>Tel. +48 664 570 171</FooterLinkTitle>
-						<FooterLinkTitle>E-mail: biuro@lokaltank.pl</FooterLinkTitle>
+						<FooterLinkTitle>E-mail:&nbsp;
+
+							<EmailLink
+								to="/"
+								onClick={sendMail}
+								smooth
+								duration={500}
+								spy
+								offset={-80}
+
+							>
+								biuro@lokaltank.pl
+							</EmailLink>
+						</FooterLinkTitle>
 					</FooterLinkItems>
 
 					<FooterLinksWrapper>

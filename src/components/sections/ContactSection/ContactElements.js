@@ -107,3 +107,12 @@ export const StyledContactForm = styled.div`
     }
   }
 `;
+
+export const EmailLink = styled('a')`
+  &:hover,
+  &:focus {
+    transition: all 0.2s ease-in-out;
+    color: ${colors.blue};
+    cursor: pointer;
+  }
+`;

@@ -147,6 +147,7 @@ export const OfferBtnSecondary = styled('button')`
     cursor: pointer;
     padding: 8px;
     display: flex;
+    justify-content: space-between;
     border: none;
     background: ${(colors.lightGrayLt)};
     font-weight: 550;
@@ -263,7 +264,6 @@ export const Img = styled.img`
 
 export const ImgWrap = styled.div`
   max-width: 200px;
-  height: 100%;
   animation: move 8s infinite alternate;
 
   @keyframes move {
