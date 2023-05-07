@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Modal } from 'react-bootstrap';
 import { FormattedMessage } from 'react-intl';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -10,7 +10,7 @@ import odgazowywacze_termiczne from '../../../images/Odgazowywacze-termoczne-kas
 import pionowe_zasobniki from '../../../images/Pionowe-zasobniki-ciepłej-wody-ZWV.pdf';
 import WP_3 from '../../../images/WP-3x.pdf';
 import waves from '../../../images/waves.svg';
-import { Link } from '../../common/Link'
+import { Link } from '../../common/Link';
 import {
 	OfferContainer,
 	OffersWrapper,
@@ -28,7 +28,7 @@ import {
 	ItemWrapper,
 	Text,
 	Img,
-	ImgWrap
+	ImgWrap,
 } from './OfferElements';
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/legacy/build/pdf.worker.min.js`;
@@ -37,7 +37,9 @@ const OfferSection = () => {
 	const [show, setShow] = useState(false);
 	const [numPages, setNumPages] = useState(null);
 	const [pageNumber, setPageNumber] = useState(1);
+	const [loaded, setLoaded] = useState(false);
 	const [showSecondaryLinks, setShowSecondaryLinks] = useState(false); // new state variable
+
 	const [filePaths] = useState({
 		zbiornikiMagazynowe: '',
 		filtryCisnieniowe: filtry_FWPiPionoweFWL,
@@ -50,16 +52,21 @@ const OfferSection = () => {
 	});
 	const [selectedFile, setSelectedFile] = useState(filePaths.magazynowe);
 
-	const handleClose = () => setShow(false);
+	const handleClose = () => {
+		setShow(false);
+		setLoaded(false);
+	};
+
 	const handleShow = (pdfFile) => {
-		setPageNumber(1);
 		setSelectedFile(pdfFile);
+		setPageNumber(1)
 		setShow(true);
 	};
 
 	// eslint-disable-next-line no-shadow
 	function onDocumentLoadSuccess({ numPages }) {
 		setNumPages(numPages);
+		setLoaded(true);
 	}
 
 	function toggleSecondaryLinks() {
@@ -87,7 +94,7 @@ const OfferSection = () => {
 				<Column1>
 					<TextWrapper>
 						<PDFModal show={show} onHide={handleClose} size="lg">
-							{numPages > 0 ? (
+							{loaded ? (
 								<Modal.Header>
 									<FontAwesomeIcon
 										icon={faTimes}
@@ -107,7 +114,7 @@ const OfferSection = () => {
 								</Document>
 							</Modal.Body>
 
-							{numPages > 0 ? (
+							{loaded ? (
 								<Modal.Footer>
 									<PopupBtn
 										onClick={handlePrevPage}
@@ -129,7 +136,9 @@ const OfferSection = () => {
 						<LinksWrapper>
 							<ItemWrapper>
 								<OfferBtn>
-									<span><FormattedMessage id="offer.zbiornikiMagazynowe" /></span>
+									<span>
+										<FormattedMessage id="offer.zbiornikiMagazynowe" />
+									</span>
 									{/* <span><FormattedMessage id="offer.preview" /></span> */}
 								</OfferBtn>
 								{/* <Link href={filePaths.zbiornikiMagazynowe} download={filePaths.zbiornikiMagazynowe} secondary>
@@ -146,13 +155,21 @@ const OfferSection = () => {
 							{showSecondaryLinks && (
 								<OfferBtnSecondaryWrapper>
 									<ItemWrapper>
-										<OfferBtnSecondary onClick={() => handleShow(filePaths.filtryCisnieniowe)}>
+										<OfferBtnSecondary
+											onClick={() => handleShow(filePaths.filtryCisnieniowe)}
+										>
 											<li>
 												<FormattedMessage id="offer.filtryCiśnieniowe" />
 											</li>
-											<span><FormattedMessage id="offer.preview" /></span>
+											<span>
+												<FormattedMessage id="offer.preview" />
+											</span>
 										</OfferBtnSecondary>
-										<Link href={filePaths.filtryCisnieniowe} download={filePaths.filtryCisnieniowe} secondary>
+										<Link
+											href={filePaths.filtryCisnieniowe}
+											download={filePaths.filtryCisnieniowe}
+											secondary
+										>
 											<FormattedMessage id="navigation.download" />
 										</Link>
 									</ItemWrapper>
@@ -168,46 +185,81 @@ const OfferSection = () => {
 										</Link> */}
 									</ItemWrapper>
 									<ItemWrapper>
-										<OfferBtnSecondary onClick={() => handleShow(filePaths.zbiornikiHydroforowe)}>
+										<OfferBtnSecondary
+											onClick={() => handleShow(filePaths.zbiornikiHydroforowe)}
+										>
 											<li>
 												<FormattedMessage id="offer.zbiornikiHydroforowe" />
 											</li>
-											<span><FormattedMessage id="offer.preview" /></span>
+											<span>
+												<FormattedMessage id="offer.preview" />
+											</span>
 										</OfferBtnSecondary>
-										<Link href={filePaths.zbiornikiHydroforowe} download={filePaths.zbiornikiHydroforowe} secondary>
+										<Link
+											href={filePaths.zbiornikiHydroforowe}
+											download={filePaths.zbiornikiHydroforowe}
+											secondary
+										>
 											<FormattedMessage id="navigation.download" />
 										</Link>
 									</ItemWrapper>
 									<ItemWrapper>
-										<OfferBtnSecondary onClick={() => handleShow(filePaths.wymiennikiPojemnosciowe)}>
+										<OfferBtnSecondary
+											onClick={() => handleShow(filePaths.wymiennikiPojemnosciowe)
+											}
+										>
 											<li>
 												<FormattedMessage id="offer.wymiennikiPojemnościowe" />
 											</li>
-											<span><FormattedMessage id="offer.preview" /></span>
+											<span>
+												<FormattedMessage id="offer.preview" />
+											</span>
 										</OfferBtnSecondary>
-										<Link href={filePaths.wymiennikiPojemnosciowe} download={filePaths.wymiennikiPojemnosciowe} secondary>
+										<Link
+											href={filePaths.wymiennikiPojemnosciowe}
+											download={filePaths.wymiennikiPojemnosciowe}
+											secondary
+										>
 											<FormattedMessage id="navigation.download" />
 										</Link>
 									</ItemWrapper>
 									<ItemWrapper>
-										<OfferBtnSecondary onClick={() => handleShow(filePaths.zasobnikiCieplejWodyLubPary)}>
+										<OfferBtnSecondary
+											onClick={() => handleShow(filePaths.zasobnikiCieplejWodyLubPary)
+											}
+										>
 											<li>
 												<FormattedMessage id="offer.zasobnikiCiepłejWodyLubPary" />
 											</li>
-											<span><FormattedMessage id="offer.preview" /></span>
+											<span>
+												<FormattedMessage id="offer.preview" />
+											</span>
 										</OfferBtnSecondary>
-										<Link href={filePaths.zasobnikiCieplejWodyLubPary} download={filePaths.zasobnikiCieplejWodyLubPary} secondary>
+										<Link
+											href={filePaths.zasobnikiCieplejWodyLubPary}
+											download={filePaths.zasobnikiCieplejWodyLubPary}
+											secondary
+										>
 											<FormattedMessage id="navigation.download" />
 										</Link>
 									</ItemWrapper>
 									<ItemWrapper>
-										<OfferBtnSecondary onClick={() => handleShow(filePaths.odgazowywaczeTermiczne)}>
+										<OfferBtnSecondary
+											onClick={() => handleShow(filePaths.odgazowywaczeTermiczne)
+											}
+										>
 											<li>
 												<FormattedMessage id="offer.odgazowywaczeTermiczne" />
 											</li>
-											<span><FormattedMessage id="offer.preview" /></span>
+											<span>
+												<FormattedMessage id="offer.preview" />
+											</span>
 										</OfferBtnSecondary>
-										<Link href={filePaths.odgazowywaczeTermiczne} download={filePaths.odgazowywaczeTermiczne} secondary>
+										<Link
+											href={filePaths.odgazowywaczeTermiczne}
+											download={filePaths.odgazowywaczeTermiczne}
+											secondary
+										>
 											<FormattedMessage id="navigation.download" />
 										</Link>
 									</ItemWrapper>
@@ -216,7 +268,9 @@ const OfferSection = () => {
 
 							<ItemWrapper>
 								<OfferBtn>
-									<span><FormattedMessage id="offer.zbiornikiProcesowe" /></span>
+									<span>
+										<FormattedMessage id="offer.zbiornikiProcesowe" />
+									</span>
 									{/* <span><FormattedMessage id="offer.preview" /></span> */}
 								</OfferBtn>
 								{/* <Link href={filePaths.zbiornikiProcesowe} download={filePaths.zbiornikiProcesowe} secondary>
@@ -226,7 +280,9 @@ const OfferSection = () => {
 
 							<ItemWrapper>
 								<OfferBtn id="offer.zbiornikiNaZamówienie">
-									<span><FormattedMessage id="offer.zbiornikiNaZamówienie" /></span>
+									<span>
+										<FormattedMessage id="offer.zbiornikiNaZamówienie" />
+									</span>
 									{/* <span><FormattedMessage id="offer.preview" /></span> */}
 								</OfferBtn>
 								{/* <Link href={filePaths.zbiornikiNaZamówienie} download={filePaths.zbiornikiNaZamówienie} secondary>
@@ -236,7 +292,9 @@ const OfferSection = () => {
 
 							<ItemWrapper>
 								<OfferBtn>
-									<span><FormattedMessage id="offer.konstrukcjeStalowe" /></span>
+									<span>
+										<FormattedMessage id="offer.konstrukcjeStalowe" />
+									</span>
 									{/* <span><FormattedMessage id="offer.preview" /></span> */}
 								</OfferBtn>
 								{/* <Link href={filePaths.konstrukcjeStalowe} download={filePaths.konstrukcjeStalowe} secondary>
