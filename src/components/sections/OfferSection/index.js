@@ -4,8 +4,7 @@ import { FormattedMessage } from 'react-intl';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Document, Page, pdfjs } from 'react-pdf';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
-import filtry_FWP from '../../../images/filtry-FWP.pdf';
-// import filtry_pionowe_FWL from '../../../images/FILTRY-PIONOWE-FWL.pdf';
+import filtry_FWPiPionoweFWL from '../../../images/filtry_FWPiPionoweFWL.pdf';
 import hydrofory_pionowe_HPB from '../../../images/Hydrofory-pionowe-HPB.pdf';
 import odgazowywacze_termiczne from '../../../images/Odgazowywacze-termoczne-kaskadowe-typu-ODT.pdf';
 import pionowe_zasobniki from '../../../images/Pionowe-zasobniki-ciepłej-wody-ZWV.pdf';
@@ -41,7 +40,7 @@ const OfferSection = () => {
 	const [showSecondaryLinks, setShowSecondaryLinks] = useState(false); // new state variable
 	const [filePaths] = useState({
 		zbiornikiMagazynowe: '',
-		filtryCisnieniowe: filtry_FWP,
+		filtryCisnieniowe: filtry_FWPiPionoweFWL,
 		mieszaczeWodnoPowietrzne: '',
 		zbiornikiHydroforowe: hydrofory_pionowe_HPB,
 		wymiennikiPojemnosciowe: WP_3,
