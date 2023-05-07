@@ -68,11 +68,8 @@ export const ServicesH2 = styled.h2`
   color: ${colors.darkGray};
   margin-bottom: 64px;
   font-family: Arial, sans-serif;
-
-  @media screen and (max-width: 480px) {
-    font-size: 2rem;
-  }
 `;
+
 export const ServicesP = styled.p`
   font-size: 0.8rem;
   text-align: center;
@@ -80,10 +77,6 @@ export const ServicesP = styled.p`
   line-height: 1.1rem;
   color: ${colors.secondary};
   height: 100%;
-    display: flex;
-    align-items: center;
-
-  @media screen and (max-width: 480px) {
-    font-size: 14px;
-  }
+  display: flex;
+  align-items: center;
 `;

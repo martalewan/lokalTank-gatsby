@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Link as LinkScroll } from 'react-scroll';
 import { colors } from '../../../colors';
 
 export const ContactContainer = styled.div`
@@ -52,58 +51,12 @@ export const Column2 = styled.div`
   };
 `;
 
-export const TextWrapper = styled.div`
-  padding-top: 0;
-`;
-
 export const ContactInfo = styled.ul`
     margin: 0;
     padding: 0;
     color: ${colors.darkGray};
     font-size: 14px;
     font-weight: 600;
-`;
-
-export const Heading = styled.h1`
-  margin-bottom: 24px;
-  font-size: 42px;
-  font-weight: 600;
-  color: ${colors.darkGray};
-
-  @media screen and (max-width: 480px) {
-    font-size: 28px;
-  } ;
-`;
-
-export const BtnWrap = styled.div`
-  display: flex;
-  justify-content: flex-start;
-`;
-
-export const LinksWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-
-  @media screen and (max-width: 820px) {
-    flex-direction: column;
-  }
-`;
-
-export const OfferLink = styled(LinkScroll)`
-  color: ${colors.darkGray};
-  background: ${colors.white};
-  text-decoration: none;
-  margin: 0.3rem 0;
-  font-size: 14px;
-  cursor: pointer;
-  padding: 6px;
-
-  &:hover {
-    color: ${colors.darkBlue};
-    transform: scale(1.01);
-    transition: all 0.2 ease-in-out;
-    cursor: pointer;
-  }
 `;
 
 export const StyledContactForm = styled.div`

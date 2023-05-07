@@ -42,7 +42,6 @@ export const MainH1 = styled.h1`
     align-items: center;
     padding: 0 10%;
 
-    
     @media screen and (max-width: 768px) {
         padding: 0 1.8rem;     
        font-size: 40px;
@@ -58,7 +57,6 @@ export const BtnWrap = styled.div`
     align-items: center;
     margin-top: 200px;
 `
-
 
 const AppearAnimation = keyframes`
   from {

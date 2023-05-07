@@ -27,10 +27,10 @@ export const AboutRow = styled.div`
   grid-gap: 30px;
   grid-auto-columns: minmax(2fr, 1fr);
   align-items: start;
-  grid-template-areas: ${({ imgStart }) => (imgStart ? '"col2 col1"' : '"col1 col2"')};
+  grid-template-areas: ${('"col1 col2"')};
 
   @media screen and (max-width: 768px) {
-    grid-template-areas: ${({ imgStart }) => (imgStart ? '"col1" "col2"' : '"col1 col1" "col2 col2"')};
+    grid-template-areas: ${('"col1 col1" "col2 col2"')};
   } ;
 `;
 
@@ -70,10 +70,6 @@ export const Heading = styled.h2`
   font-weight: 600;
   background: ${colors.white};
   color: ${colors.darkGray};
-
-  @media screen and (max-width: 480px) {
-    font-size: 28px;
-  } ;
 `;
 
 export const Text = styled.p`

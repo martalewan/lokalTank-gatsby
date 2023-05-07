@@ -158,6 +158,10 @@ export const OfferBtnSecondary = styled('button')`
         transition: all 0.2 ease-in-out;
         text-decoration: underline;
     }
+
+    ul{
+      text-align: left;
+    }
 `
 
 
@@ -275,5 +279,5 @@ export const ImgWrap = styled.div`
   }
   @media screen and (max-width: 1200px) {
     display: none;
-  } ;
+  };
 `;

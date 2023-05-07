@@ -34,12 +34,7 @@ const SEO = ({ location = '', title }) => {
 			"postalCode": "${config.address.zipCode}"
 		},
 		"sameAs": [
-			"${config.socialLinks.twitter}",
-			"${config.socialLinks.google}",
-			"${config.socialLinks.youtube}",
 			"${config.socialLinks.linkedin}",
-			"${config.socialLinks.instagram}",
-			"${config.socialLinks.github}"
 		]
 	}`
 
@@ -58,14 +53,7 @@ const SEO = ({ location = '', title }) => {
 			<meta property="og:title" content={lang === 'uk' ? configUk.title : config.title} />
 			<meta property="og:description" content={lang === 'uk' ? configUk.description : config.description} />
 			<meta property="og:image" content={config.cover} />
-			<meta property="fb:app_id" content={config.social.facebook} />
 
-			<meta name="twitter:card" content="summary_large_image" />
-			<meta name="twitter:creator" content={config.social.twitter} />
-			<meta name="twitter:site" content={config.socialLinks.twitter} />
-			<meta name="twitter:title" content={lang === 'uk' ? configUk.title : config.title} />
-			<meta name="twitter:description" content={lang === 'uk' ? configUk.description : config.description} />
-			<meta name="twitter:image:src" content={config.cover} />
 			<script type="application/ld+json">{structuredDataOrganization}</script>
 			<link rel="publisher" href={config.socialLinks.google} />
 			<title>

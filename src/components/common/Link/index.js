@@ -1,8 +1,7 @@
 import styled from 'styled-components';
-import { Link } from 'react-scroll';
 import { primaryStyles, secondaryStyles } from '../Button'
 
-export const ButtonLink = styled(Link)`
+export const Link = styled('a')`
     width: 8rem;
     white-space: nowrap;
     outline: none;
@@ -25,4 +24,4 @@ export const ButtonLink = styled(Link)`
   }
 `;
 
-export default ButtonLink;
+export default Link;

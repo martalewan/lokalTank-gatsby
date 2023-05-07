@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import { colors } from '../../../colors'
 
-const primaryStyles = css`
+export const primaryStyles = css`
   background-color: ${(colors.blue)};
   border-radius: 4px;
   font-size: 16px;
@@ -28,7 +28,7 @@ const primaryStyles = css`
   }
 `;
 
-const secondaryStyles = css`
+export const secondaryStyles = css`
   background: "none";
   background-color: "none";
   color: ${(colors.darkGray)};
