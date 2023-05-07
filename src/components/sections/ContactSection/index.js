@@ -181,7 +181,7 @@ const ContactSection = () => {
 					</ContactInfo>
 
 					<iframe
-						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2547.6286592474958!2d18.970595116405708!3d50.317521579457406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4716d2413713289f%3A0xd2aa5e4087cd7f03!2sGabriela%20Narutowicza%2015%2C%2041-503%20Chorz%C3%B3w%2C%20Poland!5e0!3m2!1sen!2sse!4v1673188109282!5m2!1sen!2sse"
+						src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d8332.704702418963!2d18.96786994261085!3d50.31497758123612!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4716d3d4e4473f17%3A0xb6ebe39ff8c81015!2sLokal%20Tank%20Sp.%20z%20o.o.!5e0!3m2!1sen!2sse!4v1683493673559!5m2!1sen!2ssee"
 						width="100%"
 						height="335px"
 						style={{ border: 0, marginTop: '20px' }}

@@ -180,6 +180,7 @@ export const PDFModal = styled(Modal)`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    font-family: Arial, Helvetica, sans-serif;
 
   .modal-content {
     border-radius: 3px;
@@ -195,9 +196,8 @@ export const PDFModal = styled(Modal)`
     position: absolute;
     bottom: 5px;
     width: 100%;
-    font-family: Arial, Helvetica, sans-serif;
-
   }
+
   .modal-header {
     position: absolute;
     z-index: 9;
@@ -218,8 +218,9 @@ export const PDFModal = styled(Modal)`
   .annotationLayer {
     height: 0 !important;
   }
+
   canvas {
-    width: 537px !important;
+    width: 480px !important;
     height: auto !important;
 
     @media screen and (max-width: 768px) {
