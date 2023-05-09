@@ -36,6 +36,7 @@ export const ImagesContainer = styled.div`
   display: flex;
   margin: 2.5rem 0;
   width: 100%;
+  height: auto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -80,4 +81,7 @@ export const ImplementationBtn = styled.button`
 `;
 
 export const ImgImp = styled.img`
+    object-fit: cover;
+    width: 100%;
+    height: auto;
 `;

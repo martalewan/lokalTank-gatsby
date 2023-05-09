@@ -52,10 +52,22 @@ const Footer = () => {
 					<FooterLinksWrapper>
 						<FooterLinkItems>
 							<FooterLinkTitle>NIP 6272782103</FooterLinkTitle>
-							<FooterLinksPage to="onas">
+							<FooterLinksPage
+								to="onas"
+								smooth
+								duration={500}
+								spy
+								offset={-80}
+							>
 								<FormattedMessage id="navigation.about" />
 							</FooterLinksPage>
-							<FooterLinksPage to="oferta">
+							<FooterLinksPage
+								to="oferta"
+								smooth
+								duration={500}
+								spy
+								offset={-80}
+							>
 								<FormattedMessage id="navigation.offer" />
 							</FooterLinksPage>
 						</FooterLinkItems>

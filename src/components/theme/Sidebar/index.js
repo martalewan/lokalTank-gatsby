@@ -51,18 +51,18 @@ const Sidebar = ({ isOpen, toggle }) => {
 
 			<SidebarWrapper>
 				<SidebarMenu>
-					<SidebarLink to="onas" onClick={toggle}>
+					<SidebarLink to="onas" onClick={toggle} smooth duration={500} spy offset={-80}>
 						<FormattedMessage id="navigation.about" />
 					</SidebarLink>
-					<SidebarLink to="oferta" onClick={toggle}>
+					<SidebarLink to="oferta" onClick={toggle} smooth duration={500} spy offset={-80}>
 						<FormattedMessage id="navigation.offer" />
 					</SidebarLink>
 
-					<SidebarLink to="galeria" onClick={toggle}>
+					<SidebarLink to="galeria" onClick={toggle} smooth duration={500} spy offset={-80}>
 						<FormattedMessage id="navigation.implementation" />
 					</SidebarLink>
 
-					<SidebarLink to="kontakt" onClick={toggle}>
+					<SidebarLink to="kontakt" onClick={toggle} smooth duration={500} spy offset={-80}>
 						<FormattedMessage id="navigation.contact" />
 					</SidebarLink>
 					<LanguageWrapper>
