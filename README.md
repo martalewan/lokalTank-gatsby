@@ -4,7 +4,7 @@ Lokal Tank web, made using gatsby, react and i18n.
 ## Getting started
 
 ```bash
-gatsby new https://github.com/smakosh/gatsby-starter-i18n
+gatsby new https://lokaltank.pl
 
 yarn && yarn start
 ```
