@@ -5,5 +5,6 @@ module.exports = {
 	address: {
 		city: 'Chorzów',
 		country: 'Polska'
-	}
+	},
+	keyWords: 'LokalTank, Lokal Tank, zbiorniki, ciśnieniowe, magazynowe, konstrukcje stalowe'
 }

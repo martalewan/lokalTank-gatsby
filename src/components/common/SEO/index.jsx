@@ -1,66 +1,65 @@
-import React from 'react'
-import Helmet from 'react-helmet'
-import { useIntl } from 'react-intl'
-import config from '../../../../data/config'
-import configUk from '../../../../data/configUk'
-import { useI18n } from '../../../providers/LanguageProvider'
+import React from 'react';
+import Helmet from 'react-helmet';
+import { useIntl } from 'react-intl';
+import { useI18n } from '../../../providers/LanguageProvider';
+import config from '../../../../data/config';
+import configUk from '../../../../data/configUk';
 
 const SEO = ({ location = '', title }) => {
-	const { lang } = useI18n()
-	const { formatMessage } = useIntl()
+	const { lang } = useI18n();
+	const { formatMessage } = useIntl();
 
-	const structuredDataOrganization = `{ 
-		"@context": "http://schema.org",
-		"@type": "Organization",
-		"legalName": "${lang === 'uk' ? configUk.legalName : config.legalName}",
-		"url": "${config.url}",
-		"logo": "${config.logo}",
-		"foundingDate": "${config.foundingDate}",
-		"founders": [{
-			"@type": "Person",
-			"name": "${lang === 'uk' ? configUk.legalName : config.legalName}"
+	const currentConfig = lang === 'uk' ? configUk : config;
+
+	const structuredDataOrganization = {
+		'@context': 'http://schema.org',
+		'@type': 'Organization',
+		legalName: currentConfig.legalName,
+		url: currentConfig.url,
+		logo: currentConfig.logo,
+		foundingDate: currentConfig.foundingDate,
+		founders: [{
+			'@type': 'Person',
+			name: currentConfig.legalName,
 		}],
-		"contactPoint": [{
-			"@type": "ContactPoint",
-			"email": "${config.contact.email}",
-			"telephone": "${config.contact.phone}",
-			"contactType": "customer service"
+		contactPoint: [{
+			'@type': 'ContactPoint',
+			email: currentConfig.contact.email,
+			telephone: currentConfig.contact.phone,
+			contactType: 'customer service',
 		}],
-		"address": {
-			"@type": "PostalAddress",
-			"addressLocality": "${lang === 'uk' ? configUk.address.city : config.address.city}",
-			"addressRegion": "${lang === 'uk' ? configUk.address.region : config.address.region}",
-			"addressCountry": "${lang === 'uk' ? configUk.address.country : config.address.country}",
-			"postalCode": "${config.address.zipCode}"
+		address: {
+			'@type': 'PostalAddress',
+			addressLocality: currentConfig.address.city,
+			addressRegion: currentConfig.address.region,
+			addressCountry: currentConfig.address.country,
+			postalCode: currentConfig.address.zipCode,
 		},
-		"sameAs": [
-			"${config.socialLinks.linkedin}",
-		]
-	}`
+		sameAs: [
+			currentConfig.socialLinks.linkedin,
+		],
+	};
 
 	return (
 		<Helmet>
 			<html lang={lang} />
-			<meta name="google-site-verification" content={config.googleVerification} />
-			<link rel="shortcut icon" href={config.favicon} />
-
+			<meta name="author" content="Lokal Tank" />
+			<meta name="keywords" content="LokalTank, LokalTank," />
+			<meta name="google-site-verification" content={currentConfig.googleVerification} />
+			<link rel="shortcut icon" href={currentConfig.favicon} />
 			<meta name="robots" content="index, follow" />
-			<meta name="description" content={lang === 'uk' ? configUk.description : config.description} />
-			<meta name="image" content={config.cover} />
-
-			<meta property="og:url" content={`${config.url}${location}`} />
+			<meta name="description" content={currentConfig.description} />
+			<meta name="image" content={currentConfig.cover} />
+			<meta property="og:url" content={`${currentConfig.url}${location}`} />
 			<meta property="og:type" content="website" />
-			<meta property="og:title" content={lang === 'uk' ? configUk.title : config.title} />
-			<meta property="og:description" content={lang === 'uk' ? configUk.description : config.description} />
-			<meta property="og:image" content={config.cover} />
-
-			<script type="application/ld+json">{structuredDataOrganization}</script>
-			<link rel="publisher" href={config.socialLinks.google} />
-			<title>
-				{formatMessage({ id: title })}
-			</title>
+			<meta property="og:title" content={currentConfig.title} />
+			<meta property="og:description" content={currentConfig.description} />
+			<meta property="og:image" content={currentConfig.cover} />
+			<script type="application/ld+json">{JSON.stringify(structuredDataOrganization)}</script>
+			<link rel="publisher" href={currentConfig.socialLinks.google} />
+			<title>{formatMessage({ id: title })}</title>
 		</Helmet>
-	)
-}
+	);
+};
 
-export default SEO
+export default SEO;

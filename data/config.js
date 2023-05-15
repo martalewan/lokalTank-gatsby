@@ -22,5 +22,6 @@ module.exports = {
 		phone: '+48 517 580 300'
 	},
 	foundingDate: '2023',
-	googleVerification: 'xxx'
+	googleVerification: 'xxx',
+	keyWords: 'LokalTank, Lokal Tank, Tank, pressure, storage tanks, steel structures'
 }

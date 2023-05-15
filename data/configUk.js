@@ -5,5 +5,13 @@ module.exports = {
 	address: {
 		city: 'Chorzów',
 		country: 'Польща'
-	}
+	},
+	keyWords: 'LokalTank, Lokal Tank, напірні, накопичувальні резервуари, металоконструкції',
+	contact: {
+		email: 'biuro@lokaltank.pl',
+		phone: '+48 517 580 300'
+	},
+	socialLinks: {
+		// linkedin: 'https://www.linkedin.com/in/ismail-ghallou-630149122/',
+	},
 }
