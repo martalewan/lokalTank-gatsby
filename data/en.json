@@ -1,9 +1,7 @@
 {
     "welcome": "Lokal Tank | Welcome",
     "not_found": "404 - Page Not Found",
-
     "general.downloadLink": "Click to download the pdf",
-
     "navigation.about": "About us",
     "navigation.offer": "Offer",
     "navigation.contact": "Contact",
@@ -13,10 +11,8 @@
     "navigation.ukrainian": "UKR",
     "navigation.german": "DEU",
     "navigation.download": "Download",
-
     "mainPage.header": "Pressure filters Lokal Tank",
     "mainPage.description": "Mechanical purification of water from iron, manganese compounds and minor impurities.",
-
     "aboutPage.title": "About us",
     "aboutPage.p1": "LOCAL TANK is a company, which specializing in the production of high-quality pressure and storage vessels, steel constructions. We earn the trust of our customers through reliability, solidity, and fast implementation.",
     "aboutPage.p2": "Due to several production plants in Poland provide us with flexibility in production and fast order fulfillment. Each of plants is equipped with modern machinery and tools that allowing to produce high-quality tanks and steel constructions",
@@ -25,29 +21,25 @@
     "aboutPage.p5": "Our experts offer commitment, innovation and knowledge in every phase of a project. Our specialists are available for you to provide solution according your request. Feel free to contact us.",
     "aboutPage.button": "Offer",
     "aboutPage.button2": "Write",
-
     "cardsPage.title": "What makes us stand out",
     "cardsPage.card1": "Complex offer",
     "cardsPage.card2": "Solutions tailored to individual customer needs",
     "cardsPage.card3": "Sustainable growth",
-
     "offer.title": "Offer",
     "offer.text": "At Local Tank, we prioritize quality and reliability of our products, which is why we use only the best materials and the latest technologies in production. This allows us to guarantee our customers high-quality products with long service life.",
-
     "offer.zbiornikiMagazynowe": "Storage tanks",
     "offer.zbiornikiCiśnieniowe": "Pressure tanks",
     "offer.filtryCiśnieniowe": "Pressure filtrs",
     "offer.mieszaczeWodnoPowietrzne": "Water-Air mixters",
-    "offer.zbiornikiHydroforowe":  "Hydrophore tanks",
+    "offer.zbiornikiHydroforowe": "Hydrophore tanks",
     "offer.wymiennikiPojemnościowe": "Capacitive exchangers",
     "offer.zasobnikiCiepłejWodyLubPary": "Hot wayer or steam tanks",
     "offer.odgazowywaczeTermiczne": "Thermal deaerators",
     "offer.zbiornikiProcesowe": "Process tanks",
-    "offer.zbiornikiNaZamówienie":"Customized tanks",
+    "offer.zbiornikiNaZamówienie": "Customized tanks",
     "offer.konstrukcjeStalowe": "Steel structers",
     "offer.instalacjeProcesowe": "Process instalation",
     "offer.preview": "Podgląd",
-
     "contactPage.title": "Contact",
     "contactPage.button": "Write an email",
     "contactPage.contactForm": "Contact form:",
@@ -59,7 +51,6 @@
     "contactPage.successMessage": "Your message has been sent! Thank You",
     "contactPage.errorMessage": "Something went wrong. Please try again later.",
     "contactPage.send": "Send",
-
     "galeryPage.title": "Implementation",
     "galeryPage.subtitle1": "Underground tanks",
     "galeryPage.subtitle2": "Double-walled tanks",
@@ -70,5 +61,14 @@
     "galeryPage.subtitle7": "Stainless steel tanks",
     "galeryPage.subtitle8": "Technological tanks",
     "galeryPage.subtitle9": "Silos tanks",
-    "galeryPage.subtitle10": "Retention tanks"
+    "galeryPage.subtitle10": "Retention tanks",
+    "galeryPage.pressureFilter": "Pressure filtery",
+    "galeryPage.pressureFilterCoated": "Pressure filter with rubber coated",
+    "galeryPage.thermalDeaerator": "Thermal deaerator",
+    "galeryPage.sifter": "Sifter",
+    "galeryPage.metalConstruction": "Metal construction for cover support",
+    "galeryPage.steelCartridgeForHeat": "Steel cartridge for heat exchanger",
+    "galeryPage.brassCartridgeForHeat": "Brass cartridge for heat exchanger",
+    "galeryPage.galvanizedWaterTank": "Galvanized water tank",
+    "galeryPage.storageTankForCondensate": "Storage tank for condensate"
 }

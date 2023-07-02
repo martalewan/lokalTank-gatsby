@@ -1,9 +1,7 @@
 {
   "welcome": "Lokal Tank | Witamy",
   "not_found": "404 - Nie znaleziono",
-
   "general.downloadLink": "Click to download the pdf",
-
   "navigation.about": "O nas",
   "navigation.offer": "Oferta",
   "navigation.contact": "Kontakt",
@@ -13,10 +11,8 @@
   "navigation.ukrainian": "UKR",
   "navigation.german": "DEU",
   "navigation.download": "Pobierz",
-
   "mainPage.header": "Zbiorniki i konstrukcje stalowe",
   "mainPage.description": "Mechaniczne oczyszczanie wody ze związków żelaza, manganu i drobnych zanieczyszczeń.",
-
   "aboutPage.title": "O nas",
   "aboutPage.p1": "Witamy na stronie firmy Lokal Tank, która specjalizuje się w produkcji wysokiej jakości zbiorników ciśnieniowych, magazynowych oraz konstrukcji stalowych. Zdobywamy zaufanie klientów dzięki naszej niezawodności, solidności oraz szybkiej realizacji zamówień.",
   "aboutPage.p2": "Posiadamy kilka zakładów produkcyjnych w Polsce, co zapewnia nam elastyczność w produkcji oraz szybką realizację zamówień. W każdym zakładzie znajdują się nowoczesne maszyny i narzędzia, które pozwalają na produkcję wysokiej jakości zbiorników i konstrukcji stalowych. ",
@@ -25,12 +21,10 @@
   "aboutPage.p5": "Zapraszamy do zapoznania się z naszą ofertą oraz do kontaktu z naszymi specjalistami, którzy chętnie pomogą w doborze najlepszego rozwiązania dla Państwa firmy.",
   "aboutPage.button": "Oferta",
   "aboutPage.button2": "Napisz",
-
   "cardsPage.title": "Co nas wyróżnia",
   "cardsPage.card1": "Kompleksowa oferta",
   "cardsPage.card2": "Rozwiązania dopasowane do indywidualnych potrzeb klienta",
   "cardsPage.card3": "Zrównoważony wzrost",
-
   "offer.title": "Oferta",
   "offer.text": "W Lokal Tank stawiamy na jakość i niezawodność naszych produktów, dlatego stosujemy tylko najlepsze materiały i najnowocześniejsze technologie. Dzięki temu możemy zagwarantować naszym klientom produkty o wysokiej jakości oraz długiej żywotności.",
   "offer.zbiornikiMagazynowe": "Zbiorniki Magazynowe",
@@ -46,7 +40,6 @@
   "offer.konstrukcjeStalowe": "Konstrukcje Stalowe",
   "offer.instalacjeProcesowe": "Instalacje procesowe",
   "offer.preview": "Podgląd",
-
   "contactPage.title": "Kontakt",
   "contactPage.button": "Napisz meila",
   "contactPage.contactForm": "Formularz kontaktowy:",
@@ -58,7 +51,6 @@
   "contactPage.successMessage": "Twoja wiadomość została wysłana!",
   "contactPage.errorMessage": "oś poszło nie tak. Spróbuj ponownie później.",
   "contactPage.send": "Wyślij",
-  
   "galeryPage.title": "Realizacje",
   "galeryPage.subtitle1": "Zbiorniki podziemne",
   "galeryPage.subtitle2": "Zbiorniki dwupłaszczowe",
@@ -69,5 +61,14 @@
   "galeryPage.subtitle7": "Zbiorniki nierdzewne",
   "galeryPage.subtitle8": "Zbiorniki technologiczne",
   "galeryPage.subtitle9": "Silosy",
-  "galeryPage.subtitle10": "Zbiorniki retencyjne"
+  "galeryPage.subtitle10": "Zbiorniki retencyjne",
+  "galeryPage.pressureFilter": "Filtr ciśnieniowy",
+  "galeryPage.pressureFilterCoated": "Filtry ciśnieniowe gumowane",
+  "galeryPage.thermalDeaerator": "Odgazowywacz termiczny",
+  "galeryPage.sifter": "Przesiewacz",
+  "galeryPage.metalConstruction": "Stopy do obudowy",
+  "galeryPage.steelCartridgeForHeat": "Wkład stalowy do wymiennika",
+  "galeryPage.brassCartridgeForHeat": "Wkłady mosiężne do wymienników",
+  "galeryPage.galvanizedWaterTank": "Zbiornik magazynowy pary kondensatu",
+  "galeryPage.storageTankForCondensate": "Zbiornik magazynowy pary kondensatu"
 }

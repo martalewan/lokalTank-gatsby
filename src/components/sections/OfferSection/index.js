@@ -4,6 +4,7 @@ import { FormattedMessage } from 'react-intl';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Document, Page, pdfjs } from 'react-pdf';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import mxpl from '../../../images/Karta-katalogowa-MWPL.pdf';
 import filtry_FWPiPionoweFWL from '../../../images/filtry_FWPiPionoweFWL.pdf';
 import hydrofory_pionowe_HPB from '../../../images/Hydrofory-pionowe-HPB.pdf';
 import odgazowywacze_termiczne from '../../../images/Odgazowywacze-termoczne-kaskadowe-typu-ODT.pdf';
@@ -43,7 +44,7 @@ const OfferSection = () => {
 	const [filePaths] = useState({
 		zbiornikiMagazynowe: '',
 		filtryCisnieniowe: filtry_FWPiPionoweFWL,
-		mieszaczeWodnoPowietrzne: '',
+		mieszaczeWodnoPowietrzne: mxpl,
 		zbiornikiHydroforowe: hydrofory_pionowe_HPB,
 		wymiennikiPojemnosciowe: WP_3,
 		zasobnikiCieplejWodyLubPary: pionowe_zasobniki,
@@ -178,11 +179,11 @@ const OfferSection = () => {
 											<li>
 												<FormattedMessage id="offer.mieszaczeWodnoPowietrzne" />
 											</li>
-											{/* <span><FormattedMessage id="offer.preview" /></span> */}
+											<span><FormattedMessage id="offer.preview" /></span>
 										</OfferBtnSecondary>
-										{/* <Link href={filePaths.mieszaczeWodnoPowietrzne} download={filePaths.mieszaczeWodnoPowietrzne} secondary>
+										<Link href={filePaths.mieszaczeWodnoPowietrzne} download={filePaths.mieszaczeWodnoPowietrzne} secondary>
 											<FormattedMessage id="navigation.download" />
-										</Link> */}
+										</Link>
 									</ItemWrapper>
 									<ItemWrapper>
 										<OfferBtnSecondary

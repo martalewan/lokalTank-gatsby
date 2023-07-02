@@ -57,42 +57,61 @@ const GalerySection = () => {
 					<FormattedMessage id="galeryPage.subtitle7" />
 				</ImplementationBtn>
 			</div> */}
+
 			<ImagesContainer>
 				<ImageWrapper>
 					<ImgImp src={Filtr_ciśnieniowy} alt="Filtr ciśnieniowy" />
-					<PhotoDescription>Filtr ciśnieniowy</PhotoDescription>
+					<PhotoDescription>
+						<FormattedMessage id="galeryPage.pressureFilter" />
+					</PhotoDescription>
 				</ImageWrapper>
 				<ImageWrapper>
 					<ImgImp src={Filtry_ciśnieniowe_gumowane} alt="Filtry ciśnieniowe gumowane" />
-					<PhotoDescription>Filtry ciśnieniowe gumowane</PhotoDescription>
+					<PhotoDescription>
+						<FormattedMessage id="galeryPage.pressureFilterCoated" />
+					</PhotoDescription>
 				</ImageWrapper>
 				<ImageWrapper>
 					<ImgImp src={Odgazowywacz_termiczny} alt="Odgazowywacz termiczny" />
-					<PhotoDescription>Odgazowywacz termiczny</PhotoDescription>
+					<PhotoDescription>
+						<FormattedMessage id="galeryPage.thermalDeaerator" />
+					</PhotoDescription>
 				</ImageWrapper>
 				<ImageWrapper>
 					<ImgImp src={Przesiewacz} alt="Przesiewacz" />
-					<PhotoDescription>Przesiewacz</PhotoDescription>
+					<PhotoDescription>
+						<FormattedMessage id="galeryPage.sifter" />
+					</PhotoDescription>
 				</ImageWrapper>
 				<ImageWrapper>
 					<ImgImp src={Stopy_do_obudowy} alt="Stopy do obudowy" />
-					<PhotoDescription>Stopy do obudowy</PhotoDescription>
+					<PhotoDescription>
+						<FormattedMessage id="galeryPage.metalConstruction" />
+					</PhotoDescription>
 				</ImageWrapper>
 				<ImageWrapper>
 					<ImgImp src={Wkład_stalowy_do_wymiennika_2} alt="Wkład stalowy do wymiennika" />
-					<PhotoDescription>Wkład stalowy do wymiennika</PhotoDescription>
+					<PhotoDescription>
+						<FormattedMessage id="galeryPage.steelCartridgeForHeat" />
+					</PhotoDescription>
 				</ImageWrapper>
 				<ImageWrapper>
 					<ImgImp src={Wkłady_mosiężne_do_wymienników_2} alt="Wkłady mosiężne do wymienników" />
-					<PhotoDescription>Wkłady mosiężne do wymienników</PhotoDescription>
+					<PhotoDescription>
+						<FormattedMessage id="galeryPage.brassCartridgeForHeat" />
+					</PhotoDescription>
 				</ImageWrapper>
 				<ImageWrapper>
 					<ImgImp src={Zbiornik_hydroforofy_ocynkowany} alt="Zbiornik hydroforofy ocynkowany" />
-					<PhotoDescription>Zbiornik hydroforofy ocynkowany</PhotoDescription>
+					<PhotoDescription>
+						<FormattedMessage id="galeryPage.galvanizedWaterTank" />
+					</PhotoDescription>
 				</ImageWrapper>
 				<ImageWrapper>
 					<ImgImp src={Zbiornik_magazynowy_pary_kondensatu} alt="Zbiornik magazynowy pary kondensatu" />
-					<PhotoDescription>Zbiornik magazynowy pary kondensatu</PhotoDescription>
+					<PhotoDescription>
+						<FormattedMessage id="galeryPage.storageTankForCondensate" />
+					</PhotoDescription>
 				</ImageWrapper>
 			</ImagesContainer>
 		</GaleryContainer>

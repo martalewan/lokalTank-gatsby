@@ -2,7 +2,6 @@
     "welcome": "Lokal Tank | Herzlich willkommen",
     "not_found": "404 - Seite nicht gefunden",
     "general.downloadLink": "Klicken Sie, um das PDF herunterzuladen",
-
     "navigation.about": "Über uns",
     "navigation.offer": "Angebot",
     "navigation.contact": "Kontakt",
@@ -12,10 +11,8 @@
     "navigation.ukrainian": "UKR",
     "navigation.german": "DEU",
     "navigation.download": "Herunterladen",
-
     "mainPage.header": "Druckfilter Lokal Tank",
     "mainPage.description": "Mechanische Reinigung von Wasser von Eisen, Manganverbindungen und geringfügigen Verunreinigungen",
-
     "aboutPage.title": "Über uns",
     "aboutPage.p1": "Willkommen auf der Website von Local Tank, einem Unternehmen, das sich auf die Herstellung von hochwertigen Druckbehältern, Lagertanks und Stahlkonstruktionen spezialisiert. Wir gewinnen das Vertrauen unserer Kunden durch Zuverlässigkeit und Solidität sowie schnelle Auftragsabwicklung.",
     "aboutPage.p2": "Wir verfügen über mehrere Produktionsstätten in Polen, was uns Flexibilität in der Produktion und schnelle Auftragsabwicklung ermöglicht. Jede unserer Anlagen ist mit modernen Maschinen und Werkzeugen ausgestattet, die uns die Herstellung von hochwertigen Tanks und Stahlkonstruktionen ermöglichen.",
@@ -24,12 +21,10 @@
     "aboutPage.p5": "Wir laden Sie ein, sich mit unserem Angebot vertraut zu machen und Kontakt mit unseren Fachleuten aufzunehmen, die Ihnen gerne bei der Auswahl der besten Lösung für Ihr Unternehmen helfen.",
     "aboutPage.button": "Angebot",
     "aboutPage.button2": "Schreiben Sie",
-
     "cardsPage.title": "Was uns auszeichnet",
     "cardsPage.card1": "Umfassendes Angebot",
     "cardsPage.card2": "Maßgeschneiderte Lösungen",
     "cardsPage.card3": "Nachhaltiges Wachstum",
-
     "offer.title": "Angebot",
     "offer.text": "Bei Local Tank legen wir großen Wert auf die Qualität und Zuverlässigkeit unserer Produkte. Deshalb verwenden wir bei der Produktion nur die besten Materialien und die neuesten Technologien. So können wir unseren Kunden hochwertige Produkte mit langer Lebensdauer garantieren.",
     "offer.zbiornikiMagazynowe": "Lagertanks",
@@ -45,7 +40,6 @@
     "offer.konstrukcjeStalowe": "Stahlkonstruktionen",
     "offer.instalacjeProcesowe": "Prozessanlagen",
     "offer.preview": "Vorschau",
-
     "contactPage.title": "Kontakt",
     "contactPage.button": "E-Mail schreiben",
     "contactPage.contactForm": "Kontakt-Formular:",
@@ -57,7 +51,6 @@
     "contactPage.successMessage": "Ihre Nachricht wurde gesendet",
     "contactPage.errorMessage": "Es ist ein Fehler aufgetreten. Bitte versuchen Sie es später noch einmal.",
     "contactPage.send": "Senden",
-
     "galeryPage.title": "Realisierungen",
     "galeryPage.subtitle1": "Unterirdische Tanks",
     "galeryPage.subtitle2": "Doppelwandige Tanks",
@@ -68,5 +61,14 @@
     "galeryPage.subtitle7": "Rostfreie Tanks",
     "galeryPage.subtitle8": "Technologie-Tanks",
     "galeryPage.subtitle9": "Silos",
-    "galeryPage.subtitle10": "Lagertanks"
+    "galeryPage.subtitle10": "Lagertanks",
+    "galeryPage.pressureFilter": "Druckfilter",
+    "galeryPage.pressureFilterCoated": "Gummierte Druckfilter",
+    "galeryPage.thermalDeaerator": "Thermischer Entlüfter",
+    "galeryPage.sifter": "Siebanlage",
+    "galeryPage.metalConstruction": "Gehäusefüße",
+    "galeryPage.steelCartridgeForHeat": "Stahleinsatz für Wärmetauscher",
+    "galeryPage.brassCartridgeForHeat": "Messingeinsatz für Wärmetauscher",
+    "galeryPage.galvanizedWaterTank": "Verzinkter Hydrophorbehälter",
+    "galeryPage.storageTankForCondensate": "Kondensatdampf-Speicherbehälter"
 }
