@@ -1,6 +1,6 @@
 module.exports = {
 	title: 'Lokal Tank, Druckfilter',
-	legalName: 'Lokal Tank Sp. Z o.o.',
+	legalName: 'Lokal Tank Sp. z o.o.',
 	description: 'Gatsby Internalisierungs Starter-Kit',
 	address: {
 		city: 'Chorzów',

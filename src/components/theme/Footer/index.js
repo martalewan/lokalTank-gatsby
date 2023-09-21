@@ -21,7 +21,7 @@ const Footer = () => {
 					<FooterLinksWrapper>
 						<FooterLinkItems>
 							<FooterLinkTitle>
-								<strong>Lokal Tank</strong> Sp. Z o.o.
+								<strong>Lokal Tank</strong> Sp. z o.o.
 							</FooterLinkTitle>
 							<FooterLinkTitle>
                 Gabriela Narutowicza 15,
