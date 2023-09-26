@@ -4,11 +4,12 @@ import { FormattedMessage } from 'react-intl';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Document, Page, pdfjs } from 'react-pdf';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
-import mxpl from '../../../images/Karta-katalogowa-MWPL.pdf';
 import filtry_FWPiPionoweFWL from '../../../images/filtry_FWPiPionoweFWL.pdf';
 import hydrofory_pionowe_HPB from '../../../images/Hydrofory-pionowe-HPB.pdf';
 import odgazowywacze_termiczne from '../../../images/Odgazowywacze-termoczne-kaskadowe-typu-ODT.pdf';
 import pionowe_zasobniki from '../../../images/Pionowe-zasobniki-ciepłej-wody-ZWV.pdf';
+import mieszacz_wodno_powietrzny_MWPL from '../../../images/mieszacz-wodno-powietrzny-MWPL.pdf';
+
 import WP_3 from '../../../images/WP-3x.pdf';
 import waves from '../../../images/waves.svg';
 import { Link } from '../../common/Link';
@@ -44,7 +45,7 @@ const OfferSection = () => {
 	const [filePaths] = useState({
 		zbiornikiMagazynowe: '',
 		filtryCisnieniowe: filtry_FWPiPionoweFWL,
-		mieszaczeWodnoPowietrzne: mxpl,
+		mieszaczeWodnoPowietrzne: mieszacz_wodno_powietrzny_MWPL,
 		zbiornikiHydroforowe: hydrofory_pionowe_HPB,
 		wymiennikiPojemnosciowe: WP_3,
 		zasobnikiCieplejWodyLubPary: pionowe_zasobniki,
