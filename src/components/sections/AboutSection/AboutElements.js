@@ -9,7 +9,7 @@ export const AboutContainer = styled.div`
 
   @media screen and (max-width: 768px) {
     padding: 1rem 1.8rem;
-  } ;
+  }
 `;
 
 export const AboutWrapper = styled.div`
@@ -24,52 +24,39 @@ export const AboutWrapper = styled.div`
 export const AboutRow = styled.div`
   display: grid;
   width: 100%;
-  grid-gap: 30px;
-  grid-auto-columns: minmax(2fr, 1fr);
+  grid-gap: 120px;
+  grid-template-areas: "col1 col2";
   align-items: start;
-  grid-template-areas: ${('"col1 col2"')};
 
   @media screen and (max-width: 768px) {
-    grid-template-areas: ${('"col1 col1" "col2 col2"')};
-  } ;
+    grid-template-areas:
+      "col1"
+      "col2";
+  }
 `;
 
 export const Column1 = styled.div`
-  margin-bottom: 15px;
   grid-area: col1;
   display: flex;
-  direction: row;
   flex-direction: row;
   align-items: center;
 
   @media screen and (max-width: 420px) {
-    margin: 0;
-    padding: 10px;
-    width: 100%;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
   }
 `;
 
 export const Column2 = styled.div`
-  margin-top: 15px;
   grid-area: col2;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
 `;
 
+/* LEFT SIDE (UNCHANGED) */
 export const TextWrapper = styled.div`
   padding-top: 0;
-`;
-
-export const Heading = styled.h2`
-  margin-bottom: 24px;
-  font-size: 1.6rem;
-  line-height: 36px;
-  font-weight: 600;
-  background: ${colors.white};
-  color: ${colors.darkGray};
 `;
 
 export const Text = styled.p`
@@ -77,12 +64,10 @@ export const Text = styled.p`
   margin-bottom: 25px;
   font-size: 15px;
   line-height: 1.5;
-  background: ${colors.white};
 
   @media screen and (max-width: 480px) {
     font-size: 15px;
-    line-height: 20px;
-  } ;
+  }
 `;
 
 export const BtnWrap = styled.div`
@@ -91,9 +76,77 @@ export const BtnWrap = styled.div`
   margin-top: 2.5rem;
 `;
 
+export const RightSideWrapper = styled.div`
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+`;
+
+export const RightTitle = styled.p`
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.45);
+  text-align: center;
+  margin-bottom: 6px;
+`;
+
+export const MiniCardsStack = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+  align-items: center;
+`;
+
+export const MiniCard = styled.div`
+  background: #ffffff;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 14px;
+
+  border: 1px solid rgba(0, 0, 0, 0.08);
+
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.04);
+
+  padding: 12px 14px;
+
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: ${colors.darkGray};
+
+  text-align: center;
+  line-height: 1.2;
+
+  transition: all 0.25s ease;
+
+  position: relative;
+
+  &:hover {
+    transform: translateY(-3px);
+    border-color: rgba(0, 0, 0, 0.16);
+
+    box-shadow:
+      0 2px 4px rgba(0, 0, 0, 0.08),
+      0 2px 5px rgba(0, 0, 0, 0.10);
+
+    cursor: pointer;
+  }
+`;
+
 export const ImgWrap = styled.div`
   max-width: ${({ imgSize }) => imgSize};
-  height: 100%;
+  margin-top: 60px; /* 👈 ONLY CHANGE: pushes it lower */
+  opacity: 0.3;
+  position: relative;
+
   animation: move 8s infinite alternate;
 
   @keyframes move {
@@ -107,9 +160,10 @@ export const ImgWrap = styled.div`
       transform: translateY(-10%);
     }
   }
+
   @media screen and (max-width: 768px) {
     display: none;
-  } ;
+  }
 `;
 
 export const Img = styled.img`

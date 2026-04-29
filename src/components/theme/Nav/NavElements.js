@@ -10,7 +10,7 @@ export const Navbar = styled.nav`
     margin-top: -80px;
     display: flex;
     align-items: center;
-    font-size: 1rem;
+    font-size: .9rem;
     position: sticky;
     top: 0;
     z-index: 9;

@@ -7,7 +7,6 @@ import Sidebar from '../components/theme/Sidebar'
 import AboutSection from '../components/sections/AboutSection'
 import MainSection from '../components/sections/MainSection'
 import OfferSection from '../components/sections/OfferSection'
-import CardsSection from '../components/sections/CardsSection'
 import GalerySection from '../components/sections/GalerySection'
 import ContactSection from '../components/sections/ContactSection'
 
@@ -29,7 +28,6 @@ const IndexPage = () => {
 
 				<MainSection />
 				<AboutSection />
-				<CardsSection />
 				<OfferSection />
 				<GalerySection />
 
