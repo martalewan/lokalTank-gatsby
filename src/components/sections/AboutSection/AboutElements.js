@@ -109,7 +109,7 @@ export const MiniCard = styled.div`
   align-items: center;
   justify-content: center;
 
-  border-radius: 14px;
+  border-radius: 4px;
 
   border: 1px solid rgba(0, 0, 0, 0.08);
 
@@ -118,7 +118,7 @@ export const MiniCard = styled.div`
 
   padding: 12px 14px;
 
-  font-size: 0.85rem;
+  font-size: 14px;;
   font-weight: 500;
   color: ${colors.darkGray};
 
@@ -130,12 +130,12 @@ export const MiniCard = styled.div`
   position: relative;
 
   &:hover {
-    transform: translateY(-3px);
+    transform: translateY(-1px);
     border-color: rgba(0, 0, 0, 0.16);
 
     box-shadow:
       0 2px 4px rgba(0, 0, 0, 0.08),
-      0 2px 5px rgba(0, 0, 0, 0.10);
+      0 2px 3px rgba(0, 0, 0, 0.10);
 
     cursor: pointer;
   }

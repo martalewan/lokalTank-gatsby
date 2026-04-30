@@ -80,7 +80,7 @@ export const Heading = styled.h2`
 `
 
 export const Text = styled.p`
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.75;
     color: ${colors.darkGray};
     font-weight: 600;

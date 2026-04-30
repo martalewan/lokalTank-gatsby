@@ -2,117 +2,122 @@ import styled from 'styled-components';
 import { colors } from '../../../colors';
 
 export const ContactContainer = styled.div`
-  color: ${colors.white};
+  color: ${colors.darkGray};
   background: ${colors.lightGray};
-  box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
-  padding: 0 10%;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding: 4rem 10%;
 
   @media screen and (max-width: 768px) {
-    padding: 1rem 1.8rem;
-  };
+    padding: 2rem 1.5rem;
+  }
 `;
 
 export const ContactH2 = styled.h2`
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 600;
   color: ${colors.darkGray};
-  margin-top: 3rem;
+  margin-bottom: 2rem;
 `;
 
 export const ContactRow = styled.div`
   display: flex;
-  flex-direction: row;
-  width: 100%;
-  gap: 40px;
   flex-wrap: wrap;
+  gap: 40px;
 `;
 
 export const Column1 = styled.div`
-  margin-bottom: 15px;
-  align-items: center;
-  width: 55%;
-
-  @media screen and (max-width: 1200px) {
-    width: 100%;
-  };
+  flex: 1;
+  min-width: 320px;
 `;
 
 export const Column2 = styled.div`
+  flex: 1;
+  min-width: 320px;
+
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  margin-top: 1.7rem;
-  width: 40%;
-
-  @media screen and (max-width: 1200px) {
-    width: 100%;
-  };
-`;
-
-export const ContactInfo = styled.ul`
-    margin: 0;
-    padding: 0;
-    color: ${colors.darkGray};
-    font-size: 14px;
-    font-weight: 600;
+  gap: 18px;
 `;
 
 export const StyledContactForm = styled.div`
   form {
     display: flex;
-    align-items: flex-start;
     flex-direction: column;
-    width: 100%;
-    min-width: 300px;
-    font-size: 14px;
-    color: ${colors.darkGray};
 
-    input {
-      width: 100%;
-      height: 38px;
-      padding: 7px;
-      outline: none;
-      border-radius: 2px;
-      border: 1px solid rgb(220, 220, 220);
-      &:focus {
-        border: 2px solid;
-        border-color: ${colors.blue};
-      }
-    }
+    padding: 22px;
+    border-radius: 2px;
+
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(2px);
+
+    border: 1px solid rgba(0, 0, 0, 0.06);
+
+    input,
     textarea {
       width: 100%;
-      height: 100px;
-      padding: 7px;
+      padding: 10px 12px;
+
+      border-radius: 4px;
+      border: 1px solid rgba(0, 0, 0, 0.12);
+
       outline: none;
-      border-radius: 2px;
-      border: 1px solid rgb(220, 220, 220);
+      font-size: 14px;
+
+      transition: all 0.2s ease;
+
+      background: white;
 
       &:focus {
-        border: 2px solid;
         border-color: ${colors.blue};
+        box-shadow: 0 0 0 3px rgba(0, 120, 255, 0.12);
       }
     }
-    
+
+    textarea {
+      min-height: 120px;
+      resize: none;
+    }
+
     label {
-      margin-top: 0.4rem;
+      font-size: 12px;
       font-weight: 600;
-      color: ${colors.secondary};
+      letter-spacing: 0.02em;
+      color: ${colors.darkGray};
+      margin-top: 8px;
     }
 
     button[type="submit"] {
-      margin-top: 1.2rem;
+      margin-top: 30px;
       width: 100%;
     }
   }
 `;
 
-export const EmailLink = styled('a')`
-  &:hover,
-  &:focus {
-    transition: all 0.2s ease-in-out;
+export const ContactInfo = styled.div`
+  font-size: 13px;
+  font-weight: 500;
+  color: ${colors.darkGray};
+  line-height: 1.6;
+`;
+
+export const EmailLink = styled.a`
+  color: inherit;
+  text-decoration: none;
+  font-weight: 600;
+
+  &:hover {
     color: ${colors.blue};
-    cursor: pointer;
+    transition: 0.2s ease;
+  }
+`;
+
+export const MapWrapper = styled.div`
+  overflow: hidden;
+
+  border: 1px solid rgba(0, 0, 0, 0.08);
+
+
+  iframe {
+    display: block;
+    width: 100%;
   }
 `;

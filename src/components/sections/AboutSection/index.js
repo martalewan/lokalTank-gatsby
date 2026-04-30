@@ -39,7 +39,6 @@ const AboutSection = () => {
 							>
 								<FormattedMessage
 									id="aboutPage.p1"
-									values={{ boldText: <strong>Lalala</strong> }}
 								/>
 							</Text>
 
