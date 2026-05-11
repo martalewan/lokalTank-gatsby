@@ -1,17 +1,28 @@
-# Gatsby i18n web
+# Lokal Tank — Corporate Industrial Website
 
-Lokal Tank web, made using gatsby, react and i18n.
-## Getting started
+A multilingual corporate website developed for Lokal Tank, an industrial manufacturer specializing in pressure vessels, filtration systems, and steel constructions.
 
-```bash
-gatsby new https://lokaltank.pl
+Built with Gatsby and React, the project focuses on performance, clear information architecture, multilingual accessibility, and modern B2B presentation.
 
-yarn && yarn start
-```
+---
 
-### Features
+## Tech Stack
 
-- 🌍 i18n with 4 languages
-- 📈 SEO (meta tags, openGraph, structured data and more...)
-- 📊 One config file containing all the information you have change for SEO's sake
-- 💅 Styled-components
+- Gatsby
+- React
+- JavaScript
+- styled-components
+- react-i18next / i18n
+- SEO optimization
+
+---
+
+## Features
+
+- 🌍 Multilingual support (4 languages)
+- ⚡ Static site generation with Gatsby
+- 📱 Responsive design across devices
+- 📈 SEO-friendly setup
+- 🎨 Component-based UI architecture
+- 💅 Styled-components styling system
+- 🚀 Optimized performance and fast loading
