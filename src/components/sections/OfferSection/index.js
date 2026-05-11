@@ -18,7 +18,6 @@ import {
 	OffersWrapper,
 	Column1,
 	TextWrapper,
-	Heading,
 	Column2,
 	LinksWrapper,
 	PDFModal,
@@ -31,6 +30,7 @@ import {
 	Text,
 	Img,
 	ImgWrap,
+	AccentLabel
 } from './OfferElements';
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/legacy/build/pdf.worker.min.js`;
@@ -89,9 +89,9 @@ const OfferSection = () => {
 
 	return (
 		<OfferContainer id="oferta">
-			<Heading>
+			<AccentLabel>
 				<FormattedMessage id="navigation.offer" />
-			</Heading>
+			</AccentLabel>
 			<OffersWrapper>
 				<Column1>
 					<TextWrapper>
@@ -122,14 +122,14 @@ const OfferSection = () => {
 										onClick={handlePrevPage}
 										disabled={pageNumber === 1}
 									>
-                    Previous
+										Previous
 									</PopupBtn>
 
 									<PopupBtn
 										onClick={handleNextPage}
 										disabled={pageNumber === numPages}
 									>
-                    Next
+										Next
 									</PopupBtn>
 								</Modal.Footer>
 							) : null}

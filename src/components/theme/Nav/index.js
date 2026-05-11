@@ -17,7 +17,7 @@ import {
 	LanguageItem,
 	StyledIcon,
 } from './NavElements';
-import logoWhite from '../../../images/logo-white.svg';
+import logoWhite from '../../../images/logoLT.svg';
 
 const Nav = ({ toggle }) => {
 	const [scrollNav, setScrollNav] = useState(false);
@@ -27,16 +27,16 @@ const Nav = ({ toggle }) => {
 
 	const getLanguageName = (code) => {
 		switch (code) {
-		case 'en':
-			return 'ENG';
-		case 'pl':
-			return 'POL';
-		case 'de':
-			return 'DEU';
-		case 'uk':
-			return 'UKR';
-		default:
-			return '';
+			case 'en':
+				return 'ENG';
+			case 'pl':
+				return 'POL';
+			case 'de':
+				return 'DEU';
+			case 'uk':
+				return 'UKR';
+			default:
+				return '';
 		}
 	};
 	const langName = getLanguageName(lang);
@@ -54,7 +54,7 @@ const Nav = ({ toggle }) => {
 	window.onclick = function (event) {
 		if (
 			!event.target.matches('.langBtn')
-      && !event.target.matches('.lang-dropdown')
+			&& !event.target.matches('.lang-dropdown')
 		) {
 			setIsOpen(false);
 		}

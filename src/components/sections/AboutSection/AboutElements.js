@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 import { colors } from '../../../colors';
 
-export const AboutContainer = styled.div`
+export const AboutContainer = styled.section`
+  position: relative;
+  overflow: hidden;
+  background: #fbfbfa;
   color: ${colors.secondary};
-  background: ${colors.white};
-  box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
   padding: 2rem 10%;
 
   @media screen and (max-width: 768px) {
@@ -13,151 +14,189 @@ export const AboutContainer = styled.div`
 `;
 
 export const AboutWrapper = styled.div`
-  z-index: 1;
-  min-height: 750px;
+  min-height: 112vh;
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
-  align-content: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 72px 0;
 `;
 
-export const AboutRow = styled.div`
-  display: grid;
-  width: 100%;
-  grid-gap: 120px;
-  grid-template-areas: "col1 col2";
-  align-items: start;
+export const IntroBlock = styled.div`
+  max-width: 1120px;
+  margin-bottom: clamp(48px, 7vw, 88px);
+`;
+
+export const AccentLabel = styled.p`
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 34px;
+
+  color: #2358d8;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+
+  &::before {
+    content: '';
+    width: 56px;
+    height: 1px;
+    background: #2358d8;
+  }
+`;
+
+export const LeadText = styled.p`
+  max-width: 920px;
+  margin: 0;
+
+  color: #111827;
+
+  font-size: clamp(24px, 4vw, 58px);
+  line-height: 0.98;
+  letter-spacing: -0.075em;
+  font-weight: 850;
 
   @media screen and (max-width: 768px) {
-    grid-template-areas:
-      "col1"
-      "col2";
+    font-size: clamp(22px, 9vw, 42px);
+    line-height: 1.02;
   }
 `;
 
-export const Column1 = styled.div`
-  grid-area: col1;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+export const ContentGrid = styled.div`
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: 90px;
+  align-items: start;
 
-  @media screen and (max-width: 420px) {
-    flex-direction: column;
-    align-items: flex-start;
+  @media screen and (max-width: 900px) {
+    grid-template-columns: 1fr;
+    gap: 52px;
   }
 `;
 
-export const Column2 = styled.div`
-  grid-area: col2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
-/* LEFT SIDE (UNCHANGED) */
-export const TextWrapper = styled.div`
-  padding-top: 0;
+export const CopyBlock = styled.div`
+  max-width: 680px;
 `;
 
 export const Text = styled.p`
-  max-width: 750px;
-  margin-bottom: 25px;
-  font-size: 15px;
-  line-height: 1.5;
+  max-width: 640px;
+  margin-bottom: 16px;
 
-  @media screen and (max-width: 480px) {
-    font-size: 15px;
+  color: rgba(17, 24, 39, 0.66);
+  font-size: 14px;
+  line-height: 1.85;
+  letter-spacing: -0.005em;
+
+  &:first-of-type {
+    padding-left: 24px;
+    border-left: 2px solid #2358d8;
+    color: rgba(17, 24, 39, 0.82);
   }
 `;
 
 export const BtnWrap = styled.div`
   display: flex;
-  justify-content: flex-start;
-  margin-top: 2.5rem;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 38px;
+
+  a {
+    border-radius: 0 !important;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    transition:
+      transform 0.22s ease,
+      opacity 0.22s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+      opacity: 0.9;
+    }
+  }
 `;
 
-export const RightSideWrapper = styled.div`
+export const InfoPanel = styled.aside`
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 18px;
+  width: 100%;
+  max-width: 360px;
+  padding: 6px 0 0;
 `;
 
 export const RightTitle = styled.p`
-  font-size: 12px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: rgba(0, 0, 0, 0.45);
-  text-align: center;
-  margin-bottom: 6px;
+  margin: 0 0 28px;
+  max-width: 320px;
+
+  color: rgba(17, 24, 39, 0.52);
+  font-size: 12.5px;
+  line-height: 1.75;
+  font-weight: 600;
 `;
 
 export const MiniCardsStack = styled.div`
   display: flex;
   flex-direction: column;
   gap: 14px;
-  width: 100%;
-  align-items: center;
 `;
 
 export const MiniCard = styled.div`
-  background: #ffffff;
-  width: 100%;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 4px;
-
-  border: 1px solid rgba(0, 0, 0, 0.08);
-
-  box-shadow:
-    0 1px 2px rgba(0, 0, 0, 0.04);
-
-  padding: 12px 14px;
-
-  font-size: 14px;;
-  font-weight: 500;
-  color: ${colors.darkGray};
-
-  text-align: center;
-  line-height: 1.2;
-
-  transition: all 0.25s ease;
-
   position: relative;
+  padding: 22px 24px 22px 58px;
+
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(17, 24, 39, 0.1);
+
+  color: #111827;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: -0.035em;
+
+  transition:
+    transform 0.24s ease,
+    border-color 0.24s ease,
+    background 0.24s ease;
+
+  span {
+    position: absolute;
+    left: 22px;
+    top: 24px;
+
+    color: #2358d8;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 0.14em;
+  }
 
   &:hover {
-    transform: translateY(-1px);
-    border-color: rgba(0, 0, 0, 0.16);
-
-    box-shadow:
-      0 2px 4px rgba(0, 0, 0, 0.08),
-      0 2px 3px rgba(0, 0, 0, 0.10);
-
-    cursor: pointer;
+    transform: translateY(-3px);
+    background: #ffffff;
+    border-color: rgba(35, 88, 216, 0.26);
   }
 `;
 
 export const ImgWrap = styled.div`
+  position: absolute;
+  right: -30px;
+  bottom: -54px;
   max-width: ${({ imgSize }) => imgSize};
-  margin-top: 60px; /* 👈 ONLY CHANGE: pushes it lower */
-  opacity: 0.3;
-  position: relative;
 
-  animation: move 8s infinite alternate;
+  opacity: 0.1;
+  pointer-events: none;
 
-  @keyframes move {
-    0% {
-      transform: translateY(0);
+  animation: waveFloat 10s ease-in-out infinite;
+
+  @keyframes waveFloat {
+    0%, 100% {
+      transform: translateY(0) rotate(-4deg);
     }
+
     50% {
-      transform: translateX(10%);
-    }
-    100% {
-      transform: translateY(-10%);
+      transform: translateY(-8px) rotate(3deg);
     }
   }
 
@@ -168,7 +207,5 @@ export const ImgWrap = styled.div`
 
 export const Img = styled.img`
   width: 100%;
-  margin: 0 0 10px 0;
-  padding-right: 0;
-  opacity: 0.3;
+  display: block;
 `;

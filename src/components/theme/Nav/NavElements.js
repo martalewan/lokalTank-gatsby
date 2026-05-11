@@ -5,20 +5,15 @@ import { FaCaretDown } from 'react-icons/fa'
 import { colors } from '../../../colors'
 
 export const Navbar = styled.nav`
-    background: ${({ scrollNav }) => (scrollNav ? colors.darkGray : 'transperent')};
-    height: 80px;
-    margin-top: -80px;
-    display: flex;
-    align-items: center;
-    font-size: .9rem;
-    position: sticky;
-    top: 0;
-    z-index: 9;
-    width: 100%;
-
-    @media screen and (max-width: 960px) {
-        transition: 0.8s all ease;
-    }
+  background: ${({ scrollNav }) => (scrollNav ? colors.darkGray : 'transparent')};
+  height: 60px;
+  display: flex;
+  align-items: center;
+  font-size: .75rem;
+  position: fixed;
+  top: 0;
+  z-index: 9;
+  width: 100%;
 `;
 
 export const NavbarContainer = styled.div`
@@ -35,15 +30,12 @@ export const NavbarContainer = styled.div`
 `;
 
 export const NavLogo = styled(LinkScroll)`
-    color: ${(colors.white)};
-    justify-self: flex-start;
     cursor: pointer;
-    font-size: 1.5rem;
     display: flex;
     align-items: center;
-    font-weight: bold;
-    text-decoration: none;
+    text-decoration: none;    
 `;
+
 
 export const MobileIcon = styled.div`
     display: none;
@@ -54,7 +46,7 @@ export const MobileIcon = styled.div`
         top: 0;
         right: 0;
         transform: translate(-100%, 60%);
-        font-size: 1.8rem;
+        font-size: 1rem;
         cursor: pointer;
         color: #fff;
     }
@@ -76,23 +68,59 @@ export const NavItem = styled.li`
 `;
 
 export const NavLinks = styled(LinkScroll)`
-    color: ${(colors.white)};
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    padding: 0 1rem;
-    height: 100%;
-    cursor: pointer;
-    
-    &.active {
-        border-bottom: 5px solid ${(colors.blue)};
+  position: relative;
+
+  color: rgba(255, 255, 255, 0.78);
+
+  display: flex;
+  align-items: center;
+
+  text-decoration: none;
+
+  padding: 0 1rem;
+  height: 100%;
+
+  cursor: pointer;
+
+  font-size: 13px;
+  font-weight: 500;
+
+
+  &:hover {
+    color: #ffffff;
+  }
+
+  &::after {
+    content: '';
+
+    position: absolute;
+    left: 1rem;
+    bottom: 18px;
+
+    width: calc(100% - 2rem);
+    height: 1px;
+
+    background: ${colors.blue};
+
+    transform: scaleX(0);
+    transform-origin: left;
+
+    transition: transform 0.25s ease;
+  }
+
+  &.active {
+    color: #ffffff;
+
+    &::after {
+      transform: scaleX(1);
     }
+  }
 `;
 
 export const Img = styled.img`
-    height: 25px;
-    margin-top: 4px;
-`
+  height: 25px;
+  margin-top: 3px;
+`;
 
 export const NavLinkBtn = styled.button`
     color: ${(colors.white)};

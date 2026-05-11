@@ -1,120 +1,245 @@
 import styled from 'styled-components';
 import { colors } from '../../../colors';
 
-export const ContactContainer = styled.div`
-  color: ${colors.darkGray};
-  background: ${colors.lightGray};
-  padding: 4rem 10%;
+export const ContactContainer = styled.section`
+  position: relative;
+  overflow: hidden;
+  color: #ffffff;
+  background: ${colors.darkGray};
+  padding: 7rem 10%;
 
   @media screen and (max-width: 768px) {
-    padding: 2rem 1.5rem;
+    padding: 4rem 1.8rem;
   }
 `;
 
 export const ContactH2 = styled.h2`
-  font-size: 1.8rem;
-  font-weight: 600;
-  color: ${colors.darkGray};
-  margin-bottom: 2rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+
+  margin: 0 0 64px;
+  color: ${colors.blue};
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+
+  &::before {
+    content: '';
+    width: 56px;
+    height: 1px;
+    background: ${colors.blue};
+  }
 `;
 
 export const ContactRow = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 390px;
+  gap: 90px;
+  align-items: start;
+
+  @media screen and (max-width: 980px) {
+    grid-template-columns: 1fr;
+    gap: 56px;
+  }
 `;
 
 export const Column1 = styled.div`
-  flex: 1;
-  min-width: 320px;
+  width: 100%;
 `;
 
-export const Column2 = styled.div`
-  flex: 1;
-  min-width: 320px;
-
+export const Column2 = styled.aside`
+  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 28px;
+
+  .contact-card {
+    position: relative;
+    padding: 28px;
+    background: rgba(255, 255, 255, 0.045);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+
+    transition:
+      background 0.28s ease,
+      border-color 0.28s ease,
+      transform 0.28s ease;
+
+    &:hover {
+      transform: translateY(-4px);
+      background: rgba(255, 255, 255, 0.065);
+      border-color: rgba(126, 162, 255, 0.22);
+    }
+  }
 `;
 
 export const StyledContactForm = styled.div`
   form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 28px;
+    row-gap: 26px;
+    width: 100%;
+  }
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  color: rgba(255, 255, 255, 0.5);
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: none;
+
+  transition: color 0.22s ease;
+
+  &:focus-within {
+    color: ${colors.blue};
+  }
+
+  span {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+}
 
-    padding: 22px;
-    border-radius: 2px;
+  .required {
+    color: ${colors.blue};
+  }
 
-    background: rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(2px);
+input,
+textarea {
+  width: 100%;
+  padding: 14px 16px;
 
-    border: 1px solid rgba(0, 0, 0, 0.06);
+  color: #ffffff;
 
-    input,
-    textarea {
-      width: 100%;
-      padding: 10px 12px;
+  background: rgba(255, 255, 255, 0.03);
 
-      border-radius: 4px;
-      border: 1px solid rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 
-      outline: none;
-      font-size: 14px;
+  outline: none;
 
-      transition: all 0.2s ease;
+  font-size: 15px;
+  line-height: 1.45;
 
-      background: white;
+  transition:
+    border-color 0.25s ease,
+    background 0.25s ease,
+    transform 0.25s ease;
 
-      &:focus {
-        border-color: ${colors.blue};
-        box-shadow: 0 0 0 3px rgba(0, 120, 255, 0.12);
-      }
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.26);
+  }
+
+  &:focus {
+    border-color: ${colors.blue};
+    background: rgba(255, 255, 255, 0.05);
+
+    transform: translateY(-1px);
+  }
+}
+
+  textarea {
+    min-height: 120px;
+    resize: none;
+  }
+
+  label:nth-of-type(1),
+  label:nth-of-type(2),
+  label:nth-of-type(5),
+  button[type="submit"] {
+    grid-column: 1 / -1;
+  }
+
+  button[type="submit"] {
+    margin-top: 14px;
+    width: fit-content;
+    min-width: 180px;
+    border-radius: 0 !important;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+  }
+
+  .success-message {
+    color: ${colors.blue};
+  }
+
+  .error-message {
+    color: #ff6b6b;
+  }
+
+  p {
+    margin-top: 18px;
+    font-size: 13px;
+  }
+
+  @media screen and (max-width: 700px) {
+    form {
+      grid-template-columns: 1fr;
+      row-gap: 22px;
     }
 
-    textarea {
-      min-height: 120px;
-      resize: none;
-    }
-
-    label {
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 0.02em;
-      color: ${colors.darkGray};
-      margin-top: 8px;
-    }
-
+    label,
+    label:nth-of-type(1),
+    label:nth-of-type(2),
+    label:nth-of-type(5),
     button[type="submit"] {
-      margin-top: 30px;
-      width: 100%;
+      grid-column: auto;
     }
   }
 `;
 
 export const ContactInfo = styled.div`
+  padding: 12px 0;
+
+  color: rgba(255, 255, 255, 0.72);
   font-size: 13px;
-  font-weight: 500;
-  color: ${colors.darkGray};
-  line-height: 1.6;
+  line-height: 1.65;
+  font-weight: 600;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+  &:last-child {
+    border-bottom: none;
+  }
 `;
 
 export const EmailLink = styled.a`
-  color: inherit;
+  color: #ffffff;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 800;
+  cursor: pointer;
+
+  transition: color 0.22s ease;
 
   &:hover {
     color: ${colors.blue};
-    transition: 0.2s ease;
   }
 `;
 
 export const MapWrapper = styled.div`
   overflow: hidden;
+  min-height: 235px;
 
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  filter: grayscale(100%) contrast(1.05) brightness(0.75);
 
+  transition:
+    filter 0.35s ease,
+    transform 0.35s ease;
+
+  &:hover {
+    filter: grayscale(30%) contrast(1.05) brightness(0.9);
+    transform: translateY(-4px);
+  }
 
   iframe {
     display: block;

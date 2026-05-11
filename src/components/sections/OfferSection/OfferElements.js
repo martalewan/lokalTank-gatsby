@@ -1,213 +1,323 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 import { Modal } from 'react-bootstrap';
-import { FaCaretDown } from 'react-icons/fa'
-import { colors } from '../../../colors'
-import { Button } from '../../common/Button';
+import { FaCaretDown } from 'react-icons/fa';
+import { colors } from '../../../colors';
 
-export const OfferContainer = styled.div`
-    color: ${(colors.white)};
-    background: ${(colors.white)};
-    box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
-    padding: 0 10%;
-    min-height: 700px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+export const OfferContainer = styled.section`
+  position: relative;
+  overflow: hidden;
+  color: ${colors.darkGray};
+  background: #fbfbfa;
+  padding: 2rem 10%;
+  min-height: 105vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
-    @media screen and (max-width: 768px) {
-        padding: 0 1.8rem;
-    };
-`
-
-export const OffersWrapper = styled.div`
-    z-index: 1;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 3rem;
-    padding-bottom: 2rem;
-`
-
-export const Column1 = styled.div`
-    margin-bottom: 15px;
-    grid-area: col1;
-    display: flex;
-    direction: row;
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-
-    @media screen and (min-width: 1350px) {
-        width: 60%;
-    }; 
-`
-
-export const Column2 = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: start;
-    margin-top: -30px;
-
-    @media screen and (min-width: 1350px) {
-        width: 35%;
-    }; 
-`
-
-export const ItemWrapper = styled.div`
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    gap: 1rem;
-    margin-bottom: .7rem;
-    width: 100%;
-
-    a {
-        @media screen and (max-width: 768px) {
-            display: none;
-        }; 
-    }
-`
-
-export const TextWrapper = styled.div`
-    width: 100%;
-`
-
-export const Heading = styled.h2`
-    margin: 3rem 0;
-    font-size: 1.6rem;
-    font-weight: 600;
-    color: ${colors.darkGray};
-`
-
-export const Text = styled.p`
-    font-size: 14px;
-    line-height: 1.75;
-    color: ${colors.darkGray};
-    font-weight: 600;
-    margin: 0;
-    width: 100%;
-
-    @media screen and (max-width: 480px) {
-        font-size: 14px;
-        line-height: 20px;
-    };
-`
-
-export const BtnWrap = styled.div`
-    display: flex;
-    justify-content: flex-start;
-    width: 100%;
-
-`
-
-export const LinksWrapper = styled.div`
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-
-    @media screen and (max-width: 820px) {
-        flex-direction: column;
-    }
-`
-
-export const OfferBtn = styled('button')`
-    color: ${(colors.darkGray)};
-    background: ${(colors.lightGray)};
-    text-decoration: none;
-    width: 100%;
-    min-width: 13rem;
-    font-size: 14px;
-    cursor: pointer;
-    padding: 8px;
-    text-align: left;
-    border: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-weight: 550;
-
-    &:hover {
-        color: ${(colors.darkBlue)};
-        transform: scale(1.01);
-        transition: all 0.2 ease-in-out;
-        cursor: pointer;
-        text-decoration: underline;
-    }
-`
-
-export const OfferBtnSecondaryWrapper = styled.div``
-
-export const OfferBtnSecondary = styled('button')`
-    color: ${(colors.darkGray)};
-    text-decoration: none;
-    width: 100%;
-    min-width: 14rem;
-    font-size: 14px;
-    background: none;
-    cursor: pointer;
-    padding: 8px;
-    display: flex;
-    justify-content: space-between;
-    border: none;
-    background: ${(colors.lightGrayLt)};
-    font-weight: 550;
-
-    &:hover {
-        color: ${(colors.darkBlue)};
-        cursor: pointer;
-        transform: scale(1.01);
-        transition: all 0.2 ease-in-out;
-        text-decoration: underline;
-    }
-
-    ul{
-      text-align: left;
-    }
-`
-
-
-export const StyledIcon = styled(FaCaretDown)`
-    margin-left: 4px;
-    pointer-events: none;
+  @media screen and (max-width: 768px) {
+    padding: 1rem 1.8rem;
+  }
 `;
 
-export const ModalBtn = styled(Button)`
+export const AccentLabel = styled.p`
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 46px;
 
-`
+  color: #2358d8;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+
+  &::before {
+    content: '';
+    width: 56px;
+    height: 1px;
+    background: #2358d8;
+  }
+`;
+
+export const OffersWrapper = styled.div`
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: 90px;
+  align-items: start;
+  width: 100%;
+
+  @media screen and (max-width: 980px) {
+    grid-template-columns: 1fr;
+    gap: 56px;
+  }
+`;
+
+export const Column1 = styled.div`
+  width: 100%;
+`;
+
+export const Column2 = styled.aside`
+  position: relative;
+  padding-top: 6px;
+
+  @media screen and (max-width: 980px) {
+    max-width: 540px;
+  }
+`;
+
+export const TextWrapper = styled.div`
+  width: 100%;
+`;
+
+export const LinksWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-top: 1px solid rgba(17, 24, 39, 0.13);
+`;
+
+export const ItemWrapper = styled.div`
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 18px;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid rgba(17, 24, 39, 0.13);
+
+  a {
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #2358d8;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+`;
+
+export const OfferBtn = styled.button`
+  position: relative;
+  width: 100%;
+  min-height: 68px;
+  padding: 20px 0;
+  border: none;
+  background: transparent;
+  color: #111827;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 22px;
+
+  font-size: clamp(17px, 1.5vw, 23px);
+  line-height: 1.15;
+  letter-spacing: -0.05em;
+  font-weight: 800;
+  text-align: left;
+  cursor: pointer;
+
+  transition:
+    color 0.25s ease,
+    padding-left 0.25s ease;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 0;
+    height: 1px;
+    background: #2358d8;
+    transition: width 0.35s ease;
+  }
+
+  &:hover {
+    color: #2358d8;
+    padding-left: 10px;
+
+    &::before {
+      width: 100%;
+    }
+  }
+`;
+
+export const OfferBtnSecondaryWrapper = styled.div`
+  grid-column: 1 / -1;
+  width: 100%;
+  padding: 8px 0 18px 34px;
+  border-bottom: 1px solid rgba(17, 24, 39, 0.13);
+
+  @media screen and (max-width: 768px) {
+    padding-left: 18px;
+  }
+`;
+
+export const OfferBtnSecondary = styled.button`
+  width: 100%;
+  min-height: 48px;
+  padding: 13px 0;
+  border: none;
+  background: transparent;
+  color: rgba(17, 24, 39, 0.72);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+
+  font-size: 14px;
+  line-height: 1.35;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+
+  transition:
+    color 0.22s ease,
+    padding-left 0.22s ease;
+
+  li {
+    list-style: none;
+  }
+
+  span {
+    color: #2358d8;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  &:hover {
+    color: #2358d8;
+    padding-left: 8px;
+  }
+`;
+
+export const StyledIcon = styled(FaCaretDown)`
+  flex-shrink: 0;
+  color: #2358d8;
+  font-size: 14px;
+  pointer-events: none;
+`;
+
+export const Text = styled.div`
+  position: relative;
+
+  max-width: 300px;
+  margin-left: auto;
+
+  padding: 28px;
+
+  color: #111827;
+  font-size: 18px;
+  line-height: 1.52;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+
+  text-align: right;
+
+  background: rgba(255, 255, 255, 0.55);
+
+  border: 1px solid rgba(17, 24, 39, 0.06);
+
+  backdrop-filter: blur(8px);
+
+  transition:
+    transform 0.28s ease,
+    border-color 0.28s ease,
+    background 0.28s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+
+    background: rgba(255, 255, 255, 0.72);
+
+    border-color: rgba(17, 24, 39, 0.12);
+  }
+
+  @media screen and (max-width: 980px) {
+    margin-left: 0;
+    max-width: 100%;
+    text-align: left;
+  }
+`;
+export const ImgWrap = styled.div`
+  position: absolute;
+
+  right: -34px;
+  bottom: -120px;
+
+  max-width: ${({ imgSize }) => imgSize || '150px'};
+
+  opacity: 0.08;
+  pointer-events: none;
+
+  animation: waveFloat 10s ease-in-out infinite;
+
+  @keyframes waveFloat {
+    0%, 100% {
+      transform: translateY(0) rotate(-6deg);
+    }
+
+    50% {
+      transform: translateY(-14px) rotate(3deg);
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    display: none;
+  }
+`;
+
+export const Img = styled.img`
+  width: 100%;
+  display: block;
+`;
+
 export const PDFModal = styled(Modal)`
-    z-index: 9;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-family: Arial, Helvetica, sans-serif;
+  z-index: 9;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: Arial, Helvetica, sans-serif;
 
   .modal-content {
-    border-radius: 3px;
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 0;
+    border: none;
+    box-shadow: 0 34px 90px rgba(17, 24, 39, 0.28);
     max-width: 538px;
     max-height: 98vh;
+    overflow: hidden;
   }
 
   .modal-footer {
     display: flex;
     justify-content: center;
     position: absolute;
-    position: absolute;
     bottom: 5px;
     width: 100%;
+    border: none;
   }
 
   .modal-header {
     position: absolute;
     z-index: 9;
     margin-left: -30px;
-    padding: 2px 5px;
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    padding: 0 7px;
     cursor: pointer;
-    border-radius: 15px;
-    padding: 0px 6px;
-    background-color: white;
+    border: none;
+    border-radius: 0;
+    background-color: #ffffff;
+    box-shadow: 0 10px 28px rgba(17, 24, 39, 0.18);
   }
 
   .react-pdf__Page {
@@ -230,55 +340,37 @@ export const PDFModal = styled(Modal)`
 `;
 
 export const PopupBtn = styled.button`
-    border-radius: 2px;
-    background: ${(colors.blue)};
-    white-space: nowrap;
-    padding: 2px 6px;
-    width: 4rem;
-    color: ${(colors.white)};
-    font-size: 12px;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.2s ease-in-out;
-    margin: .4rem 2px;
+  border-radius: 0;
+  background: #2358d8;
+  padding: 5px 12px;
+  min-width: 4.6rem;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  margin: 0.4rem 2px;
 
-    &:hover {
-        transition: all 0.2s ease-in-out;
-        background: ${(colors.darkBlue)};
-    }
+  transition:
+    background 0.2s ease,
+    opacity 0.2s ease;
 
-    :disabled {
-        background: ${(colors.lightGray)};
-    }
-`;
-
-
-export const Img = styled.img`
-  width: 100%;
-  margin: 0;
-  padding-right: 0;
-`;
-
-export const ImgWrap = styled.div`
-  max-width: 200px;
-  animation: move 8s infinite alternate;
-
-  @keyframes move {
-    0% {
-      transform: translateX(0);
-    }
-    50% {
-      transform: translateX(10%);
-    }
-    100% {
-      transform: translateX(10%);
-    }
+  &:hover {
+    background: ${colors.darkBlue};
   }
-  @media screen and (max-width: 1200px) {
-    display: none;
-  };
+
+  &:disabled {
+    background: rgba(17, 24, 39, 0.18);
+    cursor: not-allowed;
+  }
 `;
+
+export const BtnWrap = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+`;
+
+export const ModalBtn = styled.button``;

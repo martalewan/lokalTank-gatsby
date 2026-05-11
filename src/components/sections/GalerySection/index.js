@@ -25,38 +25,7 @@ const GalerySection = () => {
 			<ServicesH2>
 				<FormattedMessage id="galeryPage.title" />
 			</ServicesH2>
-			<Line />
 
-			{/* <div>
-				<ImplementationBtn>
-					<FormattedMessage id="galeryPage.subtitle1" />
-				</ImplementationBtn>
-
-				<ImplementationBtn>
-					<FormattedMessage id="galeryPage.subtitle2" />
-				</ImplementationBtn>
-
-				<ImplementationBtn>
-					<FormattedMessage id="galeryPage.subtitle3" />
-				</ImplementationBtn>
-
-
-				<ImplementationBtn>
-					<FormattedMessage id="galeryPage.subtitle4" />
-				</ImplementationBtn>
-
-				<ImplementationBtn>
-					<FormattedMessage id="galeryPage.subtitle5" />
-				</ImplementationBtn>
-
-				<ImplementationBtn>
-					<FormattedMessage id="galeryPage.subtitle6" />
-				</ImplementationBtn>
-
-				<ImplementationBtn>
-					<FormattedMessage id="galeryPage.subtitle7" />
-				</ImplementationBtn>
-			</div> */}
 
 			<ImagesContainer>
 				<ImageWrapper>
@@ -105,12 +74,6 @@ const GalerySection = () => {
 					<ImgImp src={Zbiornik_hydroforofy_ocynkowany} alt="Zbiornik hydroforofy ocynkowany" />
 					<PhotoDescription>
 						<FormattedMessage id="galeryPage.galvanizedWaterTank" />
-					</PhotoDescription>
-				</ImageWrapper>
-				<ImageWrapper>
-					<ImgImp src={Zbiornik_magazynowy_pary_kondensatu} alt="Zbiornik magazynowy pary kondensatu" />
-					<PhotoDescription>
-						<FormattedMessage id="galeryPage.storageTankForCondensate" />
 					</PhotoDescription>
 				</ImageWrapper>
 			</ImagesContainer>

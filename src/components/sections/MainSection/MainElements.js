@@ -7,7 +7,7 @@ export const MainContainer = styled.div`
     justify-content: center;
     align-items: center;
     padding: 0 30px;
-    height: 100vh;
+    min-height: 100vh;
     position: relative;
     z-index: 1;
 `
@@ -52,11 +52,31 @@ export const MainH1 = styled.h1`
     };
 `
 export const BtnWrap = styled.div`
-    z-index: 3;
-    position: absolute;
-    align-items: center;
-    margin-top: 200px;
-`
+  z-index: 3;
+  position: absolute;
+  align-items: center;
+  margin-top: 200px;
+
+  a,
+  button {
+    border-radius: 0 !important;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    transition:
+      transform 0.22s ease,
+      opacity 0.22s ease,
+      background 0.22s ease,
+      color 0.22s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+      opacity: 0.92;
+    }
+  }
+`;
 
 const AppearAnimation = keyframes`
   from {

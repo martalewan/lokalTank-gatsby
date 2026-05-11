@@ -5,7 +5,7 @@ export const primaryStyles = css`
   background-color: ${(colors.blue)};
   border-radius: 4px;
   font-size: 16px;
-  padding: 12px 0;
+  padding: 6px 0;
   font-weight: 500;
   letter-spacing: 1px;
   color: ${(colors.white)};

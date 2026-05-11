@@ -8,10 +8,10 @@ import {
 	FooterLinkItems,
 	FooterLinkTitle,
 	FooterLinksPage,
+	FooterCredit
 } from './FooterElements';
-import { EmailLink  } from '../../sections/ContactSection/ContactElements'
-import { sendMail } from '../../sections/ContactSection'
-
+import { EmailLink } from '../../sections/ContactSection/ContactElements';
+import { sendMail } from '../../sections/ContactSection';
 
 const Footer = () => {
 	return (
@@ -24,7 +24,7 @@ const Footer = () => {
 								<strong>Lokal Tank</strong> Sp. z o.o.
 							</FooterLinkTitle>
 							<FooterLinkTitle>
-                Gabriela Narutowicza 15,
+								Gabriela Narutowicza 15,
 							</FooterLinkTitle>
 							<FooterLinkTitle>41-530 Chorzów</FooterLinkTitle>
 						</FooterLinkItems>
@@ -33,17 +33,9 @@ const Footer = () => {
 					<FooterLinkItems>
 						<FooterLinkTitle>Tel. +48 517 580 300,</FooterLinkTitle>
 						<FooterLinkTitle>Tel. +48 664 570 171</FooterLinkTitle>
-						<FooterLinkTitle>E-mail:&nbsp;
-
-							<EmailLink
-								to="/"
-								onClick={sendMail}
-								smooth
-								duration={500}
-								spy
-								offset={-80}
-
-							>
+						<FooterLinkTitle>
+							E-mail:&nbsp;
+							<EmailLink onClick={sendMail}>
 								biuro@lokaltank.pl
 							</EmailLink>
 						</FooterLinkTitle>
@@ -73,6 +65,12 @@ const Footer = () => {
 						</FooterLinkItems>
 					</FooterLinksWrapper>
 				</FooterLinksContainer>
+
+				<FooterCredit>
+					<span>© 2026 Lokal Tank Sp. z o.o.</span>
+
+					<span>Design & Development — Marta Lewandowska</span>
+				</FooterCredit>
 			</FooterWrapper>
 		</FooterContainer>
 	);

@@ -5,96 +5,76 @@ import Wave from '../../../images/wave.svg';
 import {
 	AboutContainer,
 	AboutWrapper,
-	AboutRow,
-	Column1,
-	Column2,
-	TextWrapper,
+	IntroBlock,
+	AccentLabel,
+	LeadText,
+	ContentGrid,
+	CopyBlock,
 	Text,
 	BtnWrap,
-	ImgWrap,
-	Img,
-	RightSideWrapper,
+	InfoPanel,
+	RightTitle,
 	MiniCardsStack,
-	MiniCard
+	MiniCard,
+	ImgWrap,
+	Img
 } from './AboutElements';
 
 import { ButtonLink } from './../../common/ButtonLink';
-import { colors } from '../../../colors';
 
 const AboutSection = () => {
 	return (
 		<AboutContainer id="onas">
 			<AboutWrapper>
-				<AboutRow>
+				<IntroBlock>
+					<AccentLabel>
+						<FormattedMessage id="navigation.about" defaultMessage="About us" />
+					</AccentLabel>
 
-					<Column1>
-						<TextWrapper>
+					<LeadText>
+						<FormattedMessage id="aboutPage.p1" />
+					</LeadText>
+				</IntroBlock>
 
-							<Text
-								style={{
-									color: colors.darkGray,
-									fontWeight: 800,
-									lineHeight: 1.6
-								}}
-							>
-								<FormattedMessage
-									id="aboutPage.p1"
-								/>
-							</Text>
+				<ContentGrid>
+					<CopyBlock>
+						<Text><FormattedMessage id="aboutPage.p2" /></Text>
+						<Text><FormattedMessage id="aboutPage.p3" /></Text>
+						<Text><FormattedMessage id="aboutPage.p5" /></Text>
 
-							<Text><FormattedMessage id="aboutPage.p2" /></Text>
-							<Text><FormattedMessage id="aboutPage.p3" /></Text>
-							<Text><FormattedMessage id="aboutPage.p4" /></Text>
-							<Text><FormattedMessage id="aboutPage.p5" /></Text>
+						<BtnWrap>
+							<ButtonLink to="oferta" smooth duration={500} spy offset={-80}>
+								<FormattedMessage id="navigation.offer" />
+							</ButtonLink>
 
-							<BtnWrap>
-								<ButtonLink to="oferta" smooth duration={500} spy offset={-80}>
-									<FormattedMessage id="navigation.offer" />
-								</ButtonLink>
+							<ButtonLink to="kontakt" smooth duration={500} spy offset={-80}>
+								<FormattedMessage id="navigation.contact" />
+							</ButtonLink>
+						</BtnWrap>
+					</CopyBlock>
 
-								<ButtonLink to="kontakt" smooth duration={500} spy offset={-80}>
-									<FormattedMessage id="navigation.contact" />
-								</ButtonLink>
-							</BtnWrap>
+					<InfoPanel>
+						<RightTitle>
+							<FormattedMessage id="cardsPage.card2" />
+						</RightTitle>
 
-						</TextWrapper>
-					</Column1>
+						<MiniCardsStack>
+							<MiniCard>
+								<span>01</span>
+								<FormattedMessage id="cardsPage.card1" />
+							</MiniCard>
 
-					<Column2>
+							<MiniCard>
+								<span>02</span>
+								<FormattedMessage id="cardsPage.card3" />
+							</MiniCard>
+						</MiniCardsStack>
 
-						<RightSideWrapper>
-
-							<div className="right-content">
-
-								<Text className="right-title">
-									<FormattedMessage id="cardsPage.card2" />
-								</Text>
-
-								<MiniCardsStack>
-
-									<MiniCard>
-										<FormattedMessage id="cardsPage.card1" />
-									</MiniCard>
-
-									<MiniCard>
-										<FormattedMessage id="cardsPage.card3" />
-									</MiniCard>
-
-								</MiniCardsStack>
-
-							</div>
-
-							<div className="wave-wrapper">
-								<ImgWrap imgSize="120px">
-									<Img src={Wave} alt="wave decoration" />
-								</ImgWrap>
-							</div>
-
-						</RightSideWrapper>
-
-					</Column2>
-
-				</AboutRow>
+						<ImgWrap imgSize="150px">
+							<Img src={Wave} alt="wave decoration" />
+						</ImgWrap>
+					</InfoPanel>
+				</ContentGrid>
 			</AboutWrapper>
 		</AboutContainer>
 	);
