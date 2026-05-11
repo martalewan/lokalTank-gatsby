@@ -9,7 +9,7 @@ export const Navbar = styled.nav`
   height: 60px;
   display: flex;
   align-items: center;
-  font-size: .75rem;
+  font-size: .9rem;
   position: fixed;
   top: 0;
   z-index: 9;
@@ -82,7 +82,7 @@ export const NavLinks = styled(LinkScroll)`
 
   cursor: pointer;
 
-  font-size: 13px;
+  font-size: .83rem;
   font-weight: 500;
 
 

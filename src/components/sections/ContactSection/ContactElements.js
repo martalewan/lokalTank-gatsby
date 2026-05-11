@@ -57,21 +57,87 @@ export const Column2 = styled.aside`
 
   .contact-card {
     position: relative;
-    padding: 28px;
-    background: rgba(255, 255, 255, 0.045);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 34px 30px;
+
+    background: rgba(255, 255, 255, 0.035);
+    border: 1px solid rgba(255, 255, 255, 0.075);
+
     backdrop-filter: blur(10px);
+    overflow: hidden;
+  }
+
+  .contact-item {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 36px minmax(0, 1fr);
+    gap: 18px;
+
+    padding: 20px 0;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.075);
 
     transition:
-      background 0.28s ease,
-      border-color 0.28s ease,
-      transform 0.28s ease;
+      transform 0.25s ease,
+      opacity 0.25s ease;
+
+    &:first-child {
+      padding-top: 4px;
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+      border-bottom: none;
+    }
 
     &:hover {
-      transform: translateY(-4px);
-      background: rgba(255, 255, 255, 0.065);
-      border-color: rgba(126, 162, 255, 0.22);
+      transform: translateX(4px);
     }
+
+    span {
+      display: block;
+      margin-bottom: 7px;
+      opacity: 0.4;
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    p {
+      margin: 0;
+
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 14px;
+      line-height: 1.65;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+    }
+  }
+
+  .contact-icon {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 13px;
+
+    background: rgba(255, 255, 255, 0.035);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    transition:
+      background 0.25s ease,
+      border-color 0.25s ease,
+      transform 0.25s ease;
+  }
+
+  .contact-item:hover .contact-icon {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.14);
+    transform: scale(1.04);
   }
 `;
 
@@ -199,27 +265,25 @@ textarea {
 `;
 
 export const ContactInfo = styled.div`
-  padding: 12px 0;
-
-  color: rgba(255, 255, 255, 0.72);
-  font-size: 13px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 14px;
   line-height: 1.65;
-  font-weight: 600;
-
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-
-  &:last-child {
-    border-bottom: none;
-  }
+  font-weight: 500;
 `;
 
 export const EmailLink = styled.a`
+  display: inline-block;
+
   color: #ffffff;
   text-decoration: none;
-  font-weight: 800;
+  font-size: 14px;
+  line-height: 1.65;
+  font-weight: 700;
   cursor: pointer;
 
-  transition: color 0.22s ease;
+  transition:
+    color 0.22s ease,
+    transform 0.22s ease;
 
   &:hover {
     color: ${colors.blue};

@@ -24,7 +24,7 @@ export const AboutWrapper = styled.div`
 
 export const IntroBlock = styled.div`
   max-width: 1120px;
-  margin-bottom: clamp(48px, 7vw, 88px);
+margin-bottom: clamp(110px, 14vw, 220px);
 `;
 
 export const AccentLabel = styled.p`
@@ -77,22 +77,44 @@ export const ContentGrid = styled.div`
 `;
 
 export const CopyBlock = styled.div`
-  max-width: 680px;
+  position: relative;
+
+  max-width: 700px;
+
+  padding-top: 34px;
+
+  &::before {
+    content: '';
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 72px;
+    height: 1px;
+
+    background: rgba(17, 24, 39, 0.18);
+  }
 `;
 
 export const Text = styled.p`
-  max-width: 640px;
-  margin-bottom: 16px;
+  max-width: 660px;
+  margin-bottom: 18px;
 
-  color: rgba(17, 24, 39, 0.66);
-  font-size: 14px;
-  line-height: 1.85;
+  color: #111827;
+
+  font-size: 16px;
+  line-height: 1.9;
   letter-spacing: -0.005em;
 
+
   &:first-of-type {
-    padding-left: 24px;
-    border-left: 2px solid #2358d8;
-    color: rgba(17, 24, 39, 0.82);
+
+    font-size: 16px;
+    line-height: 1.85;
+    font-weight: 500;
+
+    opacity: 1;
   }
 `;
 
@@ -131,7 +153,7 @@ export const RightTitle = styled.p`
   margin: 0 0 28px;
   max-width: 320px;
 
-  color: rgba(17, 24, 39, 0.52);
+  color: #111827;
   font-size: 12.5px;
   line-height: 1.75;
   font-weight: 600;
