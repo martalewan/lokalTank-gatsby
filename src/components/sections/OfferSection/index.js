@@ -273,11 +273,8 @@ const OfferSection = () => {
 									<span>
 										<FormattedMessage id="offer.zbiornikiProcesowe" />
 									</span>
-									{/* <span><FormattedMessage id="offer.preview" /></span> */}
 								</OfferBtn>
-								{/* <Link href={filePaths.zbiornikiProcesowe} download={filePaths.zbiornikiProcesowe} secondary>
-									<FormattedMessage id="navigation.download" />
-								</Link> */}
+
 							</ItemWrapper>
 
 							<ItemWrapper>
@@ -285,11 +282,7 @@ const OfferSection = () => {
 									<span>
 										<FormattedMessage id="offer.zbiornikiNaZamówienie" />
 									</span>
-									{/* <span><FormattedMessage id="offer.preview" /></span> */}
 								</OfferBtn>
-								{/* <Link href={filePaths.zbiornikiNaZamówienie} download={filePaths.zbiornikiNaZamówienie} secondary>
-									<FormattedMessage id="navigation.download" />
-								</Link> */}
 							</ItemWrapper>
 
 							<ItemWrapper>
@@ -297,21 +290,13 @@ const OfferSection = () => {
 									<span>
 										<FormattedMessage id="offer.konstrukcjeStalowe" />
 									</span>
-									{/* <span><FormattedMessage id="offer.preview" /></span> */}
 								</OfferBtn>
-								{/* <Link href={filePaths.konstrukcjeStalowe} download={filePaths.konstrukcjeStalowe} secondary>
-									<FormattedMessage id="navigation.download" />
-								</Link> */}
 							</ItemWrapper>
 
 							<ItemWrapper>
 								<OfferBtn>
 									<FormattedMessage id="offer.instalacjeProcesowe" />
-									{/* <span><FormattedMessage id="offer.preview" /></span> */}
 								</OfferBtn>
-								{/* <Link href={filePaths.instalacjeProcesowe} download={filePaths.instalacjeProcesowe} secondary>
-									<FormattedMessage id="navigation.download" />
-								</Link> */}
 							</ItemWrapper>
 						</LinksWrapper>
 					</TextWrapper>

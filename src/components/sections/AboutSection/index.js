@@ -54,9 +54,6 @@ const AboutSection = () => {
 					</CopyBlock>
 
 					<InfoPanel>
-						<RightTitle>
-							<FormattedMessage id="cardsPage.card2" />
-						</RightTitle>
 
 						<MiniCardsStack>
 							<MiniCard>
@@ -66,6 +63,11 @@ const AboutSection = () => {
 
 							<MiniCard>
 								<span>02</span>
+								<FormattedMessage id="cardsPage.card2" />
+							</MiniCard>
+
+							<MiniCard>
+								<span>03</span>
 								<FormattedMessage id="cardsPage.card3" />
 							</MiniCard>
 						</MiniCardsStack>

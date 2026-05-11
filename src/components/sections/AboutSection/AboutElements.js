@@ -103,14 +103,14 @@ export const Text = styled.p`
 
   color: #111827;
 
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.9;
   letter-spacing: -0.005em;
 
 
   &:first-of-type {
 
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.85;
     font-weight: 500;
 
@@ -149,16 +149,6 @@ export const InfoPanel = styled.aside`
   padding: 6px 0 0;
 `;
 
-export const RightTitle = styled.p`
-  margin: 0 0 28px;
-  max-width: 320px;
-
-  color: #111827;
-  font-size: 12.5px;
-  line-height: 1.75;
-  font-weight: 600;
-`;
-
 export const MiniCardsStack = styled.div`
   display: flex;
   flex-direction: column;
@@ -173,7 +163,7 @@ export const MiniCard = styled.div`
   border: 1px solid rgba(17, 24, 39, 0.1);
 
   color: #111827;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 800;
   line-height: 1.25;
   letter-spacing: -0.035em;

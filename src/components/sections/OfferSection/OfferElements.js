@@ -39,35 +39,14 @@ export const AccentLabel = styled.p`
   }
 `;
 
-export const OffersWrapper = styled.div`
-  z-index: 1;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 360px;
-  gap: 90px;
-  align-items: start;
-  width: 100%;
-
-  @media screen and (max-width: 980px) {
-    grid-template-columns: 1fr;
-    gap: 56px;
-  }
-`;
-
 export const Column1 = styled.div`
   width: 100%;
 `;
 
 export const Column2 = styled.aside`
   position: relative;
-  padding-top: 6px;
-
-  @media screen and (max-width: 980px) {
-    max-width: 540px;
-  }
-`;
-
-export const TextWrapper = styled.div`
   width: 100%;
+  padding-top: 6px;
 `;
 
 export const LinksWrapper = styled.div`
@@ -208,44 +187,55 @@ export const StyledIcon = styled(FaCaretDown)`
   pointer-events: none;
 `;
 
+export const OffersWrapper = styled.div`
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(420px, 0.75fr);
+  gap: 90px;
+  align-items: start;
+  width: 100%;
+
+  @media screen and (max-width: 980px) {
+    grid-template-columns: 1fr;
+    gap: 56px;
+  }
+`;
+
+export const TextWrapper = styled.div`
+  width: 100%;
+`;
 export const Text = styled.div`
   position: relative;
 
-  max-width: 300px;
+  width: 100%;
+
   margin-left: auto;
 
-  padding: 28px;
-
   color: #111827;
-  font-size: 18px;
-  line-height: 1.52;
-  font-weight: 600;
-  letter-spacing: -0.04em;
+
+  font-size: clamp(30px, 4vw, 58px);
+  line-height: 0.96;
+  letter-spacing: -0.075em;
+  font-weight: 850;
 
   text-align: right;
 
-  background: rgba(255, 255, 255, 0.55);
-
-  border: 1px solid rgba(17, 24, 39, 0.06);
-
-  backdrop-filter: blur(8px);
-
   transition:
     transform 0.28s ease,
-    border-color 0.28s ease,
-    background 0.28s ease;
+    opacity 0.28s ease;
 
   &:hover {
     transform: translateY(-4px);
-
-    background: rgba(255, 255, 255, 0.72);
-
-    border-color: rgba(17, 24, 39, 0.12);
   }
 
   @media screen and (max-width: 980px) {
-    margin-left: 0;
     max-width: 100%;
+
+    margin-left: 0;
+
+    font-size: clamp(24px, 9vw, 42px);
+    line-height: 1.02;
+
     text-align: left;
   }
 `;

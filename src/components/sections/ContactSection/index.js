@@ -258,18 +258,6 @@ const ContactSection = () => {
 						</div>
 					</div>
 
-					{/* <MapWrapper>
-						<iframe
-							src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d8332.704702418963!2d18.96786994261085!3d50.31497758123612!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4716d3d4e4473f17%3A0xb6ebe39ff8c81015!2sLokal%20Tank%20Sp.%20z%20o.o.!5e0!3m2!1sen!2sse!4v1683493673559!5m2!1sen!2ssee"
-							width="100%"
-							height="235px"
-							style={{ border: 0 }}
-							allowFullScreen=""
-							loading="lazy"
-							referrerPolicy="no-referrer-when-downgrade"
-							title="map"
-						/>
-					</MapWrapper> */}
 				</Column2>
 			</ContactRow>
 		</ContactContainer>
